@@ -41,7 +41,3 @@ def main():
     get_chapters()
 
 main()
-
-
-
-
