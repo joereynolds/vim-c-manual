@@ -1,0 +1,36 @@
+7.22.3.3 The free function
+Synopsis
+1
+
+#include <stdlib.h>
+void free(void *ptr);
+Description
+
+2
+
+The free function causes the space pointed to by ptr to be deallocated, that is, made
+available for further allocation. If ptr is a null pointer, no action occurs. Otherwise, if
+the argument does not match a pointer earlier returned by a memory management
+function, or if the space has been deallocated by a call to free or realloc, the
+behavior is undefined.
+Returns
+
+3
+
+The free function returns no value.
+
+296) Note that this need not be the same as the representation of floating-point zero or a null pointer
+constant.
+
+348
+
+Library
+
+§7.22.3.3
+
+N1570
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+

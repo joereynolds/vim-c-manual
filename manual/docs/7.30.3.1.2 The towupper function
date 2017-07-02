@@ -1,0 +1,40 @@
+7.30.3.1.2 The towupper function
+Synopsis
+1
+
+#include <wctype.h>
+wint_t towupper(wint_t wc);
+Description
+
+2
+
+The towupper function converts a lowercase letter to a corresponding uppercase letter.
+Returns
+
+3
+
+If the argument is a wide character for which iswlower is true and there are one or
+more corresponding wide characters, as specified by the current locale, for which
+iswupper is true, the towupper function returns one of the corresponding wide
+characters (always the same one for any given locale); otherwise, the argument is
+returned unchanged.
+
+7.30.3.2 Extensible wide character case mapping functions
+1
+
+The functions wctrans and towctrans provide extensible wide character mapping as
+well as case mapping equivalent to that performed by the functions described in the
+previous subclause (7.30.3.1).
+
+§7.30.3.2
+
+Library
+
+453
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+

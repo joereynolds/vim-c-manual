@@ -1,0 +1,21 @@
+7.27.2.4 The time function
+Synopsis
+1
+
+#include <time.h>
+time_t time(time_t *timer);
+Description
+
+2
+
+The time function determines the current calendar time. The encoding of the value is
+unspecified.
+Returns
+
+3
+
+The time function returns the implementation’s best approximation to the current
+calendar time. The value (time_t)(-1) is returned if the calendar time is not
+available. If timer is not a null pointer, the return value is also assigned to the object it
+points to.
+

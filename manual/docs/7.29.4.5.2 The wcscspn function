@@ -1,0 +1,31 @@
+7.29.4.5.2 The wcscspn function
+Synopsis
+1
+
+#include <wchar.h>
+size_t wcscspn(const wchar_t *s1, const wchar_t *s2);
+Description
+
+2
+
+The wcscspn function computes the length of the maximum initial segment of the wide
+string pointed to by s1 which consists entirely of wide characters not from the wide
+string pointed to by s2.
+
+§7.29.4.5.2
+
+Library
+
+435
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+
+Returns
+3
+
+The wcscspn function returns the length of the segment.
+

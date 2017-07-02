@@ -1,0 +1,29 @@
+7.22.2.1 The rand function
+Synopsis
+1
+
+#include <stdlib.h>
+int rand(void);
+Description
+
+2
+
+The rand function computes a sequence of pseudo-random integers in the range 0 to
+RAND_MAX.295)
+
+3
+
+The rand function is not required to avoid data races with other calls to pseudo-random
+sequence generation functions. The implementation shall behave as if no library function
+calls the rand function.
+Returns
+
+4
+
+The rand function returns a pseudo-random integer.
+Environmental limits
+
+5
+
+The value of the RAND_MAX macro shall be at least 32767.
+

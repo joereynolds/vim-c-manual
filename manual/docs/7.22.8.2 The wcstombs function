@@ -1,0 +1,91 @@
+7.22.8.2 The wcstombs function
+Synopsis
+1
+
+#include <stdlib.h>
+size_t wcstombs(char * restrict s,
+const wchar_t * restrict pwcs,
+size_t n);
+Description
+
+2
+
+The wcstombs function converts a sequence of wide characters from the array pointed
+to by pwcs into a sequence of corresponding multibyte characters that begins in the
+initial shift state, and stores these multibyte characters into the array pointed to by s,
+stopping if a multibyte character would exceed the limit of n total bytes or if a null
+character is stored. Each wide character is converted as if by a call to the wctomb
+function, except that the conversion state of the wctomb function is not affected.
+
+3
+
+No more than n bytes will be modified in the array pointed to by s. If copying takes place
+between objects that overlap, the behavior is undefined.
+Returns
+
+4
+
+If a wide character is encountered that does not correspond to a valid multibyte character,
+the wcstombs function returns (size_t)(-1). Otherwise, the wcstombs function
+returns the number of bytes modified, not including a terminating null character, if
+any.306)
+
+360
+
+Library
+
+§7.22.8.2
+
+N1570
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+
+7.23 _Noreturn <stdnoreturn.h>
+1
+
+The header <stdnoreturn.h> defines the macro
+noreturn
+which expands to _Noreturn.
+
+§7.23
+
+Library
+
+361
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+
+7.24 String handling <string.h>
+7.24.1 String function conventions
+1
+
+The header <string.h> declares one type and several functions, and defines one
+macro useful for manipulating arrays of character type and other objects treated as arrays
+of character type.307) The type is size_t and the macro is NULL (both described in
+7.19). Various methods are used for determining the lengths of the arrays, but in all cases
+a char * or void * argument points to the initial (lowest addressed) character of the
+array. If an array is accessed beyond the end of an object, the behavior is undefined.
+
+2
+
+Where an argument declared as size_t n specifies the length of the array for a
+function, n can have the value zero on a call to that function. Unless explicitly stated
+otherwise in the description of a particular function in this subclause, pointer arguments
+on such a call shall still have valid values, as described in 7.1.4. On such a call, a
+function that locates a character finds no occurrence, a function that compares two
+character sequences returns zero, and a function that copies characters copies zero
+characters.
+
+3
+
+For all functions in this subclause, each character shall be interpreted as if it had the type
+unsigned char (and therefore every possible object representation is valid and has a
+different value).
+
+7.24.2 Copying functions

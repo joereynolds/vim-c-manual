@@ -1,0 +1,37 @@
+7.29.3.5 The fwide function
+Synopsis
+1
+
+#include <stdio.h>
+#include <wchar.h>
+int fwide(FILE *stream, int mode);
+Description
+
+2
+
+The fwide function determines the orientation of the stream pointed to by stream. If
+mode is greater than zero, the function first attempts to make the stream wide oriented. If
+mode is less than zero, the function first attempts to make the stream byte oriented.342)
+Otherwise, mode is zero and the function does not alter the orientation of the stream.
+Returns
+
+3
+
+The fwide function returns a value greater than zero if, after the call, the stream has
+wide orientation, a value less than zero if the stream has byte orientation, or zero if the
+stream has no orientation.
+
+342) If the orientation of the stream has already been determined, fwide does not change it.
+
+§7.29.3.5
+
+Library
+
+423
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+

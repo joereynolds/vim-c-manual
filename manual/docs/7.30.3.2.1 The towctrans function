@@ -1,0 +1,30 @@
+7.30.3.2.1 The towctrans function
+Synopsis
+1
+
+#include <wctype.h>
+wint_t towctrans(wint_t wc, wctrans_t desc);
+Description
+
+2
+
+The towctrans function maps the wide character wc using the mapping described by
+desc. The current setting of the LC_CTYPE category shall be the same as during the call
+to wctrans that returned the value desc.
+
+3
+
+Each of the following expressions behaves the same as the call to the wide character case
+mapping function (7.30.3.1) in the comment that follows the expression:
+towctrans(wc, wctrans("tolower"))
+towctrans(wc, wctrans("toupper"))
+
+// towlower(wc)
+// towupper(wc)
+
+Returns
+4
+
+The towctrans function returns the mapped value of wc using the mapping described
+by desc. If desc is zero, the towctrans function returns the value of wc.
+

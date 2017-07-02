@@ -1,0 +1,40 @@
+7.24.2.4 The strncpy function
+Synopsis
+1
+
+#include <string.h>
+char *strncpy(char * restrict s1,
+const char * restrict s2,
+size_t n);
+Description
+
+2
+
+The strncpy function copies not more than n characters (characters that follow a null
+character are not copied) from the array pointed to by s2 to the array pointed to by
+
+§7.24.2.4
+
+Library
+
+363
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+
+s1.308) If copying takes place between objects that overlap, the behavior is undefined.
+3
+
+If the array pointed to by s2 is a string that is shorter than n characters, null characters
+are appended to the copy in the array pointed to by s1, until n characters in all have been
+written.
+Returns
+
+4
+
+The strncpy function returns the value of s1.
+
+7.24.3 Concatenation functions

@@ -1,0 +1,388 @@
+7.24.6.3 The strlen function
+Synopsis
+1
+
+#include <string.h>
+size_t strlen(const char *s);
+Description
+
+2
+
+The strlen function computes the length of the string pointed to by s.
+Returns
+
+3
+
+The strlen function returns the number of characters that precede the terminating null
+character.
+
+372
+
+Library
+
+§7.24.6.3
+
+N1570
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+
+7.25 Type-generic math <tgmath.h>
+1
+
+The header <tgmath.h> includes the headers <math.h> and <complex.h> and
+defines several type-generic macros.
+
+2
+
+Of the <math.h> and <complex.h> functions without an f (float) or l (long
+double) suffix, several have one or more parameters whose corresponding real type is
+double. For each such function, except modf, there is a corresponding type-generic
+macro.313) The parameters whose corresponding real type is double in the function
+synopsis are generic parameters. Use of the macro invokes a function whose
+corresponding real type and type domain are determined by the arguments for the generic
+parameters.314)
+
+3
+
+Use of the macro invokes a function whose generic parameters have the corresponding
+real type determined as follows:
+— First, if any argument for generic parameters has type long double, the type
+determined is long double.
+— Otherwise, if any argument for generic parameters has type double or is of integer
+type, the type determined is double.
+— Otherwise, the type determined is float.
+
+4
+
+For each unsuffixed function in <math.h> for which there is a function in
+<complex.h> with the same name except for a c prefix, the corresponding typegeneric macro (for both functions) has the same name as the function in <math.h>. The
+corresponding type-generic macro for fabs and cabs is fabs.
+
+313) Like other function-like macros in Standard libraries, each type-generic macro can be suppressed to
+make available the corresponding ordinary function.
+314) If the type of the argument is not compatible with the type of the parameter for the selected function,
+the behavior is undefined.
+
+§7.25
+
+Library
+
+373
+
+ISO/IEC 9899:201x
+
+<math.h>
+function
+acos
+asin
+atan
+acosh
+asinh
+atanh
+cos
+sin
+tan
+cosh
+sinh
+tanh
+exp
+log
+pow
+sqrt
+fabs
+
+Committee Draft — April 12, 2011
+
+N1570
+
+type-generic
+macro
+acos
+asin
+atan
+acosh
+asinh
+atanh
+cos
+sin
+tan
+cosh
+sinh
+tanh
+exp
+log
+pow
+sqrt
+fabs
+
+<complex.h>
+function
+cacos
+casin
+catan
+cacosh
+casinh
+catanh
+ccos
+csin
+ctan
+ccosh
+csinh
+ctanh
+cexp
+clog
+cpow
+csqrt
+cabs
+
+If at least one argument for a generic parameter is complex, then use of the macro invokes
+a complex function; otherwise, use of the macro invokes a real function.
+5
+
+For each unsuffixed function in <math.h> without a c-prefixed counterpart in
+<complex.h> (except modf), the corresponding type-generic macro has the same
+name as the function. These type-generic macros are:
+atan2
+cbrt
+ceil
+copysign
+erf
+erfc
+exp2
+expm1
+fdim
+floor
+
+fma
+fmax
+fmin
+fmod
+frexp
+hypot
+ilogb
+ldexp
+lgamma
+llrint
+
+llround
+log10
+log1p
+log2
+logb
+lrint
+lround
+nearbyint
+nextafter
+nexttoward
+
+remainder
+remquo
+rint
+round
+scalbn
+scalbln
+tgamma
+trunc
+
+If all arguments for generic parameters are real, then use of the macro invokes a real
+function; otherwise, use of the macro results in undefined behavior.
+
+374
+
+Library
+
+§7.25
+
+N1570
+
+6
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+
+For each unsuffixed function in <complex.h> that is not a c-prefixed counterpart to a
+function in <math.h>, the corresponding type-generic macro has the same name as the
+function. These type-generic macros are:
+carg
+cimag
+
+conj
+cproj
+
+creal
+
+Use of the macro with any real or complex argument invokes a complex function.
+7
+
+EXAMPLE
+
+With the declarations
+
+#include <tgmath.h>
+int n;
+float f;
+double d;
+long double ld;
+float complex fc;
+double complex dc;
+long double complex ldc;
+functions invoked by use of type-generic macros are shown in the following table:
+macro use
+exp(n)
+acosh(f)
+sin(d)
+atan(ld)
+log(fc)
+sqrt(dc)
+pow(ldc, f)
+remainder(n, n)
+nextafter(d, f)
+nexttoward(f, ld)
+copysign(n, ld)
+ceil(fc)
+rint(dc)
+fmax(ldc, ld)
+carg(n)
+cproj(f)
+creal(d)
+cimag(ld)
+fabs(fc)
+carg(dc)
+cproj(ldc)
+
+§7.25
+
+invokes
+exp(n), the function
+acoshf(f)
+sin(d), the function
+atanl(ld)
+clogf(fc)
+csqrt(dc)
+cpowl(ldc, f)
+remainder(n, n), the function
+nextafter(d, f), the function
+nexttowardf(f, ld)
+copysignl(n, ld)
+undefined behavior
+undefined behavior
+undefined behavior
+carg(n), the function
+cprojf(f)
+creal(d), the function
+cimagl(ld)
+cabsf(fc)
+carg(dc), the function
+cprojl(ldc)
+
+Library
+
+375
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+
+7.26 Threads <threads.h>
+7.26.1 Introduction
+1
+
+The header <threads.h> includes the header <time.h>, defines macros, and
+declares types, enumeration constants, and functions that support multiple threads of
+execution.315)
+
+2
+
+Implementations that define the macro _ _STDC_NO_THREADS_ _ need not provide
+this header nor support any of its facilities.
+
+3
+
+The macros are
+thread_local
+which expands to _Thread_local;
+ONCE_FLAG_INIT
+which expands to a value that can be used to initialize an object of type once_flag;
+and
+TSS_DTOR_ITERATIONS
+which expands to an integer constant expression representing the maximum number of
+times that destructors will be called when a thread terminates.
+
+4
+
+The types are
+cnd_t
+which is a complete object type that holds an identifier for a condition variable;
+thrd_t
+which is a complete object type that holds an identifier for a thread;
+tss_t
+which is a complete object type that holds an identifier for a thread-specific storage
+pointer;
+mtx_t
+which is a complete object type that holds an identifier for a mutex;
+tss_dtor_t
+which is the function pointer type void (*)(void*), used for a destructor for a
+thread-specific storage pointer;
+
+315) See ‘‘future library directions’’ (7.31.15).
+
+376
+
+Library
+
+§7.26.1
+
+N1570
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+
+thrd_start_t
+which is the function pointer type int (*)(void*) that is passed to thrd_create
+to create a new thread; and
+once_flag
+which is a complete object type that holds a flag for use by call_once.
+5
+
+The enumeration constants are
+mtx_plain
+which is passed to mtx_init to create a mutex object that supports neither timeout nor
+test and return;
+mtx_recursive
+which is passed to mtx_init to create a mutex object that supports recursive locking;
+mtx_timed
+which is passed to mtx_init to create a mutex object that supports timeout;
+thrd_timedout
+which is returned by a timed wait function to indicate that the time specified in the call
+was reached without acquiring the requested resource;
+thrd_success
+which is returned by a function to indicate that the requested operation succeeded;
+thrd_busy
+which is returned by a function to indicate that the requested operation failed because a
+resource requested by a test and return function is already in use;
+thrd_error
+which is returned by a function to indicate that the requested operation failed; and
+thrd_nomem
+which is returned by a function to indicate that the requested operation failed because it
+was unable to allocate memory.
+Forward references: date and time (7.27).
+
+§7.26.1
+
+Library
+
+377
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+
+7.26.2 Initialization functions

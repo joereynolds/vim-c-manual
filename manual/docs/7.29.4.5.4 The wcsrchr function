@@ -1,0 +1,19 @@
+7.29.4.5.4 The wcsrchr function
+Synopsis
+1
+
+#include <wchar.h>
+wchar_t *wcsrchr(const wchar_t *s, wchar_t c);
+Description
+
+2
+
+The wcsrchr function locates the last occurrence of c in the wide string pointed to by
+s. The terminating null wide character is considered to be part of the wide string.
+Returns
+
+3
+
+The wcsrchr function returns a pointer to the wide character, or a null pointer if c does
+not occur in the wide string.
+

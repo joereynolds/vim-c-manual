@@ -1,0 +1,55 @@
+7.21.6.8 The vfprintf function
+Synopsis
+1
+
+#include <stdarg.h>
+#include <stdio.h>
+int vfprintf(FILE * restrict stream,
+const char * restrict format,
+va_list arg);
+Description
+
+2
+
+The vfprintf function is equivalent to fprintf, with the variable argument list
+replaced by arg, which shall have been initialized by the va_start macro (and
+possibly subsequent va_arg calls). The vfprintf function does not invoke the
+
+326
+
+Library
+
+§7.21.6.8
+
+N1570
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+
+va_end macro.288)
+Returns
+3
+
+The vfprintf function returns the number of characters transmitted, or a negative
+value if an output or encoding error occurred.
+
+4
+
+EXAMPLE
+
+The following shows the use of the vfprintf function in a general error-reporting routine.
+
+#include <stdarg.h>
+#include <stdio.h>
+void error(char *function_name, char *format, ...)
+{
+va_list args;
+va_start(args, format);
+// print out name of function causing error
+fprintf(stderr, "ERROR in %s: ", function_name);
+// print out remainder of message
+vfprintf(stderr, format, args);
+va_end(args);
+}
+

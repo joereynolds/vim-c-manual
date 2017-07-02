@@ -1,0 +1,12 @@
+7.4.1.1 The isalnum function
+Synopsis
+1
+
+#include <ctype.h>
+int isalnum(int c);
+Description
+
+2
+
+The isalnum function tests for any character for which isalpha or isdigit is true.
+

@@ -1,0 +1,27 @@
+7.21.5.2 The fflush function
+Synopsis
+1
+
+#include <stdio.h>
+int fflush(FILE *stream);
+Description
+
+2
+
+If stream points to an output stream or an update stream in which the most recent
+operation was not input, the fflush function causes any unwritten data for that stream
+to be delivered to the host environment to be written to the file; otherwise, the behavior is
+undefined.
+
+3
+
+If stream is a null pointer, the fflush function performs this flushing action on all
+streams for which the behavior is defined above.
+Returns
+
+4
+
+The fflush function sets the error indicator for the stream and returns EOF if a write
+error occurs, otherwise it returns zero.
+Forward references: the fopen function (7.21.5.3).
+

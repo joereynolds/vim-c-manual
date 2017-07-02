@@ -1,0 +1,86 @@
+7.22.2.2 The srand function
+Synopsis
+1
+
+#include <stdlib.h>
+void srand(unsigned int seed);
+Description
+
+2
+
+The srand function uses the argument as a seed for a new sequence of pseudo-random
+numbers to be returned by subsequent calls to rand. If srand is then called with the
+same seed value, the sequence of pseudo-random numbers shall be repeated. If rand is
+called before any calls to srand have been made, the same sequence shall be generated
+as when srand is first called with a seed value of 1.
+
+3
+
+The srand function is not required to avoid data races with other calls to pseudorandom sequence generation functions. The implementation shall behave as if no library
+function calls the srand function.
+
+295) There are no guarantees as to the quality of the random sequence produced and some implementations
+are known to produce sequences with distressingly non-random low-order bits. Applications with
+particular requirements should use a generator that is known to be sufficient for their needs.
+
+346
+
+Library
+
+§7.22.2.2
+
+N1570
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+
+Returns
+4
+
+The srand function returns no value.
+
+5
+
+EXAMPLE
+
+The following functions define a portable implementation of rand and srand.
+
+static unsigned long int next = 1;
+int rand(void)
+// RAND_MAX assumed to be 32767
+{
+next = next * 1103515245 + 12345;
+return (unsigned int)(next/65536) % 32768;
+}
+void srand(unsigned int seed)
+{
+next = seed;
+}
+
+7.22.3 Memory management functions
+1
+
+The order and contiguity of storage allocated by successive calls to the
+aligned_alloc, calloc, malloc, and realloc functions is unspecified. The
+pointer returned if the allocation succeeds is suitably aligned so that it may be assigned to
+a pointer to any type of object with a fundamental alignment requirement and then used
+to access such an object or an array of such objects in the space allocated (until the space
+is explicitly deallocated). The lifetime of an allocated object extends from the allocation
+until the deallocation. Each such allocation shall yield a pointer to an object disjoint from
+any other object. The pointer returned points to the start (lowest byte address) of the
+allocated space. If the space cannot be allocated, a null pointer is returned. If the size of
+the space requested is zero, the behavior is implementation-defined: either a null pointer
+is returned, or the behavior is as if the size were some nonzero value, except that the
+returned pointer shall not be used to access an object.
+
+2
+
+For purposes of determining the existence of a data race, memory allocation functions
+behave as though they accessed only memory locations accessible through their
+arguments and not other static duration storage. These functions may, however, visibly
+modify the storage that they allocate or deallocate. A call to free or realloc that
+deallocates a region p of memory synchronizes with any allocation call that allocates all
+or part of the region p. This synchronization occurs after any access of p by the
+deallocating function, and before any such access by the allocating function.
+

@@ -1,0 +1,36 @@
+7.29.2.3 The swprintf function
+Synopsis
+1
+
+#include <wchar.h>
+int swprintf(wchar_t * restrict s,
+size_t n,
+const wchar_t * restrict format, ...);
+Description
+
+2
+
+The swprintf function is equivalent to fwprintf, except that the argument s
+specifies an array of wide characters into which the generated output is to be written,
+rather than written to a stream. No more than n wide characters are written, including a
+terminating null wide character, which is always added (unless n is zero).
+Returns
+
+3
+
+The swprintf function returns the number of wide characters written in the array, not
+counting the terminating null wide character, or a negative value if an encoding error
+occurred or if n or more wide characters were requested to be written.
+
+416
+
+Library
+
+§7.29.2.3
+
+N1570
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+

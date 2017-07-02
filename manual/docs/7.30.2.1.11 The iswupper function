@@ -1,0 +1,14 @@
+7.30.2.1.11 The iswupper function
+Synopsis
+1
+
+#include <wctype.h>
+int iswupper(wint_t wc);
+Description
+
+2
+
+The iswupper function tests for any wide character that corresponds to an uppercase
+letter or is one of a locale-specific set of wide characters for which none of iswcntrl,
+iswdigit, iswpunct, or iswspace is true.
+

@@ -1,0 +1,21 @@
+7.26.2.1 The call_once function
+Synopsis
+1
+
+#include <threads.h>
+void call_once(once_flag *flag, void (*func)(void));
+Description
+
+2
+
+The call_once function uses the once_flag pointed to by flag to ensure that
+func is called exactly once, the first time the call_once function is called with that
+value of flag. Completion of an effective call to the call_once function synchronizes
+with all subsequent calls to the call_once function with the same value of flag.
+Returns
+
+3
+
+The call_once function returns no value.
+
+7.26.3 Condition variable functions

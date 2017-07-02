@@ -1,0 +1,20 @@
+7.29.6.1.1 The btowc function
+Synopsis
+1
+
+#include <wchar.h>
+wint_t btowc(int c);
+Description
+
+2
+
+The btowc function determines whether c constitutes a valid single-byte character in the
+initial shift state.
+Returns
+
+3
+
+The btowc function returns WEOF if c has the value EOF or if (unsigned char)c
+does not constitute a valid single-byte character in the initial shift state. Otherwise, it
+returns the wide character representation of that character.
+

@@ -1,0 +1,30 @@
+7.21.4.3 The tmpfile function
+Synopsis
+1
+
+#include <stdio.h>
+FILE *tmpfile(void);
+Description
+
+2
+
+The tmpfile function creates a temporary binary file that is different from any other
+existing file and that will automatically be removed when it is closed or at program
+termination. If the program terminates abnormally, whether an open temporary file is
+removed is implementation-defined. The file is opened for update with "wb+" mode.
+Recommended practice
+
+3
+
+It should be possible to open at least TMP_MAX temporary files during the lifetime of the
+program (this limit may be shared with tmpnam) and there should be no limit on the
+number simultaneously open other than this limit and any limit on the number of open
+files (FOPEN_MAX).
+Returns
+
+4
+
+The tmpfile function returns a pointer to the stream of the file that it created. If the file
+cannot be created, the tmpfile function returns a null pointer.
+Forward references: the fopen function (7.21.5.3).
+

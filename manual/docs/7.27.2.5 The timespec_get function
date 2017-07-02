@@ -1,0 +1,46 @@
+7.27.2.5 The timespec_get function
+Synopsis
+1
+
+#include <time.h>
+int timespec_get(struct timespec *ts, int base);
+Description
+
+2
+
+The timespec_get function sets the interval pointed to by ts to hold the current
+calendar time based on the specified time base.
+
+3
+
+If base is TIME_UTC, the tv_sec member is set to the number of seconds since an
+implementation defined epoch, truncated to a whole value and the tv_nsec member is
+set to the integral number of nanoseconds, rounded to the resolution of the system
+§7.27.2.5
+Library
+391
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+
+clock.321)
+Returns
+4
+
+If the timespec_get function is successful it returns the nonzero value base;
+otherwise, it returns zero.
+
+7.27.3 Time conversion functions
+1
+
+Except for the strftime function, these functions each return a pointer to one of two
+types of static objects: a broken-down time structure or an array of char. Execution of
+any of the functions that return a pointer to one of these object types may overwrite the
+information in any object of the same type pointed to by the value returned from any
+previous call to any of them and the functions are not required to avoid data races with
+each other.322) The implementation shall behave as if no other library functions call these
+functions.
+

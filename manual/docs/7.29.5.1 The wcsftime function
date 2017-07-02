@@ -1,0 +1,92 @@
+7.29.5.1 The wcsftime function
+Synopsis
+1
+
+#include <time.h>
+#include <wchar.h>
+size_t wcsftime(wchar_t * restrict s,
+size_t maxsize,
+const wchar_t * restrict format,
+const struct tm * restrict timeptr);
+Description
+
+2
+
+The wcsftime function is equivalent to the strftime function, except that:
+— The argument s points to the initial element of an array of wide characters into which
+the generated output is to be placed.
+
+§7.29.5.1
+
+Library
+
+439
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+
+— The argument maxsize indicates the limiting number of wide characters.
+— The argument format is a wide string and the conversion specifiers are replaced by
+corresponding sequences of wide characters.
+— The return value indicates the number of wide characters.
+Returns
+3
+
+If the total number of resulting wide characters including the terminating null wide
+character is not more than maxsize, the wcsftime function returns the number of
+wide characters placed into the array pointed to by s not including the terminating null
+wide character. Otherwise, zero is returned and the contents of the array are
+indeterminate.
+
+7.29.6 Extended multibyte/wide character conversion utilities
+1
+
+The header <wchar.h> declares an extended set of functions useful for conversion
+between multibyte characters and wide characters.
+
+2
+
+Most of the following functions — those that are listed as ‘‘restartable’’, 7.29.6.3 and
+7.29.6.4 — take as a last argument a pointer to an object of type mbstate_t that is used
+to describe the current conversion state from a particular multibyte character sequence to
+a wide character sequence (or the reverse) under the rules of a particular setting for the
+LC_CTYPE category of the current locale.
+
+3
+
+The initial conversion state corresponds, for a conversion in either direction, to the
+beginning of a new multibyte character in the initial shift state. A zero-valued
+mbstate_t object is (at least) one way to describe an initial conversion state. A zerovalued mbstate_t object can be used to initiate conversion involving any multibyte
+character sequence, in any LC_CTYPE category setting. If an mbstate_t object has
+been altered by any of the functions described in this subclause, and is then used with a
+different multibyte character sequence, or in the other conversion direction, or with a
+different LC_CTYPE category setting than on earlier function calls, the behavior is
+undefined.348)
+
+4
+
+On entry, each function takes the described conversion state (either internal or pointed to
+by an argument) as current. The conversion state described by the referenced object is
+altered as needed to track the shift state, and the position within a multibyte character, for
+the associated multibyte character sequence.
+
+348) Thus, a particular mbstate_t object can be used, for example, with both the mbrtowc and
+mbsrtowcs functions as long as they are used to step sequentially through the same multibyte
+character string.
+
+440
+
+Library
+
+§7.29.6
+
+N1570
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+
+7.29.6.1 Single-byte/wide character conversion functions

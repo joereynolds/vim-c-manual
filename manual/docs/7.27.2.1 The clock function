@@ -1,0 +1,38 @@
+7.27.2.1 The clock function
+Synopsis
+1
+
+#include <time.h>
+clock_t clock(void);
+Description
+
+2
+
+The clock function determines the processor time used.
+Returns
+
+3
+
+The clock function returns the implementation’s best approximation to the processor
+time used by the program since the beginning of an implementation-defined era related
+only to the program invocation. To determine the time in seconds, the value returned by
+the clock function should be divided by the value of the macro CLOCKS_PER_SEC. If
+the processor time used is not available or its value cannot be represented, the function
+returns the value (clock_t)(-1).319)
+
+318) The range [0, 60] for tm_sec allows for a positive leap second.
+319) In order to measure the time spent in a program, the clock function should be called at the start of
+the program and its return value subtracted from the value returned by subsequent calls.
+
+§7.27.2.1
+
+Library
+
+389
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+

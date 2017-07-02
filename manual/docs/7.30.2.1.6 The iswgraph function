@@ -1,0 +1,28 @@
+7.30.2.1.6 The iswgraph function
+Synopsis
+1
+
+#include <wctype.h>
+int iswgraph(wint_t wc);
+
+354) The functions iswlower and iswupper test true or false separately for each of these additional
+wide characters; all four combinations are possible.
+
+§7.30.2.1.6
+
+Library
+
+449
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+
+Description
+2
+
+The iswgraph function tests for any wide character for which iswprint is true and
+iswspace is false.355)
+

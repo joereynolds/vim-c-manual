@@ -1,0 +1,399 @@
+7.29.2.2 The fwscanf function
+Synopsis
+1
+
+#include <stdio.h>
+#include <wchar.h>
+int fwscanf(FILE * restrict stream,
+const wchar_t * restrict format, ...);
+Description
+
+2
+
+The fwscanf function reads input from the stream pointed to by stream, under
+control of the wide string pointed to by format that specifies the admissible input
+sequences and how they are to be converted for assignment, using subsequent arguments
+336) For binary-to-decimal conversion, the result format’s values are the numbers representable with the
+given format specifier. The number of significant digits is determined by the format specifier, and in
+the case of fixed-point conversion by the source value as well.
+
+410
+
+Library
+
+§7.29.2.2
+
+N1570
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+
+as pointers to the objects to receive the converted input. If there are insufficient
+arguments for the format, the behavior is undefined. If the format is exhausted while
+arguments remain, the excess arguments are evaluated (as always) but are otherwise
+ignored.
+3
+
+The format is composed of zero or more directives: one or more white-space wide
+characters, an ordinary wide character (neither % nor a white-space wide character), or a
+conversion specification. Each conversion specification is introduced by the wide
+character %. After the %, the following appear in sequence:
+— An optional assignment-suppressing wide character *.
+— An optional decimal integer greater than zero that specifies the maximum field width
+(in wide characters).
+— An optional length modifier that specifies the size of the receiving object.
+— A conversion specifier wide character that specifies the type of conversion to be
+applied.
+
+4
+
+The fwscanf function executes each directive of the format in turn. When all directives
+have been executed, or if a directive fails (as detailed below), the function returns.
+Failures are described as input failures (due to the occurrence of an encoding error or the
+unavailability of input characters), or matching failures (due to inappropriate input).
+
+5
+
+A directive composed of white-space wide character(s) is executed by reading input up to
+the first non-white-space wide character (which remains unread), or until no more wide
+characters can be read. The directive never fails.
+
+6
+
+A directive that is an ordinary wide character is executed by reading the next wide
+character of the stream. If that wide character differs from the directive, the directive
+fails and the differing and subsequent wide characters remain unread. Similarly, if endof-file, an encoding error, or a read error prevents a wide character from being read, the
+directive fails.
+
+7
+
+A directive that is a conversion specification defines a set of matching input sequences, as
+described below for each specifier. A conversion specification is executed in the
+following steps:
+
+8
+
+Input white-space wide characters (as specified by the iswspace function) are skipped,
+unless the specification includes a [, c, or n specifier.337)
+
+9
+
+An input item is read from the stream, unless the specification includes an n specifier. An
+input item is defined as the longest sequence of input wide characters which does not
+exceed any specified field width and which is, or is a prefix of, a matching input
+337) These white-space wide characters are not counted against a specified field width.
+
+§7.29.2.2
+
+Library
+
+411
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+
+sequence.338) The first wide character, if any, after the input item remains unread. If the
+length of the input item is zero, the execution of the directive fails; this condition is a
+matching failure unless end-of-file, an encoding error, or a read error prevented input
+from the stream, in which case it is an input failure.
+10
+
+Except in the case of a % specifier, the input item (or, in the case of a %n directive, the
+count of input wide characters) is converted to a type appropriate to the conversion
+specifier. If the input item is not a matching sequence, the execution of the directive fails:
+this condition is a matching failure. Unless assignment suppression was indicated by a *,
+the result of the conversion is placed in the object pointed to by the first argument
+following the format argument that has not already received a conversion result. If this
+object does not have an appropriate type, or if the result of the conversion cannot be
+represented in the object, the behavior is undefined.
+
+11
+
+The length modifiers and their meanings are:
+hh
+
+Specifies that a following d, i, o, u, x, X, or n conversion specifier applies
+to an argument with type pointer to signed char or unsigned char.
+
+h
+
+Specifies that a following d, i, o, u, x, X, or n conversion specifier applies
+to an argument with type pointer to short int or unsigned short
+int.
+
+l (ell)
+
+Specifies that a following d, i, o, u, x, X, or n conversion specifier applies
+to an argument with type pointer to long int or unsigned long
+int; that a following a, A, e, E, f, F, g, or G conversion specifier applies to
+an argument with type pointer to double; or that a following c, s, or [
+conversion specifier applies to an argument with type pointer to wchar_t.
+
+ll (ell-ell) Specifies that a following d, i, o, u, x, X, or n conversion specifier applies
+to an argument with type pointer to long long int or unsigned
+long long int.
+j
+
+Specifies that a following d, i, o, u, x, X, or n conversion specifier applies
+to an argument with type pointer to intmax_t or uintmax_t.
+
+z
+
+Specifies that a following d, i, o, u, x, X, or n conversion specifier applies
+to an argument with type pointer to size_t or the corresponding signed
+integer type.
+
+t
+
+Specifies that a following d, i, o, u, x, X, or n conversion specifier applies
+to an argument with type pointer to ptrdiff_t or the corresponding
+unsigned integer type.
+
+338) fwscanf pushes back at most one input wide character onto the input stream. Therefore, some
+sequences that are acceptable to wcstod, wcstol, etc., are unacceptable to fwscanf.
+
+412
+
+Library
+
+§7.29.2.2
+
+N1570
+
+L
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+
+Specifies that a following a, A, e, E, f, F, g, or G conversion specifier
+applies to an argument with type pointer to long double.
+
+If a length modifier appears with any conversion specifier other than as specified above,
+the behavior is undefined.
+12
+
+The conversion specifiers and their meanings are:
+d
+
+Matches an optionally signed decimal integer, whose format is the same as
+expected for the subject sequence of the wcstol function with the value 10
+for the base argument. The corresponding argument shall be a pointer to
+signed integer.
+
+i
+
+Matches an optionally signed integer, whose format is the same as expected
+for the subject sequence of the wcstol function with the value 0 for the
+base argument. The corresponding argument shall be a pointer to signed
+integer.
+
+o
+
+Matches an optionally signed octal integer, whose format is the same as
+expected for the subject sequence of the wcstoul function with the value 8
+for the base argument. The corresponding argument shall be a pointer to
+unsigned integer.
+
+u
+
+Matches an optionally signed decimal integer, whose format is the same as
+expected for the subject sequence of the wcstoul function with the value 10
+for the base argument. The corresponding argument shall be a pointer to
+unsigned integer.
+
+x
+
+Matches an optionally signed hexadecimal integer, whose format is the same
+as expected for the subject sequence of the wcstoul function with the value
+16 for the base argument. The corresponding argument shall be a pointer to
+unsigned integer.
+
+a,e,f,g Matches an optionally signed floating-point number, infinity, or NaN, whose
+format is the same as expected for the subject sequence of the wcstod
+function. The corresponding argument shall be a pointer to floating.
+c
+
+Matches a sequence of wide characters of exactly the number specified by the
+field width (1 if no field width is present in the directive).
+If no l length modifier is present, characters from the input field are
+converted as if by repeated calls to the wcrtomb function, with the
+conversion state described by an mbstate_t object initialized to zero
+before the first wide character is converted. The corresponding argument
+shall be a pointer to the initial element of a character array large enough to
+accept the sequence. No null character is added.
+If an l length modifier is present, the corresponding argument shall be a
+
+§7.29.2.2
+
+Library
+
+413
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+
+pointer to the initial element of an array of wchar_t large enough to accept
+the sequence. No null wide character is added.
+s
+
+Matches a sequence of non-white-space wide characters.
+If no l length modifier is present, characters from the input field are
+converted as if by repeated calls to the wcrtomb function, with the
+conversion state described by an mbstate_t object initialized to zero
+before the first wide character is converted. The corresponding argument
+shall be a pointer to the initial element of a character array large enough to
+accept the sequence and a terminating null character, which will be added
+automatically.
+If an l length modifier is present, the corresponding argument shall be a
+pointer to the initial element of an array of wchar_t large enough to accept
+the sequence and the terminating null wide character, which will be added
+automatically.
+
+[
+
+Matches a nonempty sequence of wide characters from a set of expected
+characters (the scanset).
+If no l length modifier is present, characters from the input field are
+converted as if by repeated calls to the wcrtomb function, with the
+conversion state described by an mbstate_t object initialized to zero
+before the first wide character is converted. The corresponding argument
+shall be a pointer to the initial element of a character array large enough to
+accept the sequence and a terminating null character, which will be added
+automatically.
+If an l length modifier is present, the corresponding argument shall be a
+pointer to the initial element of an array of wchar_t large enough to accept
+the sequence and the terminating null wide character, which will be added
+automatically.
+The conversion specifier includes all subsequent wide characters in the
+format string, up to and including the matching right bracket (]). The wide
+characters between the brackets (the scanlist) compose the scanset, unless the
+wide character after the left bracket is a circumflex (^), in which case the
+scanset contains all wide characters that do not appear in the scanlist between
+the circumflex and the right bracket. If the conversion specifier begins with
+[] or [^], the right bracket wide character is in the scanlist and the next
+following right bracket wide character is the matching right bracket that ends
+the specification; otherwise the first following right bracket wide character is
+the one that ends the specification. If a - wide character is in the scanlist and
+is not the first, nor the second where the first wide character is a ^, nor the
+
+414
+
+Library
+
+§7.29.2.2
+
+N1570
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+
+last character, the behavior is implementation-defined.
+p
+
+Matches an implementation-defined set of sequences, which should be the
+same as the set of sequences that may be produced by the %p conversion of
+the fwprintf function. The corresponding argument shall be a pointer to a
+pointer to void. The input item is converted to a pointer value in an
+implementation-defined manner. If the input item is a value converted earlier
+during the same program execution, the pointer that results shall compare
+equal to that value; otherwise the behavior of the %p conversion is undefined.
+
+n
+
+No input is consumed. The corresponding argument shall be a pointer to
+signed integer into which is to be written the number of wide characters read
+from the input stream so far by this call to the fwscanf function. Execution
+of a %n directive does not increment the assignment count returned at the
+completion of execution of the fwscanf function. No argument is
+converted, but one is consumed. If the conversion specification includes an
+assignment-suppressing wide character or a field width, the behavior is
+undefined.
+
+%
+
+Matches a single % wide character; no conversion or assignment occurs. The
+complete conversion specification shall be %%.
+
+13
+
+If a conversion specification is invalid, the behavior is undefined.339)
+
+14
+
+The conversion specifiers A, E, F, G, and X are also valid and behave the same as,
+respectively, a, e, f, g, and x.
+
+15
+
+Trailing white space (including new-line wide characters) is left unread unless matched
+by a directive. The success of literal matches and suppressed assignments is not directly
+determinable other than via the %n directive.
+Returns
+
+16
+
+The fwscanf function returns the value of the macro EOF if an input failure occurs
+before the first conversion (if any) has completed. Otherwise, the function returns the
+number of input items assigned, which can be fewer than provided for, or even zero, in
+the event of an early matching failure.
+
+17
+
+EXAMPLE 1
+
+The call:
+
+#include <stdio.h>
+#include <wchar.h>
+/* ... */
+int n, i; float x; wchar_t name[50];
+n = fwscanf(stdin, L"%d%f%ls", &i, &x, name);
+
+339) See ‘‘future library directions’’ (7.31.16).
+
+§7.29.2.2
+
+Library
+
+415
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+
+with the input line:
+25 54.32E-1 thompson
+will assign to n the value 3, to i the value 25, to x the value 5.432, and to name the sequence
+thompson\0.
+
+18
+
+EXAMPLE 2
+
+The call:
+
+#include <stdio.h>
+#include <wchar.h>
+/* ... */
+int i; float x; double y;
+fwscanf(stdin, L"%2d%f%*d %lf", &i, &x, &y);
+with input:
+56789 0123 56a72
+will assign to i the value 56 and to x the value 789.0, will skip past 0123, and will assign to y the value
+56.0. The next wide character read from the input stream will be a.
+
+Forward references: the wcstod, wcstof, and wcstold functions (7.29.4.1.1), the
+wcstol, wcstoll, wcstoul, and wcstoull functions (7.29.4.1.2), the wcrtomb
+function (7.29.6.3.3).
+

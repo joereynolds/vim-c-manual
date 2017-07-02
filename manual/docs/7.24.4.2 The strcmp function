@@ -1,0 +1,36 @@
+7.24.4.2 The strcmp function
+Synopsis
+1
+
+#include <string.h>
+int strcmp(const char *s1, const char *s2);
+Description
+
+2
+
+The strcmp function compares the string pointed to by s1 to the string pointed to by
+s2.
+Returns
+
+3
+
+The strcmp function returns an integer greater than, equal to, or less than zero,
+accordingly as the string pointed to by s1 is greater than, equal to, or less than the string
+310) The contents of ‘‘holes’’ used as padding for purposes of alignment within structure objects are
+indeterminate. Strings shorter than their allocated space and unions may also cause problems in
+comparison.
+
+§7.24.4.2
+
+Library
+
+365
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+
+pointed to by s2.
+

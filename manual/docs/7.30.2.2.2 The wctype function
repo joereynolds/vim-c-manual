@@ -1,0 +1,43 @@
+7.30.2.2.2 The wctype function
+Synopsis
+1
+
+#include <wctype.h>
+wctype_t wctype(const char *property);
+Description
+
+2
+
+The wctype function constructs a value with type wctype_t that describes a class of
+wide characters identified by the string argument property.
+
+3
+
+The strings listed in the description of the iswctype function shall be valid in all
+locales as property arguments to the wctype function.
+Returns
+
+4
+
+If property identifies a valid class of wide characters according to the LC_CTYPE
+category of the current locale, the wctype function returns a nonzero value that is valid
+as the second argument to the iswctype function; otherwise, it returns zero.
+
+452
+
+Library
+
+§7.30.2.2.2
+
+N1570
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+
+7.30.3 Wide character case mapping utilities
+1
+
+The header <wctype.h> declares several functions useful for mapping wide characters.
+
+7.30.3.1 Wide character case mapping functions

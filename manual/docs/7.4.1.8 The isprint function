@@ -1,0 +1,12 @@
+7.4.1.8 The isprint function
+Synopsis
+1
+
+#include <ctype.h>
+int isprint(int c);
+Description
+
+2
+
+The isprint function tests for any printing character including space (' ').
+

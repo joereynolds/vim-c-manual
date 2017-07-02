@@ -1,0 +1,140 @@
+7.29.6.4.2 The wcsrtombs function
+Synopsis
+1
+
+#include <wchar.h>
+size_t wcsrtombs(char * restrict dst,
+const wchar_t ** restrict src,
+size_t len,
+mbstate_t * restrict ps);
+Description
+
+2
+
+The wcsrtombs function converts a sequence of wide characters from the array
+indirectly pointed to by src into a sequence of corresponding multibyte characters that
+begins in the conversion state described by the object pointed to by ps. If dst is not a
+null pointer, the converted characters are then stored into the array pointed to by dst.
+Conversion continues up to and including a terminating null wide character, which is also
+stored. Conversion stops earlier in two cases: when a wide character is reached that does
+not correspond to a valid multibyte character, or (if dst is not a null pointer) when the
+next multibyte character would exceed the limit of len total bytes to be stored into the
+array pointed to by dst. Each conversion takes place as if by a call to the wcrtomb
+function.351)
+
+3
+
+If dst is not a null pointer, the pointer object pointed to by src is assigned either a null
+pointer (if conversion stopped due to reaching a terminating null wide character) or the
+address just past the last wide character converted (if any). If conversion stopped due to
+reaching a terminating null wide character, the resulting state described is the initial
+conversion state.
+Returns
+
+4
+
+If conversion stops because a wide character is reached that does not correspond to a
+valid multibyte character, an encoding error occurs: the wcsrtombs function stores the
+value of the macro EILSEQ in errno and returns (size_t)(-1); the conversion
+state is unspecified. Otherwise, it returns the number of bytes in the resulting multibyte
+character sequence, not including the terminating null character (if any).
+
+351) If conversion stops because a terminating null wide character has been reached, the bytes stored
+include those necessary to reach the initial shift state immediately before the null byte.
+
+446
+
+Library
+
+§7.29.6.4.2
+
+N1570
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+
+7.30 Wide character classification and mapping utilities <wctype.h>
+7.30.1 Introduction
+1
+
+The header <wctype.h> defines one macro, and declares three data types and many
+functions.352)
+
+2
+
+The types declared are
+wint_t
+described in 7.29.1;
+wctrans_t
+which is a scalar type that can hold values which represent locale-specific character
+mappings; and
+wctype_t
+which is a scalar type that can hold values which represent locale-specific character
+classifications.
+
+3
+
+The macro defined is WEOF (described in 7.29.1).
+
+4
+
+The functions declared are grouped as follows:
+— Functions that provide wide character classification;
+— Extensible functions that provide wide character classification;
+— Functions that provide wide character case mapping;
+— Extensible functions that provide wide character mapping.
+
+5
+
+For all functions described in this subclause that accept an argument of type wint_t, the
+value shall be representable as a wchar_t or shall equal the value of the macro WEOF. If
+this argument has any other value, the behavior is undefined.
+
+6
+
+The behavior of these functions is affected by the LC_CTYPE category of the current
+locale.
+
+352) See ‘‘future library directions’’ (7.31.17).
+
+§7.30.1
+
+Library
+
+447
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+
+7.30.2 Wide character classification utilities
+1
+
+The header <wctype.h> declares several functions useful for classifying wide
+characters.
+
+2
+
+The term printing wide character refers to a member of a locale-specific set of wide
+characters, each of which occupies at least one printing position on a display device. The
+term control wide character refers to a member of a locale-specific set of wide characters
+that are not printing wide characters.
+
+7.30.2.1 Wide character classification functions
+1
+
+The functions in this subclause return nonzero (true) if and only if the value of the
+argument wc conforms to that in the description of the function.
+
+2
+
+Each of the following functions returns true for each wide character that corresponds (as
+if by a call to the wctob function) to a single-byte character for which the corresponding
+character classification function from 7.4.1 returns true, except that the iswgraph and
+iswpunct functions may differ with respect to wide characters other than L' ' that are
+both printing and white-space wide characters.353)
+Forward references: the wctob function (7.29.6.1.2).
+
