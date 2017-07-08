@@ -1,0 +1,31 @@
+7.26.6.3 The tss_get function
+Synopsis
+1
+
+#include <threads.h>
+void *tss_get(tss_t key);
+Description
+
+2
+
+The tss_get function returns the value for the current thread held in the thread-specific
+storage identified by key.
+Returns
+
+3
+
+The tss_get function returns the value for the current thread if successful, or zero if
+unsuccessful.
+
+386
+
+Library
+
+§7.26.6.3
+
+N1570
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+

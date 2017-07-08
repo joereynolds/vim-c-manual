@@ -1,0 +1,31 @@
+7.26.5.3 The thrd_detach function
+Synopsis
+1
+
+#include <threads.h>
+int thrd_detach(thrd_t thr);
+Description
+
+2
+
+The thrd_detach function tells the operating system to dispose of any resources
+allocated to the thread identified by thr when that thread terminates. The thread
+identified by thr shall not have been previously detached or joined with another thread.
+§7.26.5.3
+
+Library
+
+383
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+
+Returns
+3
+
+The thrd_detach function returns thrd_success on success or thrd_error if
+the request could not be honored.
+

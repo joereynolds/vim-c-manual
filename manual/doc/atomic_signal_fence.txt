@@ -1,0 +1,1507 @@
+7.17.4.2 The atomic_signal_fence function
+Synopsis
+1
+
+#include <stdatomic.h>
+void atomic_signal_fence(memory_order order);
+Description
+
+2
+
+Equivalent to atomic_thread_fence(order), except that the resulting ordering
+constraints are established only between a thread and a signal handler executed in the
+same thread.
+
+3
+
+NOTE 1 The atomic_signal_fence function can be used to specify the order in which actions
+performed by the thread become visible to the signal handler.
+
+4
+
+NOTE 2 Compiler optimizations and reorderings of loads and stores are inhibited in the same way as with
+atomic_thread_fence, but the hardware fence instructions that atomic_thread_fence would
+have inserted are not emitted.
+
+Returns
+5
+
+The atomic_signal_fence function returns no value.
+
+7.17.5 Lock-free property
+1
+
+The atomic lock-free macros indicate the lock-free property of integer and address atomic
+types. A value of 0 indicates that the type is never lock-free; a value of 1 indicates that
+the type is sometimes lock-free; a value of 2 indicates that the type is always lock-free.
+
+2
+
+NOTE Operations that are lock-free should also be address-free. That is, atomic operations on the same
+memory location via two different addresses will communicate atomically. The implementation should not
+depend on any per-process state. This restriction enables communication via memory mapped into a
+process more than once and memory shared between two processes.
+
+§7.17.5
+
+Library
+
+279
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+
+7.17.5.1 The atomic_is_lock_free generic function
+Synopsis
+1
+
+#include <stdatomic.h>
+_Bool atomic_is_lock_free(const volatile A *obj);
+Description
+
+2
+
+The atomic_is_lock_free generic function indicates whether or not the object
+pointed to by obj is lock-free.
+∗
+Returns
+
+3
+
+The atomic_is_lock_free generic function returns nonzero (true) if and only if the
+object’s operations are lock-free. The result of a lock-free query on one object cannot be
+inferred from the result of a lock-free query on another object.
+
+7.17.6 Atomic integer types
+1
+
+For each line in the following table,257) the atomic type name is declared as a type that
+has the same representation and alignment requirements as the corresponding direct
+type.258)
+
+257) See ‘‘future library directions’’ (7.31.8).
+258) The same representation and alignment requirements are meant to imply interchangeability as
+arguments to functions, return values from functions, and members of unions.
+
+280
+
+Library
+
+§7.17.6
+
+N1570
+
+Committee Draft — April 12, 2011
+
+Atomic type name
+atomic_bool
+atomic_char
+atomic_schar
+atomic_uchar
+atomic_short
+atomic_ushort
+atomic_int
+atomic_uint
+atomic_long
+atomic_ulong
+atomic_llong
+atomic_ullong
+atomic_char16_t
+atomic_char32_t
+atomic_wchar_t
+atomic_int_least8_t
+atomic_uint_least8_t
+atomic_int_least16_t
+atomic_uint_least16_t
+atomic_int_least32_t
+atomic_uint_least32_t
+atomic_int_least64_t
+atomic_uint_least64_t
+atomic_int_fast8_t
+atomic_uint_fast8_t
+atomic_int_fast16_t
+atomic_uint_fast16_t
+atomic_int_fast32_t
+atomic_uint_fast32_t
+atomic_int_fast64_t
+atomic_uint_fast64_t
+atomic_intptr_t
+atomic_uintptr_t
+atomic_size_t
+atomic_ptrdiff_t
+atomic_intmax_t
+atomic_uintmax_t
+2
+
+_Atomic
+_Atomic
+_Atomic
+_Atomic
+_Atomic
+_Atomic
+_Atomic
+_Atomic
+_Atomic
+_Atomic
+_Atomic
+_Atomic
+_Atomic
+_Atomic
+_Atomic
+_Atomic
+_Atomic
+_Atomic
+_Atomic
+_Atomic
+_Atomic
+_Atomic
+_Atomic
+_Atomic
+_Atomic
+_Atomic
+_Atomic
+_Atomic
+_Atomic
+_Atomic
+_Atomic
+_Atomic
+_Atomic
+_Atomic
+_Atomic
+_Atomic
+_Atomic
+
+ISO/IEC 9899:201x
+
+Direct type
+_Bool
+char
+signed char
+unsigned char
+short
+unsigned short
+int
+unsigned int
+long
+unsigned long
+long long
+unsigned long long
+char16_t
+char32_t
+wchar_t
+int_least8_t
+uint_least8_t
+int_least16_t
+uint_least16_t
+int_least32_t
+uint_least32_t
+int_least64_t
+uint_least64_t
+int_fast8_t
+uint_fast8_t
+int_fast16_t
+uint_fast16_t
+int_fast32_t
+uint_fast32_t
+int_fast64_t
+uint_fast64_t
+intptr_t
+uintptr_t
+size_t
+ptrdiff_t
+intmax_t
+uintmax_t
+∗
+
+The semantics of the operations on these types are defined in 7.17.7.
+
+§7.17.6
+
+Library
+
+281
+
+ISO/IEC 9899:201x
+
+3
+
+Committee Draft — April 12, 2011
+
+N1570
+
+NOTE The representation of atomic integer types need not have the same size as their corresponding
+regular types. They should have the same size whenever possible, as it eases effort required to port existing
+code.
+
+7.17.7 Operations on atomic types
+1
+
+There are only a few kinds of operations on atomic types, though there are many
+instances of those kinds. This subclause specifies each general kind.
+
+7.17.7.1 The atomic_store generic functions
+Synopsis
+1
+
+#include <stdatomic.h>
+void atomic_store(volatile A *object, C desired);
+void atomic_store_explicit(volatile A *object,
+C desired, memory_order order);
+Description
+
+2
+
+The
+order
+argument
+shall
+not
+be
+memory_order_acquire,
+memory_order_consume, nor memory_order_acq_rel. Atomically replace the
+value pointed to by object with the value of desired. Memory is affected according
+to the value of order.
+Returns
+
+3
+
+The atomic_store generic functions return no value.
+
+7.17.7.2 The atomic_load generic functions
+Synopsis
+1
+
+#include <stdatomic.h>
+C atomic_load(volatile A *object);
+C atomic_load_explicit(volatile A *object,
+memory_order order);
+Description
+
+2
+
+The order argument shall not be memory_order_release nor
+memory_order_acq_rel. Memory is affected according to the value of order.
+Returns
+Atomically returns the value pointed to by object.
+
+282
+
+Library
+
+§7.17.7.2
+
+N1570
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+
+7.17.7.3 The atomic_exchange generic functions
+Synopsis
+1
+
+#include <stdatomic.h>
+C atomic_exchange(volatile A *object, C desired);
+C atomic_exchange_explicit(volatile A *object,
+C desired, memory_order order);
+Description
+
+2
+
+Atomically replace the value pointed to by object with desired. Memory is affected
+according to the value of order. These operations are read-modify-write operations
+(5.1.2.4).
+Returns
+
+3
+
+Atomically returns the value pointed to by object immediately before the effects.
+
+7.17.7.4 The atomic_compare_exchange generic functions
+Synopsis
+1
+
+#include <stdatomic.h>
+_Bool atomic_compare_exchange_strong(volatile A *object,
+C *expected, C desired);
+_Bool atomic_compare_exchange_strong_explicit(
+volatile A *object, C *expected, C desired,
+memory_order success, memory_order failure);
+_Bool atomic_compare_exchange_weak(volatile A *object,
+C *expected, C desired);
+_Bool atomic_compare_exchange_weak_explicit(
+volatile A *object, C *expected, C desired,
+memory_order success, memory_order failure);
+Description
+
+2
+
+The failure argument shall not be memory_order_release nor
+memory_order_acq_rel. The failure argument shall be no stronger than the
+success argument. Atomically, compares the value pointed to by object for equality
+with that in expected, and if true, replaces the value pointed to by object with
+desired, and if false, updates the value in expected with the value pointed to by
+object. Further, if the comparison is true, memory is affected according to the value of
+success, and if the comparison is false, memory is affected according to the value of
+failure. These operations are atomic read-modify-write operations (5.1.2.4).
+
+3
+
+NOTE 1
+
+For example, the effect of atomic_compare_exchange_strong is
+
+§7.17.7.4
+
+Library
+
+283
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+
+if (memcmp(object, expected, sizeof (*object)) == 0)
+memcpy(object, &desired, sizeof (*object));
+else
+memcpy(expected, object, sizeof (*object));
+
+4
+
+A weak compare-and-exchange operation may fail spuriously. That is, even when the
+contents of memory referred to by expected and object are equal, it may return zero
+and store back to expected the same memory contents that were originally there.
+
+5
+
+NOTE 2 This spurious failure enables implementation of compare-and-exchange on a broader class of
+machines, e.g. load-locked store-conditional machines.
+
+6
+
+EXAMPLE
+be in a loop.
+
+A consequence of spurious failure is that nearly all uses of weak compare-and-exchange will
+
+exp = atomic_load(&cur);
+do {
+des = function(exp);
+} while (!atomic_compare_exchange_weak(&cur, &exp, des));
+When a compare-and-exchange is in a loop, the weak version will yield better performance on some
+platforms. When a weak compare-and-exchange would require a loop and a strong one would not, the
+strong one is preferable.
+
+Returns
+7
+
+The result of the comparison.
+
+7.17.7.5 The atomic_fetch and modify generic functions
+1
+
+The following operations perform arithmetic and bitwise computations. All of these
+operations are applicable to an object of any atomic integer type. None of these ∗
+operations is applicable to atomic_bool. The key, operator, and computation
+correspondence is:
+key
+add
+sub
+or
+xor
+and
+
+op
++
+|
+ˆ
+&
+
+computation
+addition
+subtraction
+bitwise inclusive or
+bitwise exclusive or
+bitwise and
+
+Synopsis
+2
+
+#include <stdatomic.h>
+C atomic_fetch_key(volatile A *object, M operand);
+C atomic_fetch_key_explicit(volatile A *object,
+M operand, memory_order order);
+Description
+
+3
+
+Atomically replaces the value pointed to by object with the result of the computation
+applied to the value pointed to by object and the given operand. Memory is affected
+284
+
+Library
+
+§7.17.7.5
+
+N1570
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+
+according to the value of order. These operations are atomic read-modify-write
+operations (5.1.2.4). For signed integer types, arithmetic is defined to use two’s
+complement representation with silent wrap-around on overflow; there are no undefined
+results. For address types, the result may be an undefined address, but the operations
+otherwise have no undefined behavior.
+Returns
+4
+
+Atomically, the value pointed to by object immediately before the effects.
+
+5
+
+NOTE The operation of the atomic_fetch and modify generic functions are nearly equivalent to the
+operation of the corresponding op= compound assignment operators. The only differences are that the
+compound assignment operators are not guaranteed to operate atomically, and the value yielded by a
+compound assignment operator is the updated value of the object, whereas the value returned by the
+atomic_fetch and modify generic functions is the previous value of the atomic object.
+
+7.17.8 Atomic flag type and operations
+1
+
+The atomic_flag type provides the classic test-and-set functionality. It has two
+states, set and clear.
+
+2
+
+Operations on an object of type atomic_flag shall be lock free.
+
+3
+
+NOTE Hence the operations should also be address-free. No other type requires lock-free operations, so
+the atomic_flag type is the minimum hardware-implemented type needed to conform to this
+International standard. The remaining types can be emulated with atomic_flag, though with less than
+ideal properties.
+
+4
+
+The macro ATOMIC_FLAG_INIT may be used to initialize an atomic_flag to the
+clear state. An atomic_flag that is not explicitly initialized with
+ATOMIC_FLAG_INIT is initially in an indeterminate state.
+
+5
+
+EXAMPLE
+atomic_flag guard = ATOMIC_FLAG_INIT;
+
+7.17.8.1 The atomic_flag_test_and_set functions
+Synopsis
+1
+
+#include <stdatomic.h>
+_Bool atomic_flag_test_and_set(
+volatile atomic_flag *object);
+_Bool atomic_flag_test_and_set_explicit(
+volatile atomic_flag *object, memory_order order);
+Description
+
+2
+
+Atomically sets the value pointed to by object to true. Memory is affected according
+to the value of order. These operations are atomic read-modify-write operations
+(5.1.2.4).
+
+§7.17.8.1
+
+Library
+
+285
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+
+Returns
+3
+
+Atomically, the value of the object immediately before the effects.
+
+7.17.8.2 The atomic_flag_clear functions
+Synopsis
+1
+
+#include <stdatomic.h>
+void atomic_flag_clear(volatile atomic_flag *object);
+void atomic_flag_clear_explicit(
+volatile atomic_flag *object, memory_order order);
+Description
+
+2
+
+The order argument shall not be memory_order_acquire nor
+memory_order_acq_rel. Atomically sets the value pointed to by object to false.
+Memory is affected according to the value of order.
+Returns
+
+3
+
+The atomic_flag_clear functions return no value.
+
+286
+
+Library
+
+§7.17.8.2
+
+N1570
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+
+7.18 Boolean type and values <stdbool.h>
+1
+
+The header <stdbool.h> defines four macros.
+
+2
+
+The macro
+bool
+expands to _Bool.
+
+3
+
+The remaining three macros are suitable for use in #if preprocessing directives. They
+are
+true
+which expands to the integer constant 1,
+false
+which expands to the integer constant 0, and
+_ _bool_true_false_are_defined
+which expands to the integer constant 1.
+
+4
+
+Notwithstanding the provisions of 7.1.3, a program may undefine and perhaps then
+redefine the macros bool, true, and false.259)
+
+259) See ‘‘future library directions’’ (7.31.9).
+
+§7.18
+
+Library
+
+287
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+
+7.19 Common definitions <stddef.h>
+1
+
+The header <stddef.h> defines the following macros and declares the following types.
+Some are also defined in other headers, as noted in their respective subclauses.
+
+2
+
+The types are
+ptrdiff_t
+which is the signed integer type of the result of subtracting two pointers;
+size_t
+which is the unsigned integer type of the result of the sizeof operator;
+max_align_t
+which is an object type whose alignment is as great as is supported by the implementation
+in all contexts; and
+wchar_t
+which is an integer type whose range of values can represent distinct codes for all
+members of the largest extended character set specified among the supported locales; the
+null character shall have the code value zero. Each member of the basic character set
+shall have a code value equal to its value when used as the lone character in an integer
+character
+constant
+if
+an
+implementation
+does
+not
+define
+_ _STDC_MB_MIGHT_NEQ_WC_ _.
+
+3
+
+The macros are
+NULL
+which expands to an implementation-defined null pointer constant; and
+offsetof(type, member-designator)
+which expands to an integer constant expression that has type size_t, the value of
+which is the offset in bytes, to the structure member (designated by member-designator),
+from the beginning of its structure (designated by type). The type and member designator
+shall be such that given
+static type t;
+then the expression &(t.member-designator) evaluates to an address constant. (If the
+specified member is a bit-field, the behavior is undefined.)
+Recommended practice
+
+4
+
+The types used for size_t and ptrdiff_t should not have an integer conversion rank
+greater than that of signed long int unless the implementation supports objects
+large enough to make this necessary.
+∗
+288
+
+Library
+
+§7.19
+
+N1570
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+
+7.20 Integer types <stdint.h>
+1
+
+The header <stdint.h> declares sets of integer types having specified widths, and
+defines corresponding sets of macros.260) It also defines macros that specify limits of
+integer types corresponding to types defined in other standard headers.
+
+2
+
+Types are defined in the following categories:
+— integer types having certain exact widths;
+— integer types having at least certain specified widths;
+— fastest integer types having at least certain specified widths;
+— integer types wide enough to hold pointers to objects;
+— integer types having greatest width.
+(Some of these types may denote the same type.)
+
+3
+
+Corresponding macros specify limits of the declared types and construct suitable
+constants.
+
+4
+
+For each type described herein that the implementation provides,261) <stdint.h> shall
+declare that typedef name and define the associated macros. Conversely, for each type
+described herein that the implementation does not provide, <stdint.h> shall not
+declare that typedef name nor shall it define the associated macros. An implementation
+shall provide those types described as ‘‘required’’, but need not provide any of the others
+(described as ‘‘optional’’).
+
+7.20.1 Integer types
+1
+
+When typedef names differing only in the absence or presence of the initial u are defined,
+they shall denote corresponding signed and unsigned types as described in 6.2.5; an
+implementation providing one of these corresponding types shall also provide the other.
+
+2
+
+In the following descriptions, the symbol N represents an unsigned decimal integer with
+no leading zeros (e.g., 8 or 24, but not 04 or 048).
+
+260) See ‘‘future library directions’’ (7.31.10).
+261) Some of these types may denote implementation-defined extended integer types.
+
+§7.20.1
+
+Library
+
+289
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+
+7.20.1.1 Exact-width integer types
+1
+
+The typedef name intN_t designates a signed integer type with width N , no padding
+bits, and a two’s complement representation. Thus, int8_t denotes such a signed
+integer type with a width of exactly 8 bits.
+
+2
+
+The typedef name uintN_t designates an unsigned integer type with width N and no
+padding bits. Thus, uint24_t denotes such an unsigned integer type with a width of
+exactly 24 bits.
+
+3
+
+These types are optional. However, if an implementation provides integer types with
+widths of 8, 16, 32, or 64 bits, no padding bits, and (for the signed types) that have a
+two’s complement representation, it shall define the corresponding typedef names.
+
+7.20.1.2 Minimum-width integer types
+1
+
+The typedef name int_leastN_t designates a signed integer type with a width of at
+least N , such that no signed integer type with lesser size has at least the specified width.
+Thus, int_least32_t denotes a signed integer type with a width of at least 32 bits.
+
+2
+
+The typedef name uint_leastN_t designates an unsigned integer type with a width
+of at least N , such that no unsigned integer type with lesser size has at least the specified
+width. Thus, uint_least16_t denotes an unsigned integer type with a width of at
+least 16 bits.
+
+3
+
+The following types are required:
+int_least8_t
+int_least16_t
+int_least32_t
+int_least64_t
+
+uint_least8_t
+uint_least16_t
+uint_least32_t
+uint_least64_t
+
+All other types of this form are optional.
+
+7.20.1.3 Fastest minimum-width integer types
+1
+
+Each of the following types designates an integer type that is usually fastest262) to operate
+with among all integer types that have at least the specified width.
+
+2
+
+The typedef name int_fastN_t designates the fastest signed integer type with a width
+of at least N . The typedef name uint_fastN_t designates the fastest unsigned integer
+type with a width of at least N .
+
+262) The designated type is not guaranteed to be fastest for all purposes; if the implementation has no clear
+grounds for choosing one type over another, it will simply pick some integer type satisfying the
+signedness and width requirements.
+
+290
+
+Library
+
+§7.20.1.3
+
+N1570
+
+3
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+
+The following types are required:
+int_fast8_t
+int_fast16_t
+int_fast32_t
+int_fast64_t
+
+uint_fast8_t
+uint_fast16_t
+uint_fast32_t
+uint_fast64_t
+
+All other types of this form are optional.
+
+7.20.1.4 Integer types capable of holding object pointers
+1
+
+The following type designates a signed integer type with the property that any valid
+pointer to void can be converted to this type, then converted back to pointer to void,
+and the result will compare equal to the original pointer:
+intptr_t
+The following type designates an unsigned integer type with the property that any valid
+pointer to void can be converted to this type, then converted back to pointer to void,
+and the result will compare equal to the original pointer:
+uintptr_t
+These types are optional.
+
+7.20.1.5 Greatest-width integer types
+1
+
+The following type designates a signed integer type capable of representing any value of
+any signed integer type:
+intmax_t
+The following type designates an unsigned integer type capable of representing any value
+of any unsigned integer type:
+uintmax_t
+These types are required.
+
+7.20.2 Limits of specified-width integer types
+1
+
+The following object-like macros specify the minimum and maximum limits of the types
+declared in <stdint.h>. Each macro name corresponds to a similar type name in
+7.20.1.
+
+2
+
+Each instance of any defined macro shall be replaced by a constant expression suitable
+for use in #if preprocessing directives, and this expression shall have the same type as
+would an expression that is an object of the corresponding type converted according to
+the integer promotions. Its implementation-defined value shall be equal to or greater in
+magnitude (absolute value) than the corresponding value given below, with the same sign,
+except where stated to be exactly the given value.
+§7.20.2
+
+Library
+
+291
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+
+7.20.2.1 Limits of exact-width integer types
+1
+
+— minimum values of exact-width signed integer types
+exactly −(2 N −1 )
+
+INTN_MIN
+
+— maximum values of exact-width signed integer types
+exactly 2 N −1 − 1
+
+INTN_MAX
+
+— maximum values of exact-width unsigned integer types
+exactly 2 N − 1
+
+UINTN_MAX
+
+7.20.2.2 Limits of minimum-width integer types
+1
+
+— minimum values of minimum-width signed integer types
+−(2 N −1 − 1)
+
+INT_LEASTN_MIN
+
+— maximum values of minimum-width signed integer types
+2 N −1 − 1
+
+INT_LEASTN_MAX
+
+— maximum values of minimum-width unsigned integer types
+2N − 1
+
+UINT_LEASTN_MAX
+
+7.20.2.3 Limits of fastest minimum-width integer types
+1
+
+— minimum values of fastest minimum-width signed integer types
+−(2 N −1 − 1)
+
+INT_FASTN_MIN
+
+— maximum values of fastest minimum-width signed integer types
+2 N −1 − 1
+
+INT_FASTN_MAX
+
+— maximum values of fastest minimum-width unsigned integer types
+2N − 1
+
+UINT_FASTN_MAX
+
+7.20.2.4 Limits of integer types capable of holding object pointers
+1
+
+— minimum value of pointer-holding signed integer type
+−(215 − 1)
+
+INTPTR_MIN
+
+— maximum value of pointer-holding signed integer type
+215 − 1
+
+INTPTR_MAX
+
+— maximum value of pointer-holding unsigned integer type
+216 − 1
+
+UINTPTR_MAX
+
+292
+
+Library
+
+§7.20.2.4
+
+N1570
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+
+7.20.2.5 Limits of greatest-width integer types
+1
+
+— minimum value of greatest-width signed integer type
+−(263 − 1)
+
+INTMAX_MIN
+
+— maximum value of greatest-width signed integer type
+263 − 1
+
+INTMAX_MAX
+
+— maximum value of greatest-width unsigned integer type
+264 − 1
+
+UINTMAX_MAX
+
+7.20.3 Limits of other integer types
+1
+
+The following object-like macros specify the minimum and maximum limits of integer
+types corresponding to types defined in other standard headers.
+
+2
+
+Each instance of these macros shall be replaced by a constant expression suitable for use
+in #if preprocessing directives, and this expression shall have the same type as would an
+expression that is an object of the corresponding type converted according to the integer
+promotions. Its implementation-defined value shall be equal to or greater in magnitude
+(absolute value) than the corresponding value given below, with the same sign. An
+implementation shall define only the macros corresponding to those typedef names it
+actually provides.263)
+— limits of ptrdiff_t
+PTRDIFF_MIN
+PTRDIFF_MAX
+
+−65535
++65535
+
+— limits of sig_atomic_t
+see below
+see below
+
+SIG_ATOMIC_MIN
+SIG_ATOMIC_MAX
+— limit of size_t
+SIZE_MAX
+
+65535
+
+— limits of wchar_t
+see below
+see below
+
+WCHAR_MIN
+WCHAR_MAX
+— limits of wint_t
+
+263) A freestanding implementation need not provide all of these types.
+
+§7.20.3
+
+Library
+
+293
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+
+see below
+see below
+
+WINT_MIN
+WINT_MAX
+3
+
+If sig_atomic_t (see 7.14) is defined as a signed integer type, the value of
+SIG_ATOMIC_MIN shall be no greater than −127 and the value of SIG_ATOMIC_MAX
+shall be no less than 127; otherwise, sig_atomic_t is defined as an unsigned integer
+type, and the value of SIG_ATOMIC_MIN shall be 0 and the value of
+SIG_ATOMIC_MAX shall be no less than 255.
+
+4
+
+If wchar_t (see 7.19) is defined as a signed integer type, the value of WCHAR_MIN
+shall be no greater than −127 and the value of WCHAR_MAX shall be no less than 127;
+otherwise, wchar_t is defined as an unsigned integer type, and the value of
+WCHAR_MIN shall be 0 and the value of WCHAR_MAX shall be no less than 255.264)
+
+5
+
+If wint_t (see 7.29) is defined as a signed integer type, the value of WINT_MIN shall
+be no greater than −32767 and the value of WINT_MAX shall be no less than 32767;
+otherwise, wint_t is defined as an unsigned integer type, and the value of WINT_MIN
+shall be 0 and the value of WINT_MAX shall be no less than 65535.
+
+7.20.4 Macros for integer constants
+1
+
+The following function-like macros expand to integer constants suitable for initializing
+objects that have integer types corresponding to types defined in <stdint.h>. Each
+macro name corresponds to a similar type name in 7.20.1.2 or 7.20.1.5.
+
+2
+
+The argument in any instance of these macros shall be an unsuffixed integer constant (as
+defined in 6.4.4.1) with a value that does not exceed the limits for the corresponding type.
+
+3
+
+Each invocation of one of these macros shall expand to an integer constant expression
+suitable for use in #if preprocessing directives. The type of the expression shall have
+the same type as would an expression of the corresponding type converted according to
+the integer promotions. The value of the expression shall be that of the argument.
+
+7.20.4.1 Macros for minimum-width integer constants
+1
+
+The macro INTN_C(value) shall expand to an integer constant expression
+corresponding to the type int_leastN_t. The macro UINTN_C(value) shall expand
+to an integer constant expression corresponding to the type uint_leastN_t. For
+example, if uint_least64_t is a name for the type unsigned long long int,
+then UINT64_C(0x123) might expand to the integer constant 0x123ULL.
+
+264) The values WCHAR_MIN and WCHAR_MAX do not necessarily correspond to members of the extended
+character set.
+
+294
+
+Library
+
+§7.20.4.1
+
+N1570
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+
+7.20.4.2 Macros for greatest-width integer constants
+1
+
+The following macro expands to an integer constant expression having the value specified
+by its argument and the type intmax_t:
+INTMAX_C(value)
+The following macro expands to an integer constant expression having the value specified
+by its argument and the type uintmax_t:
+UINTMAX_C(value)
+
+§7.20.4.2
+
+Library
+
+295
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+
+7.21 Input/output <stdio.h>
+7.21.1 Introduction
+1
+
+The header <stdio.h> defines several macros, and declares three types and many
+functions for performing input and output.
+
+2
+
+The types declared are size_t (described in 7.19);
+FILE
+which is an object type capable of recording all the information needed to control a
+stream, including its file position indicator, a pointer to its associated buffer (if any), an
+error indicator that records whether a read/write error has occurred, and an end-of-file
+indicator that records whether the end of the file has been reached; and
+fpos_t
+which is a complete object type other than an array type capable of recording all the
+information needed to specify uniquely every position within a file.
+
+3
+
+The macros are NULL (described in 7.19);
+_IOFBF
+_IOLBF
+_IONBF
+which expand to integer constant expressions with distinct values, suitable for use as the
+third argument to the setvbuf function;
+BUFSIZ
+which expands to an integer constant expression that is the size of the buffer used by the
+setbuf function;
+EOF
+which expands to an integer constant expression, with type int and a negative value, that
+is returned by several functions to indicate end-of-file, that is, no more input from a
+stream;
+FOPEN_MAX
+which expands to an integer constant expression that is the minimum number of files that
+the implementation guarantees can be open simultaneously;
+FILENAME_MAX
+which expands to an integer constant expression that is the size needed for an array of
+char large enough to hold the longest file name string that the implementation
+
+296
+
+Library
+
+§7.21.1
+
+N1570
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+
+guarantees can be opened;265)
+L_tmpnam
+which expands to an integer constant expression that is the size needed for an array of
+char large enough to hold a temporary file name string generated by the tmpnam
+function;
+SEEK_CUR
+SEEK_END
+SEEK_SET
+which expand to integer constant expressions with distinct values, suitable for use as the
+third argument to the fseek function;
+TMP_MAX
+which expands to an integer constant expression that is the minimum number of unique
+file names that can be generated by the tmpnam function;
+stderr
+stdin
+stdout
+which are expressions of type ‘‘pointer to FILE’’ that point to the FILE objects
+associated, respectively, with the standard error, input, and output streams.
+4
+
+The header <wchar.h> declares a number of functions useful for wide character input
+and output. The wide character input/output functions described in that subclause
+provide operations analogous to most of those described here, except that the
+fundamental units internal to the program are wide characters. The external
+representation (in the file) is a sequence of ‘‘generalized’’ multibyte characters, as
+described further in 7.21.3.
+
+5
+
+The input/output functions are given the following collective terms:
+— The wide character input functions — those functions described in 7.29 that perform
+input into wide characters and wide strings: fgetwc, fgetws, getwc, getwchar,
+fwscanf, wscanf, vfwscanf, and vwscanf.
+— The wide character output functions — those functions described in 7.29 that perform
+output from wide characters and wide strings: fputwc, fputws, putwc,
+putwchar, fwprintf, wprintf, vfwprintf, and vwprintf.
+
+265) If the implementation imposes no practical limit on the length of file name strings, the value of
+FILENAME_MAX should instead be the recommended size of an array intended to hold a file name
+string. Of course, file name string contents are subject to other system-specific constraints; therefore
+all possible strings of length FILENAME_MAX cannot be expected to be opened successfully.
+
+§7.21.1
+
+Library
+
+297
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+
+— The wide character input/output functions — the union of the ungetwc function, the
+wide character input functions, and the wide character output functions.
+— The byte input/output functions — those functions described in this subclause that
+perform input/output: fgetc, fgets, fprintf, fputc, fputs, fread,
+fscanf, fwrite, getc, getchar, printf, putc, putchar, puts, scanf,
+ungetc, vfprintf, vfscanf, vprintf, and vscanf.
+Forward references: files (7.21.3), the fseek function (7.21.9.2), streams (7.21.2), the
+tmpnam function (7.21.4.4), <wchar.h> (7.29).
+
+7.21.2 Streams
+1
+
+Input and output, whether to or from physical devices such as terminals and tape drives,
+or whether to or from files supported on structured storage devices, are mapped into
+logical data streams, whose properties are more uniform than their various inputs and
+outputs. Two forms of mapping are supported, for text streams and for binary
+streams.266)
+
+2
+
+A text stream is an ordered sequence of characters composed into lines, each line
+consisting of zero or more characters plus a terminating new-line character. Whether the
+last line requires a terminating new-line character is implementation-defined. Characters
+may have to be added, altered, or deleted on input and output to conform to differing
+conventions for representing text in the host environment. Thus, there need not be a oneto-one correspondence between the characters in a stream and those in the external
+representation. Data read in from a text stream will necessarily compare equal to the data
+that were earlier written out to that stream only if: the data consist only of printing
+characters and the control characters horizontal tab and new-line; no new-line character is
+immediately preceded by space characters; and the last character is a new-line character.
+Whether space characters that are written out immediately before a new-line character
+appear when read in is implementation-defined.
+
+3
+
+A binary stream is an ordered sequence of characters that can transparently record
+internal data. Data read in from a binary stream shall compare equal to the data that were
+earlier written out to that stream, under the same implementation. Such a stream may,
+however, have an implementation-defined number of null characters appended to the end
+of the stream.
+
+4
+
+Each stream has an orientation. After a stream is associated with an external file, but
+before any operations are performed on it, the stream is without orientation. Once a wide
+character input/output function has been applied to a stream without orientation, the
+266) An implementation need not distinguish between text streams and binary streams. In such an
+implementation, there need be no new-line characters in a text stream nor any limit to the length of a
+line.
+
+298
+
+Library
+
+§7.21.2
+
+N1570
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+
+stream becomes a wide-oriented stream. Similarly, once a byte input/output function has
+been applied to a stream without orientation, the stream becomes a byte-oriented stream.
+Only a call to the freopen function or the fwide function can otherwise alter the
+orientation of a stream. (A successful call to freopen removes any orientation.)267)
+5
+
+Byte input/output functions shall not be applied to a wide-oriented stream and wide
+character input/output functions shall not be applied to a byte-oriented stream. The
+remaining stream operations do not affect, and are not affected by, a stream’s orientation,
+except for the following additional restrictions:
+— Binary wide-oriented streams have the file-positioning restrictions ascribed to both
+text and binary streams.
+— For wide-oriented streams, after a successful call to a file-positioning function that
+leaves the file position indicator prior to the end-of-file, a wide character output
+function can overwrite a partial multibyte character; any file contents beyond the
+byte(s) written are henceforth indeterminate.
+
+6
+
+Each wide-oriented stream has an associated mbstate_t object that stores the current
+parse state of the stream. A successful call to fgetpos stores a representation of the
+value of this mbstate_t object as part of the value of the fpos_t object. A later
+successful call to fsetpos using the same stored fpos_t value restores the value of
+the associated mbstate_t object as well as the position within the controlled stream.
+
+7
+
+Each stream has an associated lock that is used to prevent data races when multiple
+threads of execution access a stream, and to restrict the interleaving of stream operations
+performed by multiple threads. Only one thread may hold this lock at a time. The lock is
+reentrant: a single thread may hold the lock multiple times at a given time.
+
+8
+
+All functions that read, write, position, or query the position of a stream lock the stream
+before accessing it. They release the lock associated with the stream when the access is
+complete.
+Environmental limits
+
+9
+
+An implementation shall support text files with lines containing at least 254 characters,
+including the terminating new-line character. The value of the macro BUFSIZ shall be at
+least 256.
+Forward references: the freopen function (7.21.5.4), the fwide function (7.29.3.5),
+mbstate_t (7.30.1), the fgetpos function (7.21.9.1), the fsetpos function
+(7.21.9.3).
+
+267) The three predefined streams stdin, stdout, and stderr are unoriented at program startup.
+
+§7.21.2
+
+Library
+
+299
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+
+7.21.3 Files
+1
+
+A stream is associated with an external file (which may be a physical device) by opening
+a file, which may involve creating a new file. Creating an existing file causes its former
+contents to be discarded, if necessary. If a file can support positioning requests (such as a
+disk file, as opposed to a terminal), then a file position indicator associated with the
+stream is positioned at the start (character number zero) of the file, unless the file is
+opened with append mode in which case it is implementation-defined whether the file
+position indicator is initially positioned at the beginning or the end of the file. The file
+position indicator is maintained by subsequent reads, writes, and positioning requests, to
+facilitate an orderly progression through the file.
+
+2
+
+Binary files are not truncated, except as defined in 7.21.5.3. Whether a write on a text
+stream causes the associated file to be truncated beyond that point is implementationdefined.
+
+3
+
+When a stream is unbuffered, characters are intended to appear from the source or at the
+destination as soon as possible. Otherwise characters may be accumulated and
+transmitted to or from the host environment as a block. When a stream is fully buffered,
+characters are intended to be transmitted to or from the host environment as a block when
+a buffer is filled. When a stream is line buffered, characters are intended to be
+transmitted to or from the host environment as a block when a new-line character is
+encountered. Furthermore, characters are intended to be transmitted as a block to the host
+environment when a buffer is filled, when input is requested on an unbuffered stream, or
+when input is requested on a line buffered stream that requires the transmission of
+characters from the host environment. Support for these characteristics is
+implementation-defined, and may be affected via the setbuf and setvbuf functions.
+
+4
+
+A file may be disassociated from a controlling stream by closing the file. Output streams
+are flushed (any unwritten buffer contents are transmitted to the host environment) before
+the stream is disassociated from the file. The value of a pointer to a FILE object is
+indeterminate after the associated file is closed (including the standard text streams).
+Whether a file of zero length (on which no characters have been written by an output
+stream) actually exists is implementation-defined.
+
+5
+
+The file may be subsequently reopened, by the same or another program execution, and
+its contents reclaimed or modified (if it can be repositioned at its start). If the main
+function returns to its original caller, or if the exit function is called, all open files are
+closed (hence all output streams are flushed) before program termination. Other paths to
+program termination, such as calling the abort function, need not close all files
+properly.
+
+6
+
+The address of the FILE object used to control a stream may be significant; a copy of a
+FILE object need not serve in place of the original.
+300
+
+Library
+
+§7.21.3
+
+N1570
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+
+7
+
+At program startup, three text streams are predefined and need not be opened explicitly
+— standard input (for reading conventional input), standard output (for writing
+conventional output), and standard error (for writing diagnostic output). As initially
+opened, the standard error stream is not fully buffered; the standard input and standard
+output streams are fully buffered if and only if the stream can be determined not to refer
+to an interactive device.
+
+8
+
+Functions that open additional (nontemporary) files require a file name, which is a string.
+The rules for composing valid file names are implementation-defined. Whether the same
+file can be simultaneously open multiple times is also implementation-defined.
+
+9
+
+Although both text and binary wide-oriented streams are conceptually sequences of wide
+characters, the external file associated with a wide-oriented stream is a sequence of
+multibyte characters, generalized as follows:
+— Multibyte encodings within files may contain embedded null bytes (unlike multibyte
+encodings valid for use internal to the program).
+— A file need not begin nor end in the initial shift state.268)
+
+10
+
+Moreover, the encodings used for multibyte characters may differ among files. Both the
+nature and choice of such encodings are implementation-defined.
+
+11
+
+The wide character input functions read multibyte characters from the stream and convert
+them to wide characters as if they were read by successive calls to the fgetwc function.
+Each conversion occurs as if by a call to the mbrtowc function, with the conversion state
+described by the stream’s own mbstate_t object. The byte input functions read
+characters from the stream as if by successive calls to the fgetc function.
+
+12
+
+The wide character output functions convert wide characters to multibyte characters and
+write them to the stream as if they were written by successive calls to the fputwc
+function. Each conversion occurs as if by a call to the wcrtomb function, with the
+conversion state described by the stream’s own mbstate_t object. The byte output
+functions write characters to the stream as if by successive calls to the fputc function.
+
+13
+
+In some cases, some of the byte input/output functions also perform conversions between
+multibyte characters and wide characters. These conversions also occur as if by calls to
+the mbrtowc and wcrtomb functions.
+
+14
+
+An encoding error occurs if the character sequence presented to the underlying
+mbrtowc function does not form a valid (generalized) multibyte character, or if the code
+value passed to the underlying wcrtomb does not correspond to a valid (generalized)
+
+268) Setting the file position indicator to end-of-file, as with fseek(file, 0, SEEK_END), has
+undefined behavior for a binary stream (because of possible trailing null characters) or for any stream
+with state-dependent encoding that does not assuredly end in the initial shift state.
+
+§7.21.3
+
+Library
+
+301
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+
+multibyte character. The wide character input/output functions and the byte input/output
+functions store the value of the macro EILSEQ in errno if and only if an encoding error
+occurs.
+Environmental limits
+15
+
+The value of FOPEN_MAX shall be at least eight, including the three standard text
+streams.
+Forward references: the exit function (7.22.4.4), the fgetc function (7.21.7.1), the
+fopen function (7.21.5.3), the fputc function (7.21.7.3), the setbuf function
+(7.21.5.5), the setvbuf function (7.21.5.6), the fgetwc function (7.29.3.1), the
+fputwc function (7.29.3.3), conversion state (7.29.6), the mbrtowc function
+(7.29.6.3.2), the wcrtomb function (7.29.6.3.3).
+
+7.21.4 Operations on files

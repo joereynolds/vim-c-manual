@@ -1,0 +1,41 @@
+7.29.4.3.2 The wcsncat function
+Synopsis
+1
+
+#include <wchar.h>
+wchar_t *wcsncat(wchar_t * restrict s1,
+const wchar_t * restrict s2,
+size_t n);
+Description
+
+2
+
+The wcsncat function appends not more than n wide characters (a null wide character
+and those that follow it are not appended) from the array pointed to by s2 to the end of
+432
+
+Library
+
+§7.29.4.3.2
+
+N1570
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+
+the wide string pointed to by s1. The initial wide character of s2 overwrites the null
+wide character at the end of s1. A terminating null wide character is always appended to
+the result.347)
+Returns
+3
+
+The wcsncat function returns the value of s1.
+
+7.29.4.4 Wide string comparison functions
+1
+
+Unless explicitly stated otherwise, the functions described in this subclause order two
+wide characters the same way as two integers of the underlying integer type designated
+by wchar_t.
+

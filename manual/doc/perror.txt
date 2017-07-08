@@ -1,0 +1,89 @@
+7.21.10.4 The perror function
+Synopsis
+1
+
+#include <stdio.h>
+void perror(const char *s);
+Description
+
+2
+
+The perror function maps the error number in the integer expression errno to an
+error message. It writes a sequence of characters to the standard error stream thus: first
+(if s is not a null pointer and the character pointed to by s is not the null character), the
+string pointed to by s followed by a colon (:) and a space; then an appropriate error
+message string followed by a new-line character. The contents of the error message
+strings are the same as those returned by the strerror function with argument errno.
+Returns
+
+3
+
+The perror function returns no value.
+Forward references: the strerror function (7.24.6.2).
+
+§7.21.10.4
+
+Library
+
+339
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+
+7.22 General utilities <stdlib.h>
+1
+
+The header <stdlib.h> declares five types and several functions of general utility, and
+defines several macros.291)
+
+2
+
+The types declared are size_t and wchar_t (both described in 7.19),
+div_t
+which is a structure type that is the type of the value returned by the div function,
+ldiv_t
+which is a structure type that is the type of the value returned by the ldiv function, and
+lldiv_t
+which is a structure type that is the type of the value returned by the lldiv function.
+
+3
+
+The macros defined are NULL (described in 7.19);
+EXIT_FAILURE
+and
+EXIT_SUCCESS
+which expand to integer constant expressions that can be used as the argument to the
+exit function to return unsuccessful or successful termination status, respectively, to the
+host environment;
+RAND_MAX
+which expands to an integer constant expression that is the maximum value returned by
+the rand function; and
+MB_CUR_MAX
+which expands to a positive integer expression with type size_t that is the maximum
+number of bytes in a multibyte character for the extended character set specified by the
+current locale (category LC_CTYPE), which is never greater than MB_LEN_MAX.
+
+291) See ‘‘future library directions’’ (7.31.12).
+
+340
+
+Library
+
+§7.22
+
+N1570
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+
+7.22.1 Numeric conversion functions
+1
+
+The functions atof, atoi, atol, and atoll need not affect the value of the integer
+expression errno on an error. If the value of the result cannot be represented, the
+behavior is undefined.
+

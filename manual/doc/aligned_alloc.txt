@@ -1,0 +1,33 @@
+7.22.3.1 The aligned_alloc function
+Synopsis
+1
+
+#include <stdlib.h>
+void *aligned_alloc(size_t alignment, size_t size);
+
+§7.22.3.1
+
+Library
+
+347
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+
+Description
+2
+
+The aligned_alloc function allocates space for an object whose alignment is
+specified by alignment, whose size is specified by size, and whose value is
+indeterminate. The value of alignment shall be a valid alignment supported by the
+implementation and the value of size shall be an integral multiple of alignment.
+Returns
+
+3
+
+The aligned_alloc function returns either a null pointer or a pointer to the allocated
+space.
+

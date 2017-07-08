@@ -1,0 +1,37 @@
+7.21.6.13 The vsprintf function
+Synopsis
+1
+
+#include <stdarg.h>
+#include <stdio.h>
+int vsprintf(char * restrict s,
+const char * restrict format,
+va_list arg);
+Description
+
+2
+
+The vsprintf function is equivalent to sprintf, with the variable argument list
+replaced by arg, which shall have been initialized by the va_start macro (and
+possibly subsequent va_arg calls). The vsprintf function does not invoke the
+va_end macro.288) If copying takes place between objects that overlap, the behavior is
+undefined.
+Returns
+
+3
+
+The vsprintf function returns the number of characters written in the array, not
+counting the terminating null character, or a negative value if an encoding error occurred.
+
+§7.21.6.13
+
+Library
+
+329
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+

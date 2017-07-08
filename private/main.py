@@ -32,8 +32,10 @@ def get_file_contents(file_path):
     return ''.join(file_contents)
 
 def write_chapter_to_file(chapter_title, chapter_contents):
+
     manual = get_file_contents('../manual/creference')
-    chapter = open('../manual/docs/' + chapter_title, 'w')
+    function_name = chapter_title.split()[2]
+    chapter = open('../manual/doc/' + function_name + '.txt', 'w')
     chapter.write(chapter_contents)
     chapter.close()
 

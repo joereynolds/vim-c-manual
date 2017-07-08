@@ -1,0 +1,48 @@
+7.24.3.2 The strncat function
+Synopsis
+1
+
+#include <string.h>
+char *strncat(char * restrict s1,
+const char * restrict s2,
+size_t n);
+Description
+
+2
+
+The strncat function appends not more than n characters (a null character and
+characters that follow it are not appended) from the array pointed to by s2 to the end of
+the string pointed to by s1. The initial character of s2 overwrites the null character at the
+end of s1. A terminating null character is always appended to the result.309) If copying
+308) Thus, if there is no null character in the first n characters of the array pointed to by s2, the result will
+not be null-terminated.
+309) Thus, the maximum number of characters that can end up in the array pointed to by s1 is
+strlen(s1)+n+1.
+
+364
+
+Library
+
+§7.24.3.2
+
+N1570
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+
+takes place between objects that overlap, the behavior is undefined.
+Returns
+3
+
+The strncat function returns the value of s1.
+Forward references: the strlen function (7.24.6.3).
+
+7.24.4 Comparison functions
+1
+
+The sign of a nonzero value returned by the comparison functions memcmp, strcmp,
+and strncmp is determined by the sign of the difference between the values of the first
+pair of characters (both interpreted as unsigned char) that differ in the objects being
+compared.
+

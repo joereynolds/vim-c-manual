@@ -1,0 +1,32 @@
+7.29.3.8 The putwc function
+Synopsis
+1
+
+#include <stdio.h>
+#include <wchar.h>
+wint_t putwc(wchar_t c, FILE *stream);
+Description
+
+2
+
+The putwc function is equivalent to fputwc, except that if it is implemented as a
+macro, it may evaluate stream more than once, so that argument should never be an
+expression with side effects.
+Returns
+
+3
+
+The putwc function returns the wide character written, or WEOF.
+
+424
+
+Library
+
+§7.29.3.8
+
+N1570
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+

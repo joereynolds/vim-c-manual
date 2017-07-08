@@ -1,0 +1,15 @@
+7.4.1.7 The islower function
+Synopsis
+1
+
+#include <ctype.h>
+int islower(int c);
+Description
+
+2
+
+The islower function tests for any character that is a lowercase letter or is one of a
+locale-specific set of characters for which none of iscntrl, isdigit, ispunct, or
+isspace is true. In the "C" locale, islower returns true only for the lowercase
+letters (as defined in 5.2.1).
+

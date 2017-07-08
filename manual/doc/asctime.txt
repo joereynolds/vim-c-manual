@@ -1,0 +1,61 @@
+7.27.3.1 The asctime function
+Synopsis
+1
+
+#include <time.h>
+char *asctime(const struct tm *timeptr);
+Description
+
+2
+
+The asctime function converts the broken-down time in the structure pointed to by
+timeptr into a string in the form
+Sun Sep 16 01:03:52 1973\n\0
+using the equivalent of the following algorithm.
+char *asctime(const struct tm *timeptr)
+{
+static const char wday_name[7][3] = {
+"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"
+};
+static const char mon_name[12][3] = {
+"Jan", "Feb", "Mar", "Apr", "May", "Jun",
+"Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+};
+static char result[26];
+
+321) Although a struct timespec object describes times with nanosecond resolution, the available
+resolution is system dependent and may even be greater than 1 second.
+322) Alternative time conversion functions that do avoid data races are specified in K.3.8.2.
+
+392
+
+Library
+
+§7.27.3.1
+
+N1570
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+
+sprintf(result, "%.3s %.3s%3d %.2d:%.2d:%.2d %d\n",
+wday_name[timeptr->tm_wday],
+mon_name[timeptr->tm_mon],
+timeptr->tm_mday, timeptr->tm_hour,
+timeptr->tm_min, timeptr->tm_sec,
+1900 + timeptr->tm_year);
+return result;
+}
+3
+
+If any of the members of the broken-down time contain values that are outside their
+normal ranges,323) the behavior of the asctime function is undefined. Likewise, if the
+calculated year exceeds four digits or is less than the year 1000, the behavior is
+undefined.
+Returns
+
+4
+
+The asctime function returns a pointer to the string.
+

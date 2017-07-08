@@ -1,0 +1,115 @@
+7.29.4.5.7 The wcstok function
+Synopsis
+1
+
+#include <wchar.h>
+wchar_t *wcstok(wchar_t * restrict s1,
+const wchar_t * restrict s2,
+wchar_t ** restrict ptr);
+Description
+
+2
+
+A sequence of calls to the wcstok function breaks the wide string pointed to by s1 into
+a sequence of tokens, each of which is delimited by a wide character from the wide string
+pointed to by s2. The third argument points to a caller-provided wchar_t pointer into
+which the wcstok function stores information necessary for it to continue scanning the
+same wide string.
+
+3
+
+The first call in a sequence has a non-null first argument and stores an initial value in the
+object pointed to by ptr. Subsequent calls in the sequence have a null first argument and
+the object pointed to by ptr is required to have the value stored by the previous call in
+the sequence, which is then updated. The separator wide string pointed to by s2 may be
+different from call to call.
+
+4
+
+The first call in the sequence searches the wide string pointed to by s1 for the first wide
+character that is not contained in the current separator wide string pointed to by s2. If no
+such wide character is found, then there are no tokens in the wide string pointed to by s1
+and the wcstok function returns a null pointer. If such a wide character is found, it is
+the start of the first token.
+
+5
+
+The wcstok function then searches from there for a wide character that is contained in
+the current separator wide string. If no such wide character is found, the current token
+§7.29.4.5.7
+
+Library
+
+437
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+
+extends to the end of the wide string pointed to by s1, and subsequent searches in the
+same wide string for a token return a null pointer. If such a wide character is found, it is
+overwritten by a null wide character, which terminates the current token.
+6
+
+In all cases, the wcstok function stores sufficient information in the pointer pointed to
+by ptr so that subsequent calls, with a null pointer for s1 and the unmodified pointer
+value for ptr, shall start searching just past the element overwritten by a null wide
+character (if any).
+Returns
+
+7
+
+The wcstok function returns a pointer to the first wide character of a token, or a null
+pointer if there is no token.
+
+8
+
+EXAMPLE
+#include <wchar.h>
+static wchar_t str1[] = L"?a???b,,,#c";
+static wchar_t str2[] = L"\t \t";
+wchar_t *t, *ptr1, *ptr2;
+t
+t
+t
+t
+t
+
+=
+=
+=
+=
+=
+
+wcstok(str1,
+wcstok(NULL,
+wcstok(str2,
+wcstok(NULL,
+wcstok(NULL,
+
+L"?", &ptr1);
+L",", &ptr1);
+L" \t", &ptr2);
+L"#,", &ptr1);
+L"?", &ptr1);
+
+//
+//
+//
+//
+//
+
+t
+t
+t
+t
+t
+
+points to the token L"a"
+points to the token L"??b"
+is a null pointer
+points to the token L"c"
+is a null pointer
+

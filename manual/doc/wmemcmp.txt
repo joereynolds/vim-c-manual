@@ -1,0 +1,22 @@
+7.29.4.4.5 The wmemcmp function
+Synopsis
+1
+
+#include <wchar.h>
+int wmemcmp(const wchar_t *s1, const wchar_t *s2,
+size_t n);
+Description
+
+2
+
+The wmemcmp function compares the first n wide characters of the object pointed to by
+s1 to the first n wide characters of the object pointed to by s2.
+Returns
+
+3
+
+The wmemcmp function returns an integer greater than, equal to, or less than zero,
+accordingly as the object pointed to by s1 is greater than, equal to, or less than the object
+pointed to by s2.
+
+7.29.4.5 Wide string search functions

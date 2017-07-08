@@ -1,0 +1,32 @@
+7.27.3.3 The gmtime function
+Synopsis
+1
+
+#include <time.h>
+struct tm *gmtime(const time_t *timer);
+
+323) See 7.27.1.
+
+§7.27.3.3
+
+Library
+
+393
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+
+Description
+2
+
+The gmtime function converts the calendar time pointed to by timer into a brokendown time, expressed as UTC.
+Returns
+
+3
+
+The gmtime function returns a pointer to the broken-down time, or a null pointer if the
+specified time cannot be converted to UTC.
+

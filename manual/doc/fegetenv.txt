@@ -1,0 +1,19 @@
+7.6.4.1 The fegetenv function
+Synopsis
+1
+
+#include <fenv.h>
+int fegetenv(fenv_t *envp);
+Description
+
+2
+
+The fegetenv function attempts to store the current floating-point environment in the
+object pointed to by envp.
+Returns
+
+3
+
+The fegetenv function returns zero if the environment was successfully stored.
+Otherwise, it returns a nonzero value.
+

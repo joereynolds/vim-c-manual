@@ -1,0 +1,35 @@
+7.21.5.4 The freopen function
+Synopsis
+1
+
+#include <stdio.h>
+FILE *freopen(const char * restrict filename,
+const char * restrict mode,
+FILE * restrict stream);
+Description
+
+2
+
+The freopen function opens the file whose name is the string pointed to by filename
+and associates the stream pointed to by stream with it. The mode argument is used just
+as in the fopen function.272)
+
+3
+
+If filename is a null pointer, the freopen function attempts to change the mode of
+the stream to that specified by mode, as if the name of the file currently associated with
+the stream had been used. It is implementation-defined which changes of mode are
+permitted (if any), and under what circumstances.
+
+4
+
+The freopen function first attempts to close any file that is associated with the specified
+stream. Failure to close the file is ignored. The error and end-of-file indicators for the
+stream are cleared.
+Returns
+
+5
+
+The freopen function returns a null pointer if the open operation fails. Otherwise,
+freopen returns the value of stream.
+

@@ -1,0 +1,91 @@
+7.22.4.8 The system function
+Synopsis
+1
+
+#include <stdlib.h>
+int system(const char *string);
+Description
+
+2
+
+If string is a null pointer, the system function determines whether the host
+environment has a command processor. If string is not a null pointer, the system
+301) Each function is called as many times as it was registered, and in the correct order with respect to
+other registered functions.
+
+§7.22.4.8
+
+Library
+
+353
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+
+function passes the string pointed to by string to that command processor to be
+executed in a manner which the implementation shall document; this might then cause the
+program calling system to behave in a non-conforming manner or to terminate.
+Returns
+3
+
+If the argument is a null pointer, the system function returns nonzero only if a
+command processor is available. If the argument is not a null pointer, and the system
+function does return, it returns an implementation-defined value.
+
+7.22.5 Searching and sorting utilities
+1
+
+These utilities make use of a comparison function to search or sort arrays of unspecified
+type. Where an argument declared as size_t nmemb specifies the length of the array
+for a function, nmemb can have the value zero on a call to that function; the comparison
+function is not called, a search finds no matching element, and sorting performs no
+rearrangement. Pointer arguments on such a call shall still have valid values, as described
+in 7.1.4.
+
+2
+
+The implementation shall ensure that the second argument of the comparison function
+(when called from bsearch), or both arguments (when called from qsort), are
+pointers to elements of the array.302) The first argument when called from bsearch
+shall equal key.
+
+3
+
+The comparison function shall not alter the contents of the array. The implementation
+may reorder elements of the array between calls to the comparison function, but shall not
+alter the contents of any individual element.
+
+4
+
+When the same objects (consisting of size bytes, irrespective of their current positions
+in the array) are passed more than once to the comparison function, the results shall be
+consistent with one another. That is, for qsort they shall define a total ordering on the
+array, and for bsearch the same object shall always compare the same way with the
+key.
+
+5
+
+A sequence point occurs immediately before and immediately after each call to the
+comparison function, and also between any call to the comparison function and any
+movement of the objects passed as arguments to that call.
+
+302) That is, if the value passed is p, then the following expressions are always nonzero:
+((char *)p - (char *)base) % size == 0
+(char *)p >= (char *)base
+(char *)p < (char *)base + nmemb * size
+
+354
+
+Library
+
+§7.22.5
+
+N1570
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+

@@ -1,0 +1,27 @@
+7.4.1.6 The isgraph function
+Synopsis
+1
+
+#include <ctype.h>
+int isgraph(int c);
+
+200) The functions islower and isupper test true or false separately for each of these additional
+characters; all four combinations are possible.
+
+§7.4.1.6
+
+Library
+
+201
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+
+Description
+2
+
+The isgraph function tests for any printing character except space (' ').
+

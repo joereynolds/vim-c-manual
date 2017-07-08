@@ -1,0 +1,44 @@
+7.22.3.5 The realloc function
+Synopsis
+1
+
+#include <stdlib.h>
+void *realloc(void *ptr, size_t size);
+Description
+
+2
+
+The realloc function deallocates the old object pointed to by ptr and returns a
+pointer to a new object that has the size specified by size. The contents of the new
+object shall be the same as that of the old object prior to deallocation, up to the lesser of
+the new and old sizes. Any bytes in the new object beyond the size of the old object have
+indeterminate values.
+
+3
+
+If ptr is a null pointer, the realloc function behaves like the malloc function for the
+specified size. Otherwise, if ptr does not match a pointer earlier returned by a memory
+management function, or if the space has been deallocated by a call to the free or
+realloc function, the behavior is undefined. If memory for the new object cannot be
+allocated, the old object is not deallocated and its value is unchanged.
+Returns
+
+4
+
+The realloc function returns a pointer to the new object (which may have the same
+value as a pointer to the old object), or a null pointer if the new object could not be
+allocated.
+
+§7.22.3.5
+
+Library
+
+349
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+
+7.22.4 Communication with the environment

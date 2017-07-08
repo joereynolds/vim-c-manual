@@ -1,0 +1,23 @@
+7.21.6.10 The vprintf function
+Synopsis
+1
+
+#include <stdarg.h>
+#include <stdio.h>
+int vprintf(const char * restrict format,
+va_list arg);
+Description
+
+2
+
+The vprintf function is equivalent to printf, with the variable argument list
+replaced by arg, which shall have been initialized by the va_start macro (and
+possibly subsequent va_arg calls). The vprintf function does not invoke the
+va_end macro.288)
+Returns
+
+3
+
+The vprintf function returns the number of characters transmitted, or a negative value
+if an output or encoding error occurred.
+

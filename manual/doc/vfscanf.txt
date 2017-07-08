@@ -1,0 +1,41 @@
+7.21.6.9 The vfscanf function
+Synopsis
+1
+
+#include <stdarg.h>
+#include <stdio.h>
+int vfscanf(FILE * restrict stream,
+const char * restrict format,
+va_list arg);
+Description
+
+2
+
+The vfscanf function is equivalent to fscanf, with the variable argument list
+replaced by arg, which shall have been initialized by the va_start macro (and
+possibly subsequent va_arg calls). The vfscanf function does not invoke the
+va_end macro.288)
+Returns
+
+3
+
+The vfscanf function returns the value of the macro EOF if an input failure occurs
+before the first conversion (if any) has completed. Otherwise, the vfscanf function
+returns the number of input items assigned, which can be fewer than provided for, or even
+zero, in the event of an early matching failure.
+
+288) As the functions vfprintf, vfscanf, vprintf, vscanf, vsnprintf, vsprintf, and
+vsscanf invoke the va_arg macro, the value of arg after the return is indeterminate.
+
+§7.21.6.9
+
+Library
+
+327
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+

@@ -1,0 +1,52 @@
+7.22.7.3 The wctomb function
+Synopsis
+1
+
+#include <stdlib.h>
+int wctomb(char *s, wchar_t wc);
+Description
+
+2
+
+The wctomb function determines the number of bytes needed to represent the multibyte
+character corresponding to the wide character given by wc (including any shift
+sequences), and stores the multibyte character representation in the array whose first
+element is pointed to by s (if s is not a null pointer). At most MB_CUR_MAX characters
+are stored. If wc is a null wide character, a null byte is stored, preceded by any shift
+sequence needed to restore the initial shift state, and the function is left in the initial
+conversion state.
+358
+
+Library
+
+§7.22.7.3
+
+N1570
+
+3
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+
+The implementation shall behave as if no library function calls the wctomb function.
+Returns
+
+4
+
+If s is a null pointer, the wctomb function returns a nonzero or zero value, if multibyte
+character encodings, respectively, do or do not have state-dependent encodings. If s is
+not a null pointer, the wctomb function returns −1 if the value of wc does not correspond
+to a valid multibyte character, or returns the number of bytes that are contained in the
+multibyte character corresponding to the value of wc.
+
+5
+
+In no case will the value returned be greater than the value of the MB_CUR_MAX macro.
+
+7.22.8 Multibyte/wide string conversion functions
+1
+
+The behavior of the multibyte string functions is affected by the LC_CTYPE category of
+the current locale.
+

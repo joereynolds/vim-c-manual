@@ -1,0 +1,83 @@
+7.11.1.1 The setlocale function
+Synopsis
+1
+
+#include <locale.h>
+char *setlocale(int category, const char *locale);
+Description
+
+2
+
+The setlocale function selects the appropriate portion of the program’s locale as
+specified by the category and locale arguments. The setlocale function may be
+used to change or query the program’s entire current locale or portions thereof. The value
+LC_ALL for category names the program’s entire locale; the other values for
+category name only a portion of the program’s locale. LC_COLLATE affects the
+behavior of the strcoll and strxfrm functions. LC_CTYPE affects the behavior of
+the character handling functions224) and the multibyte and wide character functions.
+LC_MONETARY affects the monetary formatting information returned by the
+localeconv function. LC_NUMERIC affects the decimal-point character for the
+formatted input/output functions and the string conversion functions, as well as the
+nonmonetary formatting information returned by the localeconv function. LC_TIME
+affects the behavior of the strftime and wcsftime functions.
+
+3
+
+A value of "C" for locale specifies the minimal environment for C translation; a value
+of "" for locale specifies the locale-specific native environment. Other
+implementation-defined strings may be passed as the second argument to setlocale.
+222) ISO/IEC 9945−2 specifies locale and charmap formats that may be used to specify locales for C.
+223) See ‘‘future library directions’’ (7.31.6).
+224) The only functions in 7.4 whose behavior is not affected by the current locale are isdigit and
+isxdigit.
+
+224
+
+Library
+
+§7.11.1.1
+
+N1570
+
+4
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+
+At program startup, the equivalent of
+setlocale(LC_ALL, "C");
+is executed.
+
+5
+
+A call to the setlocale function may introduce a data race with other calls to the
+setlocale function or with calls to functions that are affected by the current locale.
+The implementation shall behave as if no library function calls the setlocale function.
+Returns
+
+6
+
+If a pointer to a string is given for locale and the selection can be honored, the
+setlocale function returns a pointer to the string associated with the specified
+category for the new locale. If the selection cannot be honored, the setlocale
+function returns a null pointer and the program’s locale is not changed.
+
+7
+
+A null pointer for locale causes the setlocale function to return a pointer to the
+string associated with the category for the program’s current locale; the program’s
+locale is not changed.225)
+
+8
+
+The pointer to string returned by the setlocale function is such that a subsequent call
+with that string value and its associated category will restore that part of the program’s
+locale. The string pointed to shall not be modified by the program, but may be
+overwritten by a subsequent call to the setlocale function.
+Forward references: formatted input/output functions (7.21.6), multibyte/wide
+character conversion functions (7.22.7), multibyte/wide string conversion functions
+(7.22.8), numeric conversion functions (7.22.1), the strcoll function (7.24.4.3), the
+strftime function (7.27.3.5), the strxfrm function (7.24.4.5).
+
+7.11.2 Numeric formatting convention inquiry

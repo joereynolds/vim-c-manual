@@ -1,10 +1,34 @@
-quick_exit
+7.22.4.7 The quick_exit function
+Synopsis
+1
 
-C11
+#include <stdlib.h>
+_Noreturn void quick_exit(int status);
+Description
 
-==============================================================================
-*Description*
+2
 
-    Does stuff and things
+The quick_exit function causes normal program termination to occur. No functions
+registered by the atexit function or signal handlers registered by the signal function
+are called. If a program calls the quick_exit function more than once, or calls the
+exit function in addition to the quick_exit function, the behavior is undefined. If a
+signal is raised while the quick_exit function is executing, the behavior is undefined.
 
-vim:ft=help:
+3
+
+The quick_exit function first calls all functions registered by the at_quick_exit
+function, in the reverse order of their registration,301) except that a function is called after
+any previously registered functions that had already been called at the time it was
+registered. If, during the call to any such function, a call to the longjmp function is
+made that would terminate the call to the registered function, the behavior is undefined.
+
+4
+
+Then control is returned to the host environment by means of the function call
+_Exit(status).
+Returns
+
+5
+
+The quick_exit function cannot return to its caller.
+

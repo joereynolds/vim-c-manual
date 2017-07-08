@@ -1,0 +1,13 @@
+7.4.1.12 The isxdigit function
+Synopsis
+1
+
+#include <ctype.h>
+int isxdigit(int c);
+Description
+
+2
+
+The isxdigit function tests for any hexadecimal-digit character (as defined in 6.4.4.1).
+
+7.4.2 Character case mapping functions

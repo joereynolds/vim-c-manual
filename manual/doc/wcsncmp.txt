@@ -1,0 +1,22 @@
+7.29.4.4.3 The wcsncmp function
+Synopsis
+1
+
+#include <wchar.h>
+int wcsncmp(const wchar_t *s1, const wchar_t *s2,
+size_t n);
+Description
+
+2
+
+The wcsncmp function compares not more than n wide characters (those that follow a
+null wide character are not compared) from the array pointed to by s1 to the array
+pointed to by s2.
+Returns
+
+3
+
+The wcsncmp function returns an integer greater than, equal to, or less than zero,
+accordingly as the possibly null-terminated array pointed to by s1 is greater than, equal
+to, or less than the possibly null-terminated array pointed to by s2.
+

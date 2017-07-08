@@ -1,0 +1,22 @@
+7.22.4.5 The _Exit function
+Synopsis
+1
+
+#include <stdlib.h>
+_Noreturn void _Exit(int status);
+Description
+
+2
+
+The _Exit function causes normal program termination to occur and control to be
+returned to the host environment. No functions registered by the atexit function, the
+at_quick_exit function, or signal handlers registered by the signal function are
+called. The status returned to the host environment is determined in the same way as for
+the exit function (7.22.4.4). Whether open streams with unwritten buffered data are
+flushed, open streams are closed, or temporary files are removed is implementationdefined.
+Returns
+
+3
+
+The _Exit function cannot return to its caller.
+

@@ -1,0 +1,32 @@
+7.24.5.5 The strrchr function
+Synopsis
+1
+
+#include <string.h>
+char *strrchr(const char *s, int c);
+Description
+
+2
+
+The strrchr function locates the last occurrence of c (converted to a char) in the
+string pointed to by s. The terminating null character is considered to be part of the
+string.
+
+368
+
+Library
+
+§7.24.5.5
+
+N1570
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+
+Returns
+3
+
+The strrchr function returns a pointer to the character, or a null pointer if c does not
+occur in the string.
+

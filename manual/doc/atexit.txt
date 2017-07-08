@@ -1,0 +1,41 @@
+7.22.4.2 The atexit function
+Synopsis
+1
+
+#include <stdlib.h>
+int atexit(void (*func)(void));
+Description
+
+2
+
+The atexit function registers the function pointed to by func, to be called without
+arguments at normal program termination.297) It is unspecified whether a call to the
+atexit function that does not happen before the exit function is called will succeed.
+Environmental limits
+
+3
+
+The implementation shall support the registration of at least 32 functions.
+Returns
+
+4
+
+The atexit function returns zero if the registration succeeds, nonzero if it fails.
+Forward references: the at_quick_exit function (7.22.4.3), the exit function
+(7.22.4.4).
+
+297) The atexit function registrations are distinct from the at_quick_exit registrations, so
+applications may need to call both registration functions with the same argument.
+
+350
+
+Library
+
+§7.22.4.2
+
+N1570
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+

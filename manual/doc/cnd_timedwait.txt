@@ -1,0 +1,38 @@
+7.26.3.5 The cnd_timedwait function
+Synopsis
+1
+
+#include <threads.h>
+int cnd_timedwait(cnd_t *restrict cond,
+mtx_t *restrict mtx,
+const struct timespec *restrict ts);
+
+§7.26.3.5
+
+Library
+
+379
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+
+Description
+2
+
+The cnd_timedwait function atomically unlocks the mutex pointed to by mtx and
+endeavors to block until the condition variable pointed to by cond is signaled by a call to
+cnd_signal or to cnd_broadcast, or until after the TIME_UTC-based calendar
+time pointed to by ts. When the calling thread becomes unblocked it locks the variable
+pointed to by mtx before it returns. The cnd_timedwait function requires that the
+mutex pointed to by mtx be locked by the calling thread.
+Returns
+
+3
+
+The cnd_timedwait function returns thrd_success upon success, or
+thrd_timedout if the time specified in the call was reached without acquiring the
+requested resource, or thrd_error if the request could not be honored.
+

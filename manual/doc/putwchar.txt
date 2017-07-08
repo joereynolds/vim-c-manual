@@ -1,0 +1,17 @@
+7.29.3.9 The putwchar function
+Synopsis
+1
+
+#include <wchar.h>
+wint_t putwchar(wchar_t c);
+Description
+
+2
+
+The putwchar function is equivalent to putwc with the second argument stdout.
+Returns
+
+3
+
+The putwchar function returns the character written, or WEOF.
+

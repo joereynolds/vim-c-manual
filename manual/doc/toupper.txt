@@ -1,0 +1,293 @@
+7.4.2.2 The toupper function
+Synopsis
+1
+
+#include <ctype.h>
+int toupper(int c);
+Description
+
+2
+
+The toupper function converts a lowercase letter to a corresponding uppercase letter.
+Returns
+
+3
+
+If the argument is a character for which islower is true and there are one or more
+corresponding characters, as specified by the current locale, for which isupper is true,
+the toupper function returns one of the corresponding characters (always the same one
+for any given locale); otherwise, the argument is returned unchanged.
+
+204
+
+Library
+
+§7.4.2.2
+
+N1570
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+
+7.5 Errors <errno.h>
+1
+
+The header <errno.h> defines several macros, all relating to the reporting of error
+conditions.
+
+2
+
+The macros are
+EDOM
+EILSEQ
+ERANGE
+which expand to integer constant expressions with type int, distinct positive values, and
+which are suitable for use in #if preprocessing directives; and
+errno
+which expands to a modifiable lvalue201) that has type int and thread local storage
+duration, the value of which is set to a positive error number by several library functions.
+If a macro definition is suppressed in order to access an actual object, or a program
+defines an identifier with the name errno, the behavior is undefined.
+
+3
+
+The value of errno in the initial thread is zero at program startup (the initial value of
+errno in other threads is an indeterminate value), but is never set to zero by any library
+function.202) The value of errno may be set to nonzero by a library function call
+whether or not there is an error, provided the use of errno is not documented in the
+description of the function in this International Standard.
+
+4
+
+Additional macro definitions, beginning with E and a digit or E and an uppercase
+letter,203) may also be specified by the implementation.
+
+201) The macro errno need not be the identifier of an object. It might expand to a modifiable lvalue
+resulting from a function call (for example, *errno()).
+202) Thus, a program that uses errno for error checking should set it to zero before a library function call,
+then inspect it before a subsequent library function call. Of course, a library function can save the
+value of errno on entry and then set it to zero, as long as the original value is restored if errno’s
+value is still zero just before the return.
+203) See ‘‘future library directions’’ (7.31.3).
+
+§7.5
+
+Library
+
+205
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+
+7.6 Floating-point environment <fenv.h>
+1
+
+The header <fenv.h> defines several macros, and declares types and functions that
+provide access to the floating-point environment. The floating-point environment refers
+collectively to any floating-point status flags and control modes supported by the
+implementation.204) A floating-point status flag is a system variable whose value is set
+(but never cleared) when a floating-point exception is raised, which occurs as a side effect
+of exceptional floating-point arithmetic to provide auxiliary information.205) A floatingpoint control mode is a system variable whose value may be set by the user to affect the
+subsequent behavior of floating-point arithmetic.
+
+2
+
+The floating-point environment has thread storage duration. The initial state for a
+thread’s floating-point environment is the current state of the floating-point environment
+of the thread that creates it at the time of creation.
+
+3
+
+Certain programming conventions support the intended model of use for the floatingpoint environment:206)
+— a function call does not alter its caller’s floating-point control modes, clear its caller’s
+floating-point status flags, nor depend on the state of its caller’s floating-point status
+flags unless the function is so documented;
+— a function call is assumed to require default floating-point control modes, unless its
+documentation promises otherwise;
+— a function call is assumed to have the potential for raising floating-point exceptions,
+unless its documentation promises otherwise.
+
+4
+
+The type
+fenv_t
+represents the entire floating-point environment.
+
+5
+
+The type
+fexcept_t
+represents the floating-point status flags collectively, including any status the
+implementation associates with the flags.
+204) This header is designed to support the floating-point exception status flags and directed-rounding
+control modes required by IEC 60559, and other similar floating-point state information. It is also
+designed to facilitate code portability among all systems.
+205) A floating-point status flag is not an object and can be set more than once within an expression.
+206) With these conventions, a programmer can safely assume default floating-point control modes (or be
+unaware of them). The responsibilities associated with accessing the floating-point environment fall
+on the programmer or program that does so explicitly.
+
+206
+
+Library
+
+§7.6
+
+N1570
+
+6
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+
+Each of the macros
+FE_DIVBYZERO
+FE_INEXACT
+FE_INVALID
+FE_OVERFLOW
+FE_UNDERFLOW
+is defined if and only if the implementation supports the floating-point exception by
+means of the functions in 7.6.2.207) Additional implementation-defined floating-point
+exceptions, with macro definitions beginning with FE_ and an uppercase letter,208) may
+also be specified by the implementation. The defined macros expand to integer constant
+expressions with values such that bitwise ORs of all combinations of the macros result in
+distinct values, and furthermore, bitwise ANDs of all combinations of the macros result in
+zero.209)
+
+7
+
+The macro
+FE_ALL_EXCEPT
+is simply the bitwise OR of all floating-point exception macros defined by the
+implementation. If no such macros are defined, FE_ALL_EXCEPT shall be defined as 0.
+
+8
+
+Each of the macros
+FE_DOWNWARD
+FE_TONEAREST
+FE_TOWARDZERO
+FE_UPWARD
+is defined if and only if the implementation supports getting and setting the represented
+rounding direction by means of the fegetround and fesetround functions.
+Additional implementation-defined rounding directions, with macro definitions beginning
+with FE_ and an uppercase letter,210) may also be specified by the implementation. The
+defined macros expand to integer constant expressions whose values are distinct
+nonnegative values.211)
+207) The implementation supports a floating-point exception if there are circumstances where a call to at
+least one of the functions in 7.6.2, using the macro as the appropriate argument, will succeed. It is not
+necessary for all the functions to succeed all the time.
+208) See ‘‘future library directions’’ (7.31.4).
+209) The macros should be distinct powers of two.
+210) See ‘‘future library directions’’ (7.31.4).
+211) Even though the rounding direction macros may expand to constants corresponding to the values of
+FLT_ROUNDS, they are not required to do so.
+
+§7.6
+
+Library
+
+207
+
+ISO/IEC 9899:201x
+
+9
+
+Committee Draft — April 12, 2011
+
+N1570
+
+The macro
+FE_DFL_ENV
+represents the default floating-point environment — the one installed at program startup
+— and has type ‘‘pointer to const-qualified fenv_t’’. It can be used as an argument to
+<fenv.h> functions that manage the floating-point environment.
+
+10
+
+Additional implementation-defined environments, with macro definitions beginning with
+FE_ and an uppercase letter,212) and having type ‘‘pointer to const-qualified fenv_t’’,
+may also be specified by the implementation.
+
+7.6.1 The FENV_ACCESS pragma
+Synopsis
+1
+
+#include <fenv.h>
+#pragma STDC FENV_ACCESS on-off-switch
+Description
+
+2
+
+The FENV_ACCESS pragma provides a means to inform the implementation when a
+program might access the floating-point environment to test floating-point status flags or
+run under non-default floating-point control modes.213) The pragma shall occur either
+outside external declarations or preceding all explicit declarations and statements inside a
+compound statement. When outside external declarations, the pragma takes effect from
+its occurrence until another FENV_ACCESS pragma is encountered, or until the end of
+the translation unit. When inside a compound statement, the pragma takes effect from its
+occurrence until another FENV_ACCESS pragma is encountered (including within a
+nested compound statement), or until the end of the compound statement; at the end of a
+compound statement the state for the pragma is restored to its condition just before the
+compound statement. If this pragma is used in any other context, the behavior is
+undefined. If part of a program tests floating-point status flags, sets floating-point control
+modes, or runs under non-default mode settings, but was translated with the state for the
+FENV_ACCESS pragma ‘‘off’’, the behavior is undefined. The default state (‘‘on’’ or
+‘‘off’’) for the pragma is implementation-defined. (When execution passes from a part of
+the program translated with FENV_ACCESS ‘‘off’’ to a part translated with
+FENV_ACCESS ‘‘on’’, the state of the floating-point status flags is unspecified and the
+floating-point control modes have their default settings.)
+
+212) See ‘‘future library directions’’ (7.31.4).
+213) The purpose of the FENV_ACCESS pragma is to allow certain optimizations that could subvert flag
+tests and mode changes (e.g., global common subexpression elimination, code motion, and constant
+folding). In general, if the state of FENV_ACCESS is ‘‘off’’, the translator can assume that default
+modes are in effect and the flags are not tested.
+
+208
+
+Library
+
+§7.6.1
+
+N1570
+
+3
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+
+EXAMPLE
+#include <fenv.h>
+void f(double x)
+{
+#pragma STDC FENV_ACCESS ON
+void g(double);
+void h(double);
+/* ... */
+g(x + 1);
+h(x + 1);
+/* ... */
+}
+
+4
+
+If the function g might depend on status flags set as a side effect of the first x + 1, or if the second
+x + 1 might depend on control modes set as a side effect of the call to function g, then the program shall
+contain an appropriately placed invocation of #pragma STDC FENV_ACCESS ON.214)
+
+7.6.2 Floating-point exceptions
+1
+
+The following functions provide access to the floating-point status flags.215) The int
+input argument for the functions represents a subset of floating-point exceptions, and can
+be zero or the bitwise OR of one or more floating-point exception macros, for example
+FE_OVERFLOW | FE_INEXACT. For other argument values the behavior of these
+functions is undefined.
+

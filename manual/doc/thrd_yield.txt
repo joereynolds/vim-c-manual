@@ -1,0 +1,31 @@
+7.26.5.8 The thrd_yield function
+Synopsis
+1
+
+#include <threads.h>
+void thrd_yield(void);
+Description
+
+2
+
+The thrd_yield function endeavors to permit other threads to run, even if the current
+thread would ordinarily continue to run.
+Returns
+
+3
+
+The thrd_yield function returns no value.
+
+§7.26.5.8
+
+Library
+
+385
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+
+7.26.6 Thread-specific storage functions

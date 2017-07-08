@@ -1,0 +1,23 @@
+7.29.4.2.4 The wmemmove function
+Synopsis
+1
+
+#include <wchar.h>
+wchar_t *wmemmove(wchar_t *s1, const wchar_t *s2,
+size_t n);
+Description
+
+2
+
+The wmemmove function copies n wide characters from the object pointed to by s2 to
+the object pointed to by s1. Copying takes place as if the n wide characters from the
+object pointed to by s2 are first copied into a temporary array of n wide characters that
+does not overlap the objects pointed to by s1 or s2, and then the n wide characters from
+the temporary array are copied into the object pointed to by s1.
+Returns
+
+3
+
+The wmemmove function returns the value of s1.
+
+7.29.4.3 Wide string concatenation functions

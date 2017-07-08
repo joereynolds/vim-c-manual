@@ -1,0 +1,32 @@
+7.21.7.4 The fputs function
+Synopsis
+1
+
+#include <stdio.h>
+int fputs(const char * restrict s,
+FILE * restrict stream);
+
+§7.21.7.4
+
+Library
+
+331
+
+ISO/IEC 9899:201x
+
+Committee Draft — April 12, 2011
+
+N1570
+
+Description
+2
+
+The fputs function writes the string pointed to by s to the stream pointed to by
+stream. The terminating null character is not written.
+Returns
+
+3
+
+The fputs function returns EOF if a write error occurs; otherwise it returns a
+nonnegative value.
+

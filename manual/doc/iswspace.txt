@@ -1,0 +1,30 @@
+7.30.2.1.10 The iswspace function
+Synopsis
+1
+
+#include <wctype.h>
+int iswspace(wint_t wc);
+
+355) Note that the behavior of the iswgraph and iswpunct functions may differ from their
+corresponding functions in 7.4.1 with respect to printing, white-space, single-byte execution
+characters other than ' '.
+
+450
+
+Library
+
+§7.30.2.1.10
+
+N1570
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+
+Description
+2
+
+The iswspace function tests for any wide character that corresponds to a locale-specific
+set of white-space wide characters for which none of iswalnum, iswgraph, or
+iswpunct is true.
+

@@ -1,0 +1,31 @@
+7.29.4.2.1 The wcscpy function
+Synopsis
+1
+
+#include <wchar.h>
+wchar_t *wcscpy(wchar_t * restrict s1,
+const wchar_t * restrict s2);
+Description
+
+2
+
+The wcscpy function copies the wide string pointed to by s2 (including the terminating
+null wide character) into the array pointed to by s1.
+Returns
+
+3
+
+The wcscpy function returns the value of s1.
+
+430
+
+Library
+
+§7.29.4.2.1
+
+N1570
+
+Committee Draft — April 12, 2011
+
+ISO/IEC 9899:201x
+
