@@ -1,3 +1,5 @@
+*qsort.txt*
+*qsort*
 7.22.5.2 The qsort function
 Synopsis
 1
@@ -114,3 +116,6 @@ necessary. A call with s as a null pointer causes these functions to return a no
 if encodings have state dependency, and zero otherwise.305) Changing the LC_CTYPE
 category causes the conversion state of these functions to be indeterminate.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

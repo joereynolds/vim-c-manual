@@ -1,3 +1,5 @@
+*mbrlen.txt*
+*mbrlen*
 7.29.6.3.1 The mbrlen function
 Synopsis
 1
@@ -34,3 +36,6 @@ Committee Draft — April 12, 2011
 
 ISO/IEC 9899:201x
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

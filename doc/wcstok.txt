@@ -1,3 +1,5 @@
+*wcstok.txt*
+*wcstok*
 7.29.4.5.7 The wcstok function
 Synopsis
 1
@@ -113,3 +115,6 @@ is a null pointer
 points to the token L"c"
 is a null pointer
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

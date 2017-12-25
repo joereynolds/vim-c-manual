@@ -1,3 +1,5 @@
+*fwprintf.txt*
+*fwprintf*
 7.29.2.1 The fwprintf function
 Synopsis
 1
@@ -461,3 +463,6 @@ Forward references:
 
 the btowc function (7.29.6.1.1), the mbrtowc function
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

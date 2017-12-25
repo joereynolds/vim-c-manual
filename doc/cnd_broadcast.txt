@@ -1,3 +1,5 @@
+*cnd_broadcast.txt*
+*cnd_broadcast*
 7.26.3.1 The cnd_broadcast function
 Synopsis
 1
@@ -19,3 +21,6 @@ Returns
 The cnd_broadcast function returns thrd_success on success, or thrd_error
 if the request could not be honored.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

@@ -1,3 +1,5 @@
+*iswupper.txt*
+*iswupper*
 7.30.2.1.11 The iswupper function
 Synopsis
 1
@@ -12,3 +14,6 @@ The iswupper function tests for any wide character that corresponds to an upperc
 letter or is one of a locale-specific set of wide characters for which none of iswcntrl,
 iswdigit, iswpunct, or iswspace is true.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

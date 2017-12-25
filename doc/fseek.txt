@@ -1,3 +1,5 @@
+*fseek.txt*
+*fseek*
 7.21.9.2 The fseek function
 Synopsis
 1
@@ -49,3 +51,6 @@ Returns
 The fseek function returns nonzero only for a request that cannot be satisfied.
 Forward references: the ftell function (7.21.9.4).
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

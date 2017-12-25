@@ -1,3 +1,5 @@
+*fegetround.txt*
+*fegetround*
 7.6.3.1 The fegetround function
 Synopsis
 1
@@ -17,3 +19,6 @@ The fegetround function returns the value of the rounding direction macro
 representing the current rounding direction or a negative value if there is no such
 rounding direction macro or the current rounding direction is not determinable.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

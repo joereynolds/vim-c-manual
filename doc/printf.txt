@@ -1,3 +1,5 @@
+*printf.txt*
+*printf*
 7.21.6.3 The printf function
 Synopsis
 1
@@ -29,3 +31,6 @@ Committee Draft — April 12, 2011
 
 ISO/IEC 9899:201x
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

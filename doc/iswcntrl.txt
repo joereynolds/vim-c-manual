@@ -1,3 +1,5 @@
+*iswcntrl.txt*
+*iswcntrl*
 7.30.2.1.4 The iswcntrl function
 Synopsis
 1
@@ -10,3 +12,6 @@ Description
 
 The iswcntrl function tests for any control wide character.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

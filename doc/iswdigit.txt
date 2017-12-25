@@ -1,3 +1,5 @@
+*iswdigit.txt*
+*iswdigit*
 7.30.2.1.5 The iswdigit function
 Synopsis
 1
@@ -11,3 +13,6 @@ Description
 The iswdigit function tests for any wide character that corresponds to a decimal-digit
 character (as defined in 5.2.1).
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

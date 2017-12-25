@@ -1,3 +1,5 @@
+*isspace.txt*
+*isspace*
 7.4.1.10 The isspace function
 Synopsis
 1
@@ -26,3 +28,6 @@ white-space characters are the following: space (' '), form feed ('\f'), new-lin
 ('\n'), carriage return ('\r'), horizontal tab ('\t'), and vertical tab ('\v'). In the
 "C" locale, isspace returns true only for the standard white-space characters.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

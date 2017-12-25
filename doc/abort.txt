@@ -1,3 +1,5 @@
+*abort.txt*
+*abort*
 7.22.4.1 The abort function
 Synopsis
 1
@@ -20,3 +22,6 @@ Returns
 
 The abort function does not return to its caller.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

@@ -1,3 +1,5 @@
+*mbsinit.txt*
+*mbsinit*
 7.29.6.2.1 The mbsinit function
 Synopsis
 1
@@ -46,3 +48,6 @@ no library function calls these functions with a null pointer for ps.
 Also unlike their corresponding functions, the return value does not represent whether the
 encoding is state-dependent.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

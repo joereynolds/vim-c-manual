@@ -1,3 +1,5 @@
+*mbtowc.txt*
+*mbtowc*
 7.22.7.2 The mbtowc function
 Synopsis
 1
@@ -37,3 +39,6 @@ form a valid multibyte character).
 In no case will the value returned be greater than n or the value of the MB_CUR_MAX
 macro.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

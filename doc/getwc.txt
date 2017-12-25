@@ -1,3 +1,5 @@
+*getwc.txt*
+*getwc*
 7.29.3.6 The getwc function
 Synopsis
 1
@@ -19,3 +21,6 @@ Returns
 The getwc function returns the next wide character from the input stream pointed to by
 stream, or WEOF.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

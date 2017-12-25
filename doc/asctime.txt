@@ -1,3 +1,5 @@
+*asctime.txt*
+*asctime*
 7.27.3.1 The asctime function
 Synopsis
 1
@@ -59,3 +61,6 @@ Returns
 
 The asctime function returns a pointer to the string.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

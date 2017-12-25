@@ -1,3 +1,5 @@
+*wcsxfrm.txt*
+*wcsxfrm*
 7.29.4.4.4 The wcsxfrm function
 Synopsis
 1
@@ -44,3 +46,6 @@ ISO/IEC 9899:201x
 
 1 + wcsxfrm(NULL, s, 0)
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

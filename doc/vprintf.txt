@@ -1,3 +1,5 @@
+*vprintf.txt*
+*vprintf*
 7.21.6.10 The vprintf function
 Synopsis
 1
@@ -21,3 +23,6 @@ Returns
 The vprintf function returns the number of characters transmitted, or a negative value
 if an output or encoding error occurred.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

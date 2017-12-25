@@ -1,3 +1,5 @@
+*raise.txt*
+*raise*
 7.14.2.1 The raise function
 Synopsis
 1
@@ -696,3 +698,6 @@ with an acquire fence B if there exists some atomic operation X on M such that X
 sequenced before B and reads the value written by A or a value written by any side effect
 in the release sequence headed by A.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

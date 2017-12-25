@@ -1,3 +1,5 @@
+*iswalnum.txt*
+*iswalnum*
 7.30.2.1.1 The iswalnum function
 Synopsis
 1
@@ -11,3 +13,6 @@ Description
 The iswalnum function tests for any wide character for which iswalpha or
 iswdigit is true.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

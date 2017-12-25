@@ -1,3 +1,5 @@
+*thrd_equal.txt*
+*thrd_equal*
 7.26.5.4 The thrd_equal function
 Synopsis
 1
@@ -17,3 +19,6 @@ Returns
 The thrd_equal function returns zero if the thread thr0 and the thread thr1 refer to
 different threads. Otherwise the thrd_equal function returns a nonzero value.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

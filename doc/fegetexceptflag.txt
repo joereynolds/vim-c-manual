@@ -1,3 +1,5 @@
+*fegetexceptflag.txt*
+*fegetexceptflag*
 7.6.2.2 The fegetexceptflag function
 Synopsis
 1
@@ -19,3 +21,6 @@ Returns
 The fegetexceptflag function returns zero if the representation was successfully
 stored. Otherwise, it returns a nonzero value.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

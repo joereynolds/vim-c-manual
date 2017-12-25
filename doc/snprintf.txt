@@ -1,3 +1,5 @@
+*snprintf.txt*
+*snprintf*
 7.21.6.5 The snprintf function
 Synopsis
 1
@@ -24,3 +26,6 @@ had n been sufficiently large, not counting the terminating null character, or a
 value if an encoding error occurred. Thus, the null-terminated output has been
 completely written if and only if the returned value is nonnegative and less than n.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

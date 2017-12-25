@@ -1,3 +1,5 @@
+*rename.txt*
+*rename*
 7.21.4.2 The rename function
 Synopsis
 1
@@ -31,3 +33,6 @@ Returns
 The rename function returns zero if the operation succeeds, nonzero if it fails,269) in
 which case if the file existed previously it is still known by its original name.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

@@ -1,3 +1,5 @@
+*towlower.txt*
+*towlower*
 7.30.3.1.1 The towlower function
 Synopsis
 1
@@ -19,3 +21,6 @@ iswlower is true, the towlower function returns one of the corresponding wide
 characters (always the same one for any given locale); otherwise, the argument is
 returned unchanged.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

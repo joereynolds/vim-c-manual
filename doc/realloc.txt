@@ -1,3 +1,5 @@
+*realloc.txt*
+*realloc*
 7.22.3.5 The realloc function
 Synopsis
 1
@@ -42,3 +44,6 @@ Committee Draft — April 12, 2011
 N1570
 
 7.22.4 Communication with the environment
+
+
+vim:tw=78:ts=8:ft=help:norl:

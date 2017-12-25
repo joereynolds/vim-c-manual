@@ -1,3 +1,5 @@
+*free.txt*
+*free*
 7.22.3.3 The free function
 Synopsis
 1
@@ -34,3 +36,6 @@ Committee Draft — April 12, 2011
 
 ISO/IEC 9899:201x
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

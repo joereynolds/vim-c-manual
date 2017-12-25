@@ -1,3 +1,5 @@
+*ispunct.txt*
+*ispunct*
 7.4.1.9 The ispunct function
 Synopsis
 1
@@ -13,3 +15,6 @@ of punctuation characters for which neither isspace nor isalnum is true. In the 
 locale, ispunct returns true for every printing character for which neither isspace
 nor isalnum is true.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

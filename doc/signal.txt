@@ -1,3 +1,5 @@
+*signal.txt*
+*signal*
 7.14.1.1 The signal function
 Synopsis
 1
@@ -85,3 +87,6 @@ Forward references: the abort function (7.22.4.1), the exit function (7.22.4.4),
 _Exit function (7.22.4.5), the quick_exit function (7.22.4.7).
 
 7.14.2 Send signal
+
+
+vim:tw=78:ts=8:ft=help:norl:

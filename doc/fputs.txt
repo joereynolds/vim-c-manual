@@ -1,3 +1,5 @@
+*fputs.txt*
+*fputs*
 7.21.7.4 The fputs function
 Synopsis
 1
@@ -30,3 +32,6 @@ Returns
 The fputs function returns EOF if a write error occurs; otherwise it returns a
 nonnegative value.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

@@ -1,3 +1,5 @@
+*wcscspn.txt*
+*wcscspn*
 7.29.4.5.2 The wcscspn function
 Synopsis
 1
@@ -29,3 +31,6 @@ Returns
 
 The wcscspn function returns the length of the segment.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

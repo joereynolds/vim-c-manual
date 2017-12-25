@@ -1,3 +1,5 @@
+*towupper.txt*
+*towupper*
 7.30.3.1.2 The towupper function
 Synopsis
 1
@@ -38,3 +40,6 @@ Committee Draft — April 12, 2011
 
 N1570
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

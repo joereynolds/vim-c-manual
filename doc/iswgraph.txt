@@ -1,3 +1,5 @@
+*iswgraph.txt*
+*iswgraph*
 7.30.2.1.6 The iswgraph function
 Synopsis
 1
@@ -26,3 +28,6 @@ Description
 The iswgraph function tests for any wide character for which iswprint is true and
 iswspace is false.355)
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

@@ -1,3 +1,5 @@
+*iswxdigit.txt*
+*iswxdigit*
 7.30.2.1.12 The iswxdigit function
 Synopsis
 1
@@ -18,3 +20,6 @@ The functions wctype and iswctype provide extensible wide character classificati
 as well as testing equivalent to that performed by the functions described in the previous
 subclause (7.30.2.1).
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

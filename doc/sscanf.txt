@@ -1,3 +1,5 @@
+*sscanf.txt*
+*sscanf*
 7.21.6.7 The sscanf function
 Synopsis
 1
@@ -22,3 +24,6 @@ before the first conversion (if any) has completed. Otherwise, the sscanf functi
 returns the number of input items assigned, which can be fewer than provided for, or even
 zero, in the event of an early matching failure.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

@@ -1,3 +1,5 @@
+*wcschr.txt*
+*wcschr*
 7.29.4.5.1 The wcschr function
 Synopsis
 1
@@ -17,3 +19,6 @@ Returns
 The wcschr function returns a pointer to the located wide character, or a null pointer if
 the wide character does not occur in the wide string.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

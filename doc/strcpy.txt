@@ -1,3 +1,5 @@
+*strcpy.txt*
+*strcpy*
 7.24.2.3 The strcpy function
 Synopsis
 1
@@ -18,3 +20,6 @@ Returns
 
 The strcpy function returns the value of s1.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

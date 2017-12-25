@@ -1,3 +1,5 @@
+*fsetpos.txt*
+*fsetpos*
 7.21.9.3 The fsetpos function
 Synopsis
 1
@@ -27,3 +29,6 @@ Returns
 If successful, the fsetpos function returns zero; on failure, the fsetpos function
 returns nonzero and stores an implementation-defined positive value in errno.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

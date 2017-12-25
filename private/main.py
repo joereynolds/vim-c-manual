@@ -5,9 +5,8 @@ a vim-help format
 
 import re
 
-def get_chapters():
-    """Returns all chapters from the C reference manual"""
-    manual = get_file_contents('../manual/creference')
+def write_chapters():
+    manual = get_file_contents('./manual/creference')
 
     chapter_header_pattern= r'^\d+.+ The \w+ function$'
     chapter_headers = re.findall(chapter_header_pattern, manual, re.M)
@@ -33,13 +32,16 @@ def get_file_contents(file_path):
 
 def write_chapter_to_file(chapter_title, chapter_contents):
 
-    manual = get_file_contents('../manual/creference')
+    manual = get_file_contents('./manual/creference')
     function_name = chapter_title.split()[2]
-    chapter = open('../manual/doc/' + function_name + '.txt', 'w')
+    chapter = open('../doc/' + function_name + '.txt', 'w')
+    chapter.write('*' + function_name + '.txt*\n' )
+    chapter.write('*' + function_name + '*\n')
     chapter.write(chapter_contents)
+    chapter.write('\n\nvim:tw=78:ts=8:ft=help:norl:')
     chapter.close()
 
 def main():
-    get_chapters()
+    write_chapters()
 
 main()

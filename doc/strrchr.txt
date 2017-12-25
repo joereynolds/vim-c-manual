@@ -1,3 +1,5 @@
+*strrchr.txt*
+*strrchr*
 7.24.5.5 The strrchr function
 Synopsis
 1
@@ -30,3 +32,6 @@ Returns
 The strrchr function returns a pointer to the character, or a null pointer if c does not
 occur in the string.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

@@ -1,3 +1,5 @@
+*perror.txt*
+*perror*
 7.21.10.4 The perror function
 Synopsis
 1
@@ -87,3 +89,6 @@ The functions atof, atoi, atol, and atoll need not affect the value of the integ
 expression errno on an error. If the value of the result cannot be represented, the
 behavior is undefined.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

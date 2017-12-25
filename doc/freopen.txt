@@ -1,3 +1,5 @@
+*freopen.txt*
+*freopen*
 7.21.5.4 The freopen function
 Synopsis
 1
@@ -33,3 +35,6 @@ Returns
 The freopen function returns a null pointer if the open operation fails. Otherwise,
 freopen returns the value of stream.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

@@ -1,3 +1,5 @@
+*ctime.txt*
+*ctime*
 7.27.3.2 The ctime function
 Synopsis
 1
@@ -19,3 +21,6 @@ The ctime function returns the pointer returned by the asctime function with tha
 broken-down time as argument.
 Forward references: the localtime function (7.27.3.4).
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

@@ -1,3 +1,5 @@
+*strftime.txt*
+*strftime*
 7.27.3.5 The strftime function
 Synopsis
 1
@@ -285,3 +287,6 @@ initialized at program startup to the initial conversion state; the functions ar
 to avoid data races with other calls to the same function in this case. The implementation
 behaves as if no library function calls these functions with a null pointer for ps.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

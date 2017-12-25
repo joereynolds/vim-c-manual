@@ -1,3 +1,5 @@
+*srand.txt*
+*srand*
 7.22.2.2 The srand function
 Synopsis
 1
@@ -84,3 +86,6 @@ deallocates a region p of memory synchronizes with any allocation call that allo
 or part of the region p. This synchronization occurs after any access of p by the
 deallocating function, and before any such access by the allocating function.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

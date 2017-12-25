@@ -1,3 +1,5 @@
+*memcmp.txt*
+*memcmp*
 7.24.4.1 The memcmp function
 Synopsis
 1
@@ -18,3 +20,6 @@ The memcmp function returns an integer greater than, equal to, or less than zero
 accordingly as the object pointed to by s1 is greater than, equal to, or less than the object
 pointed to by s2.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

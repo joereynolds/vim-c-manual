@@ -1,3 +1,5 @@
+*malloc.txt*
+*malloc*
 7.22.3.4 The malloc function
 Synopsis
 1
@@ -16,3 +18,6 @@ Returns
 
 The malloc function returns either a null pointer or a pointer to the allocated space.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

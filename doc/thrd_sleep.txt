@@ -1,3 +1,5 @@
+*thrd_sleep.txt*
+*thrd_sleep*
 7.26.5.7 The thrd_sleep function
 Synopsis
 1
@@ -29,3 +31,6 @@ Returns
 The thrd_sleep function returns zero if the requested time has elapsed, -1 if it has
 been interrupted by a signal, or a negative value if it fails.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

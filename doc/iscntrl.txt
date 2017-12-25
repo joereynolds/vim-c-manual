@@ -1,3 +1,5 @@
+*iscntrl.txt*
+*iscntrl*
 7.4.1.4 The iscntrl function
 Synopsis
 1
@@ -10,3 +12,6 @@ Description
 
 The iscntrl function tests for any control character.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

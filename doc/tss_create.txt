@@ -1,3 +1,5 @@
+*tss_create.txt*
+*tss_create*
 7.26.6.1 The tss_create function
 Synopsis
 1
@@ -19,3 +21,6 @@ by key to a value that uniquely identifies the newly created pointer and returns
 thrd_success; otherwise, thrd_error is returned and the thread-specific storage
 pointed to by key is set to an undefined value.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

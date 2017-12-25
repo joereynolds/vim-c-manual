@@ -1,3 +1,5 @@
+*fgetpos.txt*
+*fgetpos*
 7.21.9.1 The fgetpos function
 Synopsis
 1
@@ -21,3 +23,6 @@ If successful, the fgetpos function returns zero; on failure, the fgetpos functi
 returns nonzero and stores an implementation-defined positive value in errno.
 Forward references: the fsetpos function (7.21.9.3).
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

@@ -1,3 +1,5 @@
+*fread.txt*
+*fread*
 7.21.8.1 The fread function
 Synopsis
 1
@@ -26,3 +28,6 @@ less than nmemb if a read error or end-of-file is encountered. If size or nmemb 
 fread returns zero and the contents of the array and the state of the stream remain
 unchanged.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

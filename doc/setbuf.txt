@@ -1,3 +1,5 @@
+*setbuf.txt*
+*setbuf*
 7.21.5.5 The setbuf function
 Synopsis
 1
@@ -35,3 +37,6 @@ Returns
 The setbuf function returns no value.
 Forward references: the setvbuf function (7.21.5.6).
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

@@ -1,3 +1,5 @@
+*fesetenv.txt*
+*fesetenv*
 7.6.4.3 The fesetenv function
 Synopsis
 1
@@ -20,3 +22,6 @@ Returns
 The fesetenv function returns zero if the environment was successfully established.
 Otherwise, it returns a nonzero value.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

@@ -1,3 +1,5 @@
+*fputwc.txt*
+*fputwc*
 7.29.3.3 The fputwc function
 Synopsis
 1
@@ -36,3 +38,6 @@ The fputwc function returns the wide character written. If a write error occurs,
 error indicator for the stream is set and fputwc returns WEOF. If an encoding error
 occurs, the value of the macro EILSEQ is stored in errno and fputwc returns WEOF.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

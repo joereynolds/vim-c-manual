@@ -1,3 +1,5 @@
+*wcsrchr.txt*
+*wcsrchr*
 7.29.4.5.4 The wcsrchr function
 Synopsis
 1
@@ -17,3 +19,6 @@ Returns
 The wcsrchr function returns a pointer to the wide character, or a null pointer if c does
 not occur in the wide string.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

@@ -1,3 +1,5 @@
+*btowc.txt*
+*btowc*
 7.29.6.1.1 The btowc function
 Synopsis
 1
@@ -18,3 +20,6 @@ The btowc function returns WEOF if c has the value EOF or if (unsigned char)c
 does not constitute a valid single-byte character in the initial shift state. Otherwise, it
 returns the wide character representation of that character.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

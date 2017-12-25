@@ -1,3 +1,5 @@
+*mktime.txt*
+*mktime*
 7.27.2.3 The mktime function
 Synopsis
 1
@@ -72,3 +74,6 @@ if (mktime(&time_str) == (time_t)(-1))
 time_str.tm_wday = 7;
 printf("%s\n", wday[time_str.tm_wday]);
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

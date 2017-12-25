@@ -1,3 +1,5 @@
+*toupper.txt*
+*toupper*
 7.4.2.2 The toupper function
 Synopsis
 1
@@ -291,3 +293,6 @@ be zero or the bitwise OR of one or more floating-point exception macros, for ex
 FE_OVERFLOW | FE_INEXACT. For other argument values the behavior of these
 functions is undefined.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

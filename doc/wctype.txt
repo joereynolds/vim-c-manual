@@ -1,3 +1,5 @@
+*wctype.txt*
+*wctype*
 7.30.2.2.2 The wctype function
 Synopsis
 1
@@ -41,3 +43,6 @@ ISO/IEC 9899:201x
 The header <wctype.h> declares several functions useful for mapping wide characters.
 
 7.30.3.1 Wide character case mapping functions
+
+
+vim:tw=78:ts=8:ft=help:norl:

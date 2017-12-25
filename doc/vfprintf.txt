@@ -1,3 +1,5 @@
+*vfprintf.txt*
+*vfprintf*
 7.21.6.8 The vfprintf function
 Synopsis
 1
@@ -53,3 +55,6 @@ vfprintf(stderr, format, args);
 va_end(args);
 }
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

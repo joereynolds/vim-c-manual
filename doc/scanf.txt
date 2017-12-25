@@ -1,3 +1,5 @@
+*scanf.txt*
+*scanf*
 7.21.6.4 The scanf function
 Synopsis
 1
@@ -19,3 +21,6 @@ the first conversion (if any) has completed. Otherwise, the scanf function retur
 number of input items assigned, which can be fewer than provided for, or even zero, in
 the event of an early matching failure.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

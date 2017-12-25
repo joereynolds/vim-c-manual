@@ -1,3 +1,5 @@
+*strncat.txt*
+*strncat*
 7.24.3.2 The strncat function
 Synopsis
 1
@@ -46,3 +48,6 @@ and strncmp is determined by the sign of the difference between the values of th
 pair of characters (both interpreted as unsigned char) that differ in the objects being
 compared.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

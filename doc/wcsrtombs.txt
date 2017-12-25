@@ -1,3 +1,5 @@
+*wcsrtombs.txt*
+*wcsrtombs*
 7.29.6.4.2 The wcsrtombs function
 Synopsis
 1
@@ -138,3 +140,6 @@ iswpunct functions may differ with respect to wide characters other than L' ' th
 both printing and white-space wide characters.353)
 Forward references: the wctob function (7.29.6.1.2).
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

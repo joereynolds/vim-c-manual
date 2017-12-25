@@ -1,3 +1,5 @@
+*wcsncat.txt*
+*wcsncat*
 7.29.4.3.2 The wcsncat function
 Synopsis
 1
@@ -39,3 +41,6 @@ Unless explicitly stated otherwise, the functions described in this subclause or
 wide characters the same way as two integers of the underlying integer type designated
 by wchar_t.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

@@ -1,3 +1,5 @@
+*wcsncmp.txt*
+*wcsncmp*
 7.29.4.4.3 The wcsncmp function
 Synopsis
 1
@@ -20,3 +22,6 @@ The wcsncmp function returns an integer greater than, equal to, or less than zer
 accordingly as the possibly null-terminated array pointed to by s1 is greater than, equal
 to, or less than the possibly null-terminated array pointed to by s2.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

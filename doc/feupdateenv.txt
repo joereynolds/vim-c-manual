@@ -1,3 +1,5 @@
+*feupdateenv.txt*
+*feupdateenv*
 7.6.4.4 The feupdateenv function
 Synopsis
 1
@@ -251,3 +253,6 @@ return 0;
 }
 
 7.8.2 Functions for greatest-width integer types
+
+
+vim:tw=78:ts=8:ft=help:norl:

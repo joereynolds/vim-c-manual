@@ -1,3 +1,5 @@
+*atomic_thread_fence.txt*
+*atomic_thread_fence*
 7.17.4.1 The atomic_thread_fence function
 Synopsis
 1
@@ -52,3 +54,6 @@ Returns
 
 The atomic_thread_fence function returns no value.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

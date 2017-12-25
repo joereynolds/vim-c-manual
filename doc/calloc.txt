@@ -1,3 +1,5 @@
+*calloc.txt*
+*calloc*
 7.22.3.2 The calloc function
 Synopsis
 1
@@ -16,3 +18,6 @@ Returns
 
 The calloc function returns either a null pointer or a pointer to the allocated space.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

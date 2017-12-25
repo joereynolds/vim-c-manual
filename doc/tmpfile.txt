@@ -1,3 +1,5 @@
+*tmpfile.txt*
+*tmpfile*
 7.21.4.3 The tmpfile function
 Synopsis
 1
@@ -28,3 +30,6 @@ The tmpfile function returns a pointer to the stream of the file that it created
 cannot be created, the tmpfile function returns a null pointer.
 Forward references: the fopen function (7.21.5.3).
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

@@ -1,3 +1,5 @@
+*localtime.txt*
+*localtime*
 7.27.3.4 The localtime function
 Synopsis
 1
@@ -17,3 +19,6 @@ Returns
 The localtime function returns a pointer to the broken-down time, or a null pointer if
 the specified time cannot be converted to local time.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

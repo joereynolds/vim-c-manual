@@ -1,3 +1,5 @@
+*vfwprintf.txt*
+*vfwprintf*
 7.29.2.5 The vfwprintf function
 Synopsis
 1
@@ -59,3 +61,6 @@ vfwprintf(stderr, format, args);
 va_end(args);
 }
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

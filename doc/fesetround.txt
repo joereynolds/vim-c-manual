@@ -1,3 +1,5 @@
+*fesetround.txt*
+*fesetround*
 7.6.3.2 The fesetround function
 Synopsis
 1
@@ -55,3 +57,6 @@ fesetround(save_round);
 The functions in this section manage the floating-point environment — status flags and
 control modes — as one entity.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

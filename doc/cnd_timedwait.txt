@@ -1,3 +1,5 @@
+*cnd_timedwait.txt*
+*cnd_timedwait*
 7.26.3.5 The cnd_timedwait function
 Synopsis
 1
@@ -36,3 +38,6 @@ The cnd_timedwait function returns thrd_success upon success, or
 thrd_timedout if the time specified in the call was reached without acquiring the
 requested resource, or thrd_error if the request could not be honored.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

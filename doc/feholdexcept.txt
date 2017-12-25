@@ -1,3 +1,5 @@
+*feholdexcept.txt*
+*feholdexcept*
 7.6.4.2 The feholdexcept function
 Synopsis
 1
@@ -30,3 +32,6 @@ Returns
 The feholdexcept function returns zero if and only if non-stop floating-point
 exception handling was successfully installed.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

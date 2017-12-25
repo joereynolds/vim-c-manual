@@ -1,3 +1,5 @@
+*isalpha.txt*
+*isalpha*
 7.4.1.2 The isalpha function
 Synopsis
 1
@@ -31,3 +33,6 @@ ISO/IEC 9899:201x
 none of iscntrl, isdigit, ispunct, or isspace is true.200) In the "C" locale,
 isalpha returns true only for the characters for which isupper or islower is true.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

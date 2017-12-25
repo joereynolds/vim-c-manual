@@ -1,3 +1,5 @@
+*fwide.txt*
+*fwide*
 7.29.3.5 The fwide function
 Synopsis
 1
@@ -35,3 +37,6 @@ Committee Draft — April 12, 2011
 
 N1570
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

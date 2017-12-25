@@ -1,3 +1,5 @@
+*fwrite.txt*
+*fwrite*
 7.21.8.2 The fwrite function
 Synopsis
 1
@@ -38,3 +40,6 @@ less than nmemb only if a write error is encountered. If size or nmemb is zero,
 fwrite returns zero and the state of the stream remains unchanged.
 
 7.21.9 File positioning functions
+
+
+vim:tw=78:ts=8:ft=help:norl:

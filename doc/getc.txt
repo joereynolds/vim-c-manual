@@ -1,3 +1,5 @@
+*getc.txt*
+*getc*
 7.21.7.5 The getc function
 Synopsis
 1
@@ -20,3 +22,6 @@ stream. If the stream is at end-of-file, the end-of-file indicator for the strea
 getc returns EOF. If a read error occurs, the error indicator for the stream is set and
 getc returns EOF.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

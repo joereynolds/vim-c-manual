@@ -1,3 +1,5 @@
+*iswpunct.txt*
+*iswpunct*
 7.30.2.1.9 The iswpunct function
 Synopsis
 1
@@ -11,3 +13,6 @@ Description
 The iswpunct function tests for any printing wide character that is one of a localespecific set of punctuation wide characters for which neither iswspace nor iswalnum
 is true.355)
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

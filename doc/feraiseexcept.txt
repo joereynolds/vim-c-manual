@@ -1,3 +1,5 @@
+*feraiseexcept.txt*
+*feraiseexcept*
 7.6.2.3 The feraiseexcept function
 Synopsis
 1
@@ -36,3 +38,6 @@ Committee Draft — April 12, 2011
 
 ISO/IEC 9899:201x
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

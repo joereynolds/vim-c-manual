@@ -1,3 +1,5 @@
+*wprintf.txt*
+*wprintf*
 7.29.2.11 The wprintf function
 Synopsis
 1
@@ -17,3 +19,6 @@ Returns
 The wprintf function returns the number of wide characters transmitted, or a negative
 value if an output or encoding error occurred.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

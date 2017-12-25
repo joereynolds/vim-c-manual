@@ -1,3 +1,5 @@
+*imaxdiv.txt*
+*imaxdiv*
 7.8.2.2 The imaxdiv function
 Synopsis
 1
@@ -305,3 +307,6 @@ with the characters LC_ and an uppercase letter,223) may also be specified by th
 implementation.
 
 7.11.1 Locale control
+
+
+vim:tw=78:ts=8:ft=help:norl:

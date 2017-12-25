@@ -1,3 +1,5 @@
+*localeconv.txt*
+*localeconv*
 7.11.2.1 The localeconv function
 Synopsis
 1
@@ -2597,3 +2599,6 @@ controlling expression of a selection or iteration statement; or
 If the invocation appears in any other context, the behavior is undefined.
 
 7.13.2 Restore calling environment
+
+
+vim:tw=78:ts=8:ft=help:norl:

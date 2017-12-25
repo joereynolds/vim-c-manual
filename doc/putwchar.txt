@@ -1,3 +1,5 @@
+*putwchar.txt*
+*putwchar*
 7.29.3.9 The putwchar function
 Synopsis
 1
@@ -15,3 +17,6 @@ Returns
 
 The putwchar function returns the character written, or WEOF.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

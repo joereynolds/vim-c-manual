@@ -1,3 +1,5 @@
+*vfwscanf.txt*
+*vfwscanf*
 7.29.2.6 The vfwscanf function
 Synopsis
 1
@@ -37,3 +39,6 @@ Committee Draft — April 12, 2011
 
 ISO/IEC 9899:201x
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

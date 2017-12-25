@@ -1,3 +1,5 @@
+*strstr.txt*
+*strstr*
 7.24.5.7 The strstr function
 Synopsis
 1
@@ -18,3 +20,6 @@ Returns
 The strstr function returns a pointer to the located string, or a null pointer if the string
 is not found. If s2 points to a string with zero length, the function returns s1.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

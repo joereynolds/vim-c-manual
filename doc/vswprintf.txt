@@ -1,3 +1,5 @@
+*vswprintf.txt*
+*vswprintf*
 7.29.2.7 The vswprintf function
 Synopsis
 1
@@ -24,3 +26,6 @@ The vswprintf function returns the number of wide characters written in the arra
 counting the terminating null wide character, or a negative value if an encoding error
 occurred or if n or more wide characters were requested to be generated.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

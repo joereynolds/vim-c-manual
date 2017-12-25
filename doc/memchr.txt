@@ -1,3 +1,5 @@
+*memchr.txt*
+*memchr*
 7.24.5.1 The memchr function
 Synopsis
 1
@@ -19,3 +21,6 @@ Returns
 The memchr function returns a pointer to the located character, or a null pointer if the
 character does not occur in the object.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

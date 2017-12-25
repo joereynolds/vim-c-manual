@@ -1,3 +1,5 @@
+*fesetexceptflag.txt*
+*fesetexceptflag*
 7.6.2.4 The fesetexceptflag function
 Synopsis
 1
@@ -22,3 +24,6 @@ The fesetexceptflag function returns zero if the excepts argument is zero or if
 all the specified flags were successfully set to the appropriate state. Otherwise, it returns
 a nonzero value.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

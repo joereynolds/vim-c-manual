@@ -1,3 +1,5 @@
+*difftime.txt*
+*difftime*
 7.27.2.2 The difftime function
 Synopsis
 1
@@ -15,3 +17,6 @@ Returns
 
 The difftime function returns the difference expressed in seconds as a double.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

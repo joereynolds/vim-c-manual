@@ -1,3 +1,5 @@
+*getenv.txt*
+*getenv*
 7.22.4.6 The getenv function
 Synopsis
 1
@@ -39,3 +41,6 @@ member. The string pointed to shall not be modified by the program, but may be
 overwritten by a subsequent call to the getenv function. If the specified name cannot
 be found, a null pointer is returned.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

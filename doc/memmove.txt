@@ -1,3 +1,5 @@
+*memmove.txt*
+*memmove*
 7.24.2.2 The memmove function
 Synopsis
 1
@@ -19,3 +21,6 @@ Returns
 
 The memmove function returns the value of s1.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

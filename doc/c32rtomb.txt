@@ -1,3 +1,5 @@
+*c32rtomb.txt*
+*c32rtomb*
 7.28.1.4 The c32rtomb function
 Synopsis
 1
@@ -126,3 +128,6 @@ undefined.
 The formatted wide character input/output functions shall behave as if there is a sequence
 point after the actions associated with each specifier.329)
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

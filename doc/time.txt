@@ -1,3 +1,5 @@
+*time.txt*
+*time*
 7.27.2.4 The time function
 Synopsis
 1
@@ -19,3 +21,6 @@ calendar time. The value (time_t)(-1) is returned if the calendar time is not
 available. If timer is not a null pointer, the return value is also assigned to the object it
 points to.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

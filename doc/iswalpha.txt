@@ -1,3 +1,5 @@
+*iswalpha.txt*
+*iswalpha*
 7.30.2.1.2 The iswalpha function
 Synopsis
 1
@@ -30,3 +32,6 @@ ISO/IEC 9899:201x
 wide characters for which none of iswcntrl, iswdigit, iswpunct, or iswspace
 is true.354)
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

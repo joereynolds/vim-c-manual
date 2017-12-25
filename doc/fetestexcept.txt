@@ -1,3 +1,5 @@
+*fetestexcept.txt*
+*fetestexcept*
 7.6.2.5 The fetestexcept function
 Synopsis
 1
@@ -56,3 +58,6 @@ if (set_excepts & FE_OVERFLOW) g();
 The fegetround and fesetround functions provide control of rounding direction
 modes.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

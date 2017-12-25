@@ -1,3 +1,5 @@
+*strpbrk.txt*
+*strpbrk*
 7.24.5.4 The strpbrk function
 Synopsis
 1
@@ -17,3 +19,6 @@ Returns
 The strpbrk function returns a pointer to the character, or a null pointer if no character
 from s2 occurs in s1.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

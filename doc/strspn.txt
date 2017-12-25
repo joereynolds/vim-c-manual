@@ -1,3 +1,5 @@
+*strspn.txt*
+*strspn*
 7.24.5.6 The strspn function
 Synopsis
 1
@@ -16,3 +18,6 @@ Returns
 
 The strspn function returns the length of the segment.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

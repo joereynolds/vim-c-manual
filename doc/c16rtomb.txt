@@ -1,3 +1,5 @@
+*c16rtomb.txt*
+*c16rtomb*
 7.28.1.2 The c16rtomb function
 Synopsis
 1
@@ -44,3 +46,6 @@ any shift sequences). When c16 is not a valid wide character, an encoding error 
 the function stores the value of the macro EILSEQ in errno and returns
 (size_t)(-1); the conversion state is unspecified.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

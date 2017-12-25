@@ -1,3 +1,5 @@
+*wcscoll.txt*
+*wcscoll*
 7.29.4.4.2 The wcscoll function
 Synopsis
 1
@@ -35,3 +37,6 @@ N1570
 wide string pointed to by s2 when both are interpreted as appropriate to the current
 locale.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

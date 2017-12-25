@@ -1,3 +1,5 @@
+*mbsrtowcs.txt*
+*mbsrtowcs*
 7.29.6.4.1 The mbsrtowcs function
 Synopsis
 1
@@ -52,3 +54,6 @@ Committee Draft — April 12, 2011
 
 N1570
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

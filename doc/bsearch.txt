@@ -1,3 +1,5 @@
+*bsearch.txt*
+*bsearch*
 7.22.5.1 The bsearch function
 Synopsis
 1
@@ -30,3 +32,6 @@ The bsearch function returns a pointer to a matching element of the array, or a 
 pointer if no match is found. If two elements compare as equal, which element is
 matched is unspecified.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

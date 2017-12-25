@@ -1,3 +1,5 @@
+*cnd_destroy.txt*
+*cnd_destroy*
 7.26.3.2 The cnd_destroy function
 Synopsis
 1
@@ -28,3 +30,6 @@ Returns
 
 The cnd_destroy function returns no value.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

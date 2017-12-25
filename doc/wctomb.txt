@@ -1,3 +1,5 @@
+*wctomb.txt*
+*wctomb*
 7.22.7.3 The wctomb function
 Synopsis
 1
@@ -50,3 +52,6 @@ In no case will the value returned be greater than the value of the MB_CUR_MAX m
 The behavior of the multibyte string functions is affected by the LC_CTYPE category of
 the current locale.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

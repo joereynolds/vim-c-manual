@@ -1,3 +1,5 @@
+*fputws.txt*
+*fputws*
 7.29.3.4 The fputws function
 Synopsis
 1
@@ -19,3 +21,6 @@ Returns
 The fputws function returns EOF if a write or encoding error occurs; otherwise, it
 returns a nonnegative value.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

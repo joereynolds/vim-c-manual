@@ -1,3 +1,5 @@
+*tss_delete.txt*
+*tss_delete*
 7.26.6.2 The tss_delete function
 Synopsis
 1
@@ -16,3 +18,6 @@ Returns
 
 The tss_delete function returns no value.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

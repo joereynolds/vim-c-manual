@@ -1,3 +1,5 @@
+*iswctype.txt*
+*iswctype*
 7.30.2.2.1 The iswctype function
 Synopsis
 1
@@ -88,3 +90,6 @@ character wc has the property described by desc. If desc is zero, the iswctype
 function returns zero (false).
 Forward references: the wctype function (7.30.2.2.2).
 
+
+
+vim:tw=78:ts=8:ft=help:norl:

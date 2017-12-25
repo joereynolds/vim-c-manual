@@ -1,3 +1,5 @@
+*remove.txt*
+*remove*
 7.21.4.1 The remove function
 Synopsis
 1
@@ -18,3 +20,6 @@ Returns
 
 The remove function returns zero if the operation succeeds, nonzero if it fails.
 
+
+
+vim:tw=78:ts=8:ft=help:norl:
