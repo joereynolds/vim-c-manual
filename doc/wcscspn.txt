@@ -27,7 +27,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -37,7 +36,6 @@ Returns
 3
 
 The wcscspn function returns the length of the segment.
-
 
 
 

@@ -28,5 +28,4 @@ rounding direction macro or the current rounding direction is not determinable.
 
 
 
-
 vim:tw=78:ts=8:ft=help:norl:

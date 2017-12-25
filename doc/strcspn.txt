@@ -28,5 +28,4 @@ The strcspn function returns the length of the segment.
 
 
 
-
 vim:tw=78:ts=8:ft=help:norl:

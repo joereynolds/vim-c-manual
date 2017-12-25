@@ -43,5 +43,4 @@ The quick_exit function cannot return to its caller.
 
 
 
-
 vim:tw=78:ts=8:ft=help:norl:

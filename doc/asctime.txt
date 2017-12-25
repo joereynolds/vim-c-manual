@@ -42,9 +42,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 sprintf(result, "%.3s %.3s%3d %.2d:%.2d:%.2d %d\n",
 wday_name[timeptr->tm_wday],
@@ -67,7 +65,6 @@ Returns
 4
 
 The asctime function returns a pointer to the string.
-
 
 
 

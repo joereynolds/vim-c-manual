@@ -32,9 +32,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 as pointers to the objects to receive the converted input. If there are insufficient
 arguments for the format, the behavior is undefined. If the format is exhausted while
@@ -99,7 +97,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -173,9 +170,7 @@ Library
 
 L
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 Specifies that a following a, A, e, E, f, F, g, or G conversion specifier
 applies to an argument with type pointer to long double.
@@ -243,7 +238,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -299,9 +293,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 last character, the behavior is implementation-defined.
 p
@@ -377,7 +369,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -405,7 +396,6 @@ will assign to i the value 56 and to x the value 789.0, will skip past 0123, and
 Forward references: the wcstod, wcstof, and wcstold functions (7.29.4.1.1), the
 wcstol, wcstoll, wcstoul, and wcstoull functions (7.29.4.1.2), the wcrtomb
 function (7.29.6.3.3).
-
 
 
 

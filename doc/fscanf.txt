@@ -69,7 +69,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -138,9 +137,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 j
 
@@ -217,7 +214,6 @@ Library
 
 c
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -274,9 +270,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 before the first multibyte character is converted. The corresponding argument
 shall be a pointer to the initial element of an array of wchar_t large enough
@@ -339,7 +333,6 @@ Library
 
 15
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -420,9 +413,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 the execution of the above example will be analogous to the following assignments:
 quant
@@ -518,7 +509,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -556,7 +546,6 @@ multibyte character.
 Forward references: the strtod, strtof, and strtold functions (7.22.1.3), the
 strtol, strtoll, strtoul, and strtoull functions (7.22.1.4), conversion state
 (7.29.6), the wcrtomb function (7.29.6.3.3).
-
 
 
 

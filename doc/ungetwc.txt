@@ -53,7 +53,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -124,9 +123,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 — a nonempty sequence of decimal digits optionally containing a decimal-point wide
 character, then an optional exponent part as defined for the corresponding single-byte
@@ -177,7 +174,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -244,9 +240,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 7.29.4.1.2 The wcstol, wcstoll, wcstoul, and wcstoull functions
 
@@ -307,7 +301,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -353,7 +346,6 @@ LLONG_MAX, ULONG_MAX, or ULLONG_MAX is returned (according to the return type
 sign of the value, if any), and the value of the macro ERANGE is stored in errno.
 
 7.29.4.2 Wide string copying functions
-
 
 
 vim:tw=78:ts=8:ft=help:norl:

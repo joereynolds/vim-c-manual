@@ -38,5 +38,4 @@ The value of the RAND_MAX macro shall be at least 32767.
 
 
 
-
 vim:tw=78:ts=8:ft=help:norl:

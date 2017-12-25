@@ -59,9 +59,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 7.30 Wide character classification and mapping utilities <wctype.h>
 7.30.1 Introduction
@@ -115,7 +113,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -146,7 +143,6 @@ character classification function from 7.4.1 returns true, except that the iswgr
 iswpunct functions may differ with respect to wide characters other than L' ' that are
 both printing and white-space wide characters.353)
 Forward references: the wctob function (7.29.6.1.2).
-
 
 
 

@@ -19,5 +19,4 @@ The iswprint function tests for any printing wide character.
 
 
 
-
 vim:tw=78:ts=8:ft=help:norl:

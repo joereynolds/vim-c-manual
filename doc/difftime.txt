@@ -26,5 +26,4 @@ The difftime function returns the difference expressed in seconds as a double.
 
 
 
-
 vim:tw=78:ts=8:ft=help:norl:

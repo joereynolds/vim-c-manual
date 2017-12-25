@@ -36,5 +36,4 @@ Forward references: the quick_exit function (7.22.4.7).
 
 
 
-
 vim:tw=78:ts=8:ft=help:norl:

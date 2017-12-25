@@ -28,5 +28,4 @@ different threads. Otherwise the thrd_equal function returns a nonzero value.
 
 
 
-
 vim:tw=78:ts=8:ft=help:norl:

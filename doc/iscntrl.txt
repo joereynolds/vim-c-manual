@@ -19,5 +19,4 @@ The iscntrl function tests for any control character.
 
 
 
-
 vim:tw=78:ts=8:ft=help:norl:

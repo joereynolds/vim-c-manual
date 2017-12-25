@@ -38,5 +38,4 @@ returns nonzero and stores an implementation-defined positive value in errno.
 
 
 
-
 vim:tw=78:ts=8:ft=help:norl:

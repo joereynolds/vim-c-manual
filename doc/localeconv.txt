@@ -32,7 +32,6 @@ Library
 
 3
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -80,9 +79,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 char n_cs_precedes
 Set to 1 or 0 if the currency_symbol respectively precedes or
@@ -128,7 +125,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -216,9 +212,7 @@ and
 
 7
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 The implementation shall behave as if no library function calls the localeconv
 function.
@@ -414,7 +408,6 @@ Library
 
 11
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -491,9 +484,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 7.12 Mathematics <math.h>
 1
@@ -550,7 +541,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -609,9 +599,7 @@ Library
 
 9
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 The macros
 MATH_ERRNO
@@ -669,7 +657,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -730,9 +717,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 7.12.2 The FP_CONTRACT pragma
 
@@ -805,7 +790,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -890,9 +874,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 
 ==============================================================================
@@ -963,7 +945,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -1046,9 +1027,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 
 ==============================================================================
@@ -1135,7 +1114,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -1224,9 +1202,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 
 ==============================================================================
@@ -1314,7 +1290,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -1403,9 +1378,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 
 ==============================================================================
@@ -1479,7 +1452,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -1559,9 +1531,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 
 ==============================================================================
@@ -1641,7 +1611,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -1726,9 +1695,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 floating-point format) in the object pointed to by iptr.
 
@@ -1801,7 +1768,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -1890,9 +1856,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 
 ==============================================================================
@@ -1991,7 +1955,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -2076,9 +2039,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 7.12.9 Nearest integer functions
 7.12.9.1 The ceil functions
@@ -2158,7 +2119,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -2235,9 +2195,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 7.12.9.6 The round functions
 
@@ -2316,7 +2274,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -2394,9 +2351,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 
 ==============================================================================
@@ -2474,7 +2429,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -2552,9 +2506,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 7.12.11.4 The nexttoward functions
 
@@ -2629,7 +2581,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -2713,9 +2664,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 7.12.14 Comparison macros
 1
@@ -2782,7 +2731,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -2863,9 +2811,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 7.12.14.5 The islessgreater macro
 
@@ -2925,7 +2871,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -2997,9 +2942,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 expression of a selection or iteration statement;
 — the operand of a unary ! operator with the resulting expression being the entire
@@ -3010,7 +2953,6 @@ controlling expression of a selection or iteration statement; or
 If the invocation appears in any other context, the behavior is undefined.
 
 7.13.2 Restore calling environment
-
 
 
 vim:tw=78:ts=8:ft=help:norl:

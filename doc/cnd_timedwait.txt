@@ -20,7 +20,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -44,7 +43,6 @@ Returns
 The cnd_timedwait function returns thrd_success upon success, or
 thrd_timedout if the time specified in the call was reached without acquiring the
 requested resource, or thrd_error if the request could not be honored.
-
 
 
 

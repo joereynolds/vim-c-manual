@@ -30,9 +30,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 support positioning requests, or if the stream was opened with append mode, the
 character is appended to the output stream.
@@ -44,7 +42,6 @@ Returns
 The fputwc function returns the wide character written. If a write error occurs, the
 error indicator for the stream is set and fputwc returns WEOF. If an encoding error
 occurs, the value of the macro EILSEQ is stored in errno and fputwc returns WEOF.
-
 
 
 

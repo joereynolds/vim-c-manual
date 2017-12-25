@@ -35,5 +35,4 @@ occurred or if n or more wide characters were requested to be generated.
 
 
 
-
 vim:tw=78:ts=8:ft=help:norl:

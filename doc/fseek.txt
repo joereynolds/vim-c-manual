@@ -41,9 +41,7 @@ Library
 
 5
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 After determining the new position, a successful call to the fseek function undoes any
 effects of the ungetc function on the stream, clears the end-of-file indicator for the
@@ -57,7 +55,6 @@ Returns
 
 The fseek function returns nonzero only for a request that cannot be satisfied.
 Forward references: the ftell function (7.21.9.4).
-
 
 
 

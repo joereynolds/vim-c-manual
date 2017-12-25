@@ -36,5 +36,4 @@ completely written if and only if the returned value is nonnegative and less tha
 
 
 
-
 vim:tw=78:ts=8:ft=help:norl:

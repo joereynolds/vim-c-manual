@@ -27,5 +27,4 @@ The memset function returns the value of s.
 
 
 
-
 vim:tw=78:ts=8:ft=help:norl:

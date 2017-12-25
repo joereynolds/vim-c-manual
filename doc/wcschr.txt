@@ -28,5 +28,4 @@ the wide character does not occur in the wide string.
 
 
 
-
 vim:tw=78:ts=8:ft=help:norl:

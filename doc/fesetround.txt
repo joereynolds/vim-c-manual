@@ -37,9 +37,7 @@ Library
 
 4
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 EXAMPLE Save, set, and restore the rounding direction. Report an error and abort if setting the
 rounding direction fails.
@@ -63,7 +61,6 @@ fesetround(save_round);
 
 The functions in this section manage the floating-point environment — status flags and
 control modes — as one entity.
-
 
 
 

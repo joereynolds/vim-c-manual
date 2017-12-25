@@ -26,5 +26,4 @@ The thrd_current function returns the identifier of the thread that called it.
 
 
 
-
 vim:tw=78:ts=8:ft=help:norl:

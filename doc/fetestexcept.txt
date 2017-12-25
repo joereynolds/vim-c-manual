@@ -42,7 +42,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -64,7 +63,6 @@ if (set_excepts & FE_OVERFLOW) g();
 
 The fegetround and fesetround functions provide control of rounding direction
 modes.
-
 
 
 

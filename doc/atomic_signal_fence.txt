@@ -59,7 +59,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -109,7 +108,6 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
 Atomic type name
 atomic_bool
@@ -189,7 +187,6 @@ _Atomic
 _Atomic
 _Atomic
 
-ISO/IEC 9899:201x
 
 Direct type
 _Bool
@@ -243,7 +240,6 @@ Library
 
 3
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -322,9 +318,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 7.17.7.3 The atomic_exchange generic functions
 
@@ -399,7 +393,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -493,9 +486,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 according to the value of order. These operations are atomic read-modify-write
 operations (5.1.2.4). For signed integer types, arithmetic is defined to use two’s
@@ -574,7 +565,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -620,9 +610,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 7.18 Boolean type and values <stdbool.h>
 1
@@ -661,7 +649,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -725,9 +712,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 7.20 Integer types <stdint.h>
 1
@@ -783,7 +768,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -861,9 +845,7 @@ Library
 
 3
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 The following types are required:
 int_fast8_t
@@ -925,7 +907,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -1009,9 +990,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 7.20.2.5 Limits of greatest-width integer types
 1
@@ -1082,7 +1061,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -1152,9 +1130,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 7.20.4.2 Macros for greatest-width integer constants
 1
@@ -1174,7 +1150,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -1227,9 +1202,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 guarantees can be opened;265)
 L_tmpnam
@@ -1281,7 +1254,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -1342,9 +1314,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 stream becomes a wide-oriented stream. Similarly, once a byte input/output function has
 been applied to a stream without orientation, the stream becomes a byte-oriented stream.
@@ -1404,7 +1374,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -1470,9 +1439,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 7
 
@@ -1543,7 +1510,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -1562,7 +1528,6 @@ fputwc function (7.29.3.3), conversion state (7.29.6), the mbrtowc function
 (7.29.6.3.2), the wcrtomb function (7.29.6.3.3).
 
 7.21.4 Operations on files
-
 
 
 vim:tw=78:ts=8:ft=help:norl:

@@ -19,7 +19,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -40,7 +39,6 @@ Returns
 
 The sprintf function returns the number of characters written in the array, not
 counting the terminating null character, or a negative value if an encoding error occurred.
-
 
 
 

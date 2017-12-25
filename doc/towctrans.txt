@@ -39,5 +39,4 @@ by desc. If desc is zero, the towctrans function returns the value of wc.
 
 
 
-
 vim:tw=78:ts=8:ft=help:norl:

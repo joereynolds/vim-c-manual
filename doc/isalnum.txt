@@ -19,5 +19,4 @@ The isalnum function tests for any character for which isalpha or isdigit is tru
 
 
 
-
 vim:tw=78:ts=8:ft=help:norl:

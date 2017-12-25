@@ -31,13 +31,10 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 none of iscntrl, isdigit, ispunct, or isspace is true.200) In the "C" locale,
 isalpha returns true only for the characters for which isupper or islower is true.
-
 
 
 

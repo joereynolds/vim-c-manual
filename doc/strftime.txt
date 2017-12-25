@@ -40,9 +40,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 of the current locale and by the values of zero or more members of the broken-down time
 structure pointed to by timeptr, as specified in brackets in the description. If any of
@@ -135,7 +133,6 @@ Library
 %%
 4
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -188,9 +185,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 representation, where Monday is 1.
 %OU is replaced by the week number, using the locale’s alternative numeric symbols.
@@ -262,7 +257,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -293,7 +287,6 @@ pointer, each function uses its own internal mbstate_t object instead, which is
 initialized at program startup to the initial conversion state; the functions are not required
 to avoid data races with other calls to the same function in this case. The implementation
 behaves as if no library function calls these functions with a null pointer for ps.
-
 
 
 

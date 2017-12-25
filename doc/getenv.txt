@@ -32,9 +32,7 @@ Library
 
 3
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 The implementation shall behave as if no library function calls the getenv function.
 
@@ -47,7 +45,6 @@ The getenv function returns a pointer to a string associated with the matched li
 member. The string pointed to shall not be modified by the program, but may be
 overwritten by a subsequent call to the getenv function. If the specified name cannot
 be found, a null pointer is returned.
-
 
 
 

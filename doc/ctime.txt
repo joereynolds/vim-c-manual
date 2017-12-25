@@ -30,5 +30,4 @@ Forward references: the localtime function (7.27.3.4).
 
 
 
-
 vim:tw=78:ts=8:ft=help:norl:

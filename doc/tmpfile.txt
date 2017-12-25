@@ -39,5 +39,4 @@ Forward references: the fopen function (7.21.5.3).
 
 
 
-
 vim:tw=78:ts=8:ft=help:norl:

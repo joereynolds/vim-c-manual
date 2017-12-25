@@ -20,7 +20,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -38,7 +37,6 @@ Returns
 
 The gmtime function returns a pointer to the broken-down time, or a null pointer if the
 specified time cannot be converted to UTC.
-
 
 
 

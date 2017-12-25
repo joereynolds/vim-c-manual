@@ -29,5 +29,4 @@ is not found. If s2 points to a string with zero length, the function returns s1
 
 
 
-
 vim:tw=78:ts=8:ft=help:norl:

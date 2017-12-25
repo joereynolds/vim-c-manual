@@ -57,7 +57,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -123,9 +122,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 conversions, if a precision is specified, the 0 flag is ignored. For other
 conversions, the behavior is undefined.
@@ -194,7 +191,6 @@ Library
 
 L
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -256,9 +252,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 6; if the precision is zero and the # flag is not specified, no decimal-point
 character appears. The value is rounded to the appropriate number of digits.
@@ -306,7 +300,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -362,9 +355,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 the precision, the function would need to access a wide character one past the
 end of the array. In no case is a partial multibyte character written.281)
@@ -434,7 +425,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -523,9 +513,6 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
-
-ISO/IEC 9899:201x
 
 
 

@@ -29,7 +29,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -52,7 +51,6 @@ information in any object of the same type pointed to by the value returned from
 previous call to any of them and the functions are not required to avoid data races with
 each other.322) The implementation shall behave as if no other library functions call these
 functions.
-
 
 
 

@@ -48,7 +48,6 @@ Library
 EXAMPLE
 routine.
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -67,7 +66,6 @@ fwprintf(stderr, L"ERROR in %s: ", function_name);
 vfwprintf(stderr, format, args);
 va_end(args);
 }
-
 
 
 

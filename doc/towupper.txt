@@ -43,10 +43,8 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
-
 
 
 

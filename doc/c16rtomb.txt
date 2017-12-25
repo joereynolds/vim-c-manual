@@ -36,7 +36,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -52,7 +51,6 @@ The c16rtomb function returns the number of bytes stored in the array object (in
 any shift sequences). When c16 is not a valid wide character, an encoding error occurs:
 the function stores the value of the macro EILSEQ in errno and returns
 (size_t)(-1); the conversion state is unspecified.
-
 
 
 

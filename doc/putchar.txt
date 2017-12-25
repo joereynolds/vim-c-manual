@@ -27,5 +27,4 @@ indicator for the stream is set and putchar returns EOF.
 
 
 
-
 vim:tw=78:ts=8:ft=help:norl:

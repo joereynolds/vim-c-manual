@@ -44,7 +44,6 @@ iswctype(wc,
 iswctype(wc,
 iswctype(wc,
 
-Committee Draft — April 12, 2011
 
 wctype("alnum"))
 wctype("alpha"))
@@ -96,7 +95,6 @@ The iswctype function returns nonzero (true) if and only if the value of the wid
 character wc has the property described by desc. If desc is zero, the iswctype
 function returns zero (false).
 Forward references: the wctype function (7.30.2.2.2).
-
 
 
 

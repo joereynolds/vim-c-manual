@@ -33,5 +33,4 @@ The thrd_exit function returns no value.
 
 
 
-
 vim:tw=78:ts=8:ft=help:norl:

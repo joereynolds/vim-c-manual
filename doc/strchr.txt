@@ -27,7 +27,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -38,7 +37,6 @@ Returns
 
 The strchr function returns a pointer to the located character, or a null pointer if the
 character does not occur in the string.
-
 
 
 

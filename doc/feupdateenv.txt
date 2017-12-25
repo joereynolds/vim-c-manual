@@ -44,11 +44,9 @@ Library
 
 4
 
-Committee Draft — April 12, 2011
 
 EXAMPLE
 
-ISO/IEC 9899:201x
 
 Hide spurious underflow floating-point exceptions:
 
@@ -77,7 +75,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -100,9 +97,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 7.8 Format conversion of integer types <inttypes.h>
 1
@@ -201,7 +196,6 @@ SCNdN
 SCNiN
 5
 
-Committee Draft — April 12, 2011
 
 SCNdLEASTN
 SCNiLEASTN
@@ -260,7 +254,6 @@ return 0;
 }
 
 7.8.2 Functions for greatest-width integer types
-
 
 
 vim:tw=78:ts=8:ft=help:norl:

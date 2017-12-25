@@ -19,5 +19,4 @@ The iswcntrl function tests for any control wide character.
 
 
 
-
 vim:tw=78:ts=8:ft=help:norl:

@@ -56,9 +56,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 (size_t)(-3) if the next character resulting from a previous call has been stored (no
 bytes from the input have been consumed by this call).
@@ -69,7 +67,6 @@ stored).325)
 do not contribute to a complete and valid multibyte character (no
 value is stored); the value of the macro EILSEQ is stored in errno,
 and the conversion state is unspecified.
-
 
 
 

@@ -34,7 +34,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -67,9 +66,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 7.16 Variable arguments <stdarg.h>
 1
@@ -136,7 +133,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -212,9 +208,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 by the va_start or va_copy macro). If there is no corresponding invocation of the
 va_start or va_copy macro, or if the va_end macro is not invoked before the
@@ -285,7 +279,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -339,9 +332,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 7.17 Atomics <stdatomic.h>
 7.17.1 Introduction
@@ -401,7 +392,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -478,9 +468,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 
 ==============================================================================
@@ -558,7 +546,6 @@ Library
 
 7
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -627,9 +614,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 // Thread 1:
 r1 = atomic_load_explicit(&y, memory_order_relaxed);
@@ -687,7 +672,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -744,7 +728,6 @@ An atomic operation A that is a release operation on an atomic object M synchron
 with an acquire fence B if there exists some atomic operation X on M such that X is
 sequenced before B and reads the value written by A or a value written by any side effect
 in the release sequence headed by A.
-
 
 
 

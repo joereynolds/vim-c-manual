@@ -33,9 +33,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 7.25 Type-generic math <tgmath.h>
 1
@@ -102,7 +100,6 @@ pow
 sqrt
 fabs
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -208,9 +205,7 @@ Library
 
 6
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 For each unsuffixed function in <complex.h> that is not a c-prefixed counterpart to a
 function in <math.h>, the corresponding type-generic macro has the same name as the
@@ -293,7 +288,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -348,9 +342,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 thrd_start_t
 which is the function pointer type int (*)(void*) that is passed to thrd_create
@@ -390,12 +382,10 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
 7.26.2 Initialization functions
-
 
 
 vim:tw=78:ts=8:ft=help:norl:

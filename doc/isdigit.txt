@@ -19,5 +19,4 @@ The isdigit function tests for any decimal-digit character (as defined in 5.2.1)
 
 
 
-
 vim:tw=78:ts=8:ft=help:norl:

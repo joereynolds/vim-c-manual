@@ -27,9 +27,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 
 ==============================================================================
@@ -38,7 +36,6 @@ Returns
 
 The strrchr function returns a pointer to the character, or a null pointer if c does not
 occur in the string.
-
 
 
 

@@ -29,5 +29,4 @@ returns the wide character representation of that character.
 
 
 
-
 vim:tw=78:ts=8:ft=help:norl:

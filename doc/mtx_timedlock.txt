@@ -19,7 +19,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -41,7 +40,6 @@ Returns
 The mtx_timedlock function returns thrd_success on success, or
 thrd_timedout if the time specified was reached without acquiring the requested
 resource, or thrd_error if the request could not be honored.
-
 
 
 

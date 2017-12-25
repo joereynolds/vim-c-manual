@@ -27,7 +27,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -38,7 +37,6 @@ Returns
 
 The feholdexcept function returns zero if and only if non-stop floating-point
 exception handling was successfully installed.
-
 
 
 

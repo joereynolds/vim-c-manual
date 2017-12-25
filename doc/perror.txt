@@ -38,7 +38,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -85,9 +84,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 7.22.1 Numeric conversion functions
 1
@@ -95,7 +92,6 @@ ISO/IEC 9899:201x
 The functions atof, atoi, atol, and atoll need not affect the value of the integer
 expression errno on an error. If the value of the result cannot be represented, the
 behavior is undefined.
-
 
 
 

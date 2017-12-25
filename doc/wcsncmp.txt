@@ -31,5 +31,4 @@ to, or less than the possibly null-terminated array pointed to by s2.
 
 
 
-
 vim:tw=78:ts=8:ft=help:norl:

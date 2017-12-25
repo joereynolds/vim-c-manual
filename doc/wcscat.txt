@@ -29,5 +29,4 @@ The wcscat function returns the value of s1.
 
 
 
-
 vim:tw=78:ts=8:ft=help:norl:

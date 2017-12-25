@@ -26,7 +26,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -54,7 +53,6 @@ no library function calls these functions with a null pointer for ps.
 
 Also unlike their corresponding functions, the return value does not represent whether the
 encoding is state-dependent.
-
 
 
 

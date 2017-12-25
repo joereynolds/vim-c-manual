@@ -19,5 +19,4 @@ The isprint function tests for any printing character including space (' ').
 
 
 
-
 vim:tw=78:ts=8:ft=help:norl:

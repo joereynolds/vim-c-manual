@@ -50,7 +50,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -107,9 +106,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 — Functions for wide string date and time conversion; and
 — Functions that provide extended capabilities for conversion between multibyte and
@@ -134,7 +131,6 @@ undefined.
 
 The formatted wide character input/output functions shall behave as if there is a sequence
 point after the actions associated with each specifier.329)
-
 
 
 

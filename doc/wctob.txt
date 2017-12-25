@@ -31,5 +31,4 @@ that character as an unsigned char converted to an int.
 7.29.6.2 Conversion state functions
 
 
-
 vim:tw=78:ts=8:ft=help:norl:

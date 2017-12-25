@@ -37,13 +37,11 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
 wide string pointed to by s2 when both are interpreted as appropriate to the current
 locale.
-
 
 
 

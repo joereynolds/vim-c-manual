@@ -28,5 +28,4 @@ no wide character from s2 occurs in s1.
 
 
 
-
 vim:tw=78:ts=8:ft=help:norl:

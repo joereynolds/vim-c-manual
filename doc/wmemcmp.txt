@@ -31,5 +31,4 @@ pointed to by s2.
 7.29.4.5 Wide string search functions
 
 
-
 vim:tw=78:ts=8:ft=help:norl:

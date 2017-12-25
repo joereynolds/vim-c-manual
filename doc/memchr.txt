@@ -30,5 +30,4 @@ character does not occur in the object.
 
 
 
-
 vim:tw=78:ts=8:ft=help:norl:

@@ -30,5 +30,4 @@ The call_once function returns no value.
 7.26.3 Condition variable functions
 
 
-
 vim:tw=78:ts=8:ft=help:norl:

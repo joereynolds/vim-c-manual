@@ -59,7 +59,6 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
@@ -100,9 +99,7 @@ Library
 
 N1570
 
-Committee Draft — April 12, 2011
 
-ISO/IEC 9899:201x
 
 7.14 Signal handling <signal.h>
 1
@@ -165,12 +162,10 @@ Library
 
 ISO/IEC 9899:201x
 
-Committee Draft — April 12, 2011
 
 N1570
 
 7.14.1 Specify signal handling
-
 
 
 vim:tw=78:ts=8:ft=help:norl:
