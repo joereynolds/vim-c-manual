@@ -2,7 +2,7 @@
 
 Press <kbd>K</kbd> over a keyword to get the documentation for that function.
 
-![](https://i.imgur.com/70Yxomc.gif)
+![](https://i.imgur.com/pbOpxcf.gif)
 
 # Not working?
 
