@@ -1,11 +1,16 @@
 *atomic_signal_fence.txt*
 *atomic_signal_fence*
+
 7.17.4.2 The atomic_signal_fence function
+
+==============================================================================
 Synopsis
 1
 
 #include <stdatomic.h>
 void atomic_signal_fence(memory_order order);
+
+==============================================================================
 Description
 
 2
@@ -25,6 +30,8 @@ NOTE 2 Compiler optimizations and reorderings of loads and stores are inhibited 
 atomic_thread_fence, but the hardware fence instructions that atomic_thread_fence would
 have inserted are not emitted.
 
+
+==============================================================================
 Returns
 5
 
@@ -57,11 +64,15 @@ Committee Draft — April 12, 2011
 N1570
 
 7.17.5.1 The atomic_is_lock_free generic function
+
+==============================================================================
 Synopsis
 1
 
 #include <stdatomic.h>
 _Bool atomic_is_lock_free(const volatile A *obj);
+
+==============================================================================
 Description
 
 2
@@ -69,6 +80,8 @@ Description
 The atomic_is_lock_free generic function indicates whether or not the object
 pointed to by obj is lock-free.
 ∗
+
+==============================================================================
 Returns
 
 3
@@ -245,6 +258,8 @@ There are only a few kinds of operations on atomic types, though there are many
 instances of those kinds. This subclause specifies each general kind.
 
 7.17.7.1 The atomic_store generic functions
+
+==============================================================================
 Synopsis
 1
 
@@ -252,6 +267,8 @@ Synopsis
 void atomic_store(volatile A *object, C desired);
 void atomic_store_explicit(volatile A *object,
 C desired, memory_order order);
+
+==============================================================================
 Description
 
 2
@@ -266,6 +283,8 @@ memory_order_acquire,
 memory_order_consume, nor memory_order_acq_rel. Atomically replace the
 value pointed to by object with the value of desired. Memory is affected according
 to the value of order.
+
+==============================================================================
 Returns
 
 3
@@ -273,6 +292,8 @@ Returns
 The atomic_store generic functions return no value.
 
 7.17.7.2 The atomic_load generic functions
+
+==============================================================================
 Synopsis
 1
 
@@ -280,12 +301,16 @@ Synopsis
 C atomic_load(volatile A *object);
 C atomic_load_explicit(volatile A *object,
 memory_order order);
+
+==============================================================================
 Description
 
 2
 
 The order argument shall not be memory_order_release nor
 memory_order_acq_rel. Memory is affected according to the value of order.
+
+==============================================================================
 Returns
 Atomically returns the value pointed to by object.
 
@@ -302,6 +327,8 @@ Committee Draft — April 12, 2011
 ISO/IEC 9899:201x
 
 7.17.7.3 The atomic_exchange generic functions
+
+==============================================================================
 Synopsis
 1
 
@@ -309,6 +336,8 @@ Synopsis
 C atomic_exchange(volatile A *object, C desired);
 C atomic_exchange_explicit(volatile A *object,
 C desired, memory_order order);
+
+==============================================================================
 Description
 
 2
@@ -316,6 +345,8 @@ Description
 Atomically replace the value pointed to by object with desired. Memory is affected
 according to the value of order. These operations are read-modify-write operations
 (5.1.2.4).
+
+==============================================================================
 Returns
 
 3
@@ -323,6 +354,8 @@ Returns
 Atomically returns the value pointed to by object immediately before the effects.
 
 7.17.7.4 The atomic_compare_exchange generic functions
+
+==============================================================================
 Synopsis
 1
 
@@ -337,6 +370,8 @@ C *expected, C desired);
 _Bool atomic_compare_exchange_weak_explicit(
 volatile A *object, C *expected, C desired,
 memory_order success, memory_order failure);
+
+==============================================================================
 Description
 
 2
@@ -399,6 +434,8 @@ When a compare-and-exchange is in a loop, the weak version will yield better per
 platforms. When a weak compare-and-exchange would require a loop and a strong one would not, the
 strong one is preferable.
 
+
+==============================================================================
 Returns
 7
 
@@ -431,6 +468,8 @@ bitwise inclusive or
 bitwise exclusive or
 bitwise and
 
+
+==============================================================================
 Synopsis
 2
 
@@ -438,6 +477,8 @@ Synopsis
 C atomic_fetch_key(volatile A *object, M operand);
 C atomic_fetch_key_explicit(volatile A *object,
 M operand, memory_order order);
+
+==============================================================================
 Description
 
 3
@@ -461,6 +502,8 @@ operations (5.1.2.4). For signed integer types, arithmetic is defined to use two
 complement representation with silent wrap-around on overflow; there are no undefined
 results. For address types, the result may be an undefined address, but the operations
 otherwise have no undefined behavior.
+
+==============================================================================
 Returns
 4
 
@@ -503,6 +546,8 @@ EXAMPLE
 atomic_flag guard = ATOMIC_FLAG_INIT;
 
 7.17.8.1 The atomic_flag_test_and_set functions
+
+==============================================================================
 Synopsis
 1
 
@@ -511,6 +556,8 @@ _Bool atomic_flag_test_and_set(
 volatile atomic_flag *object);
 _Bool atomic_flag_test_and_set_explicit(
 volatile atomic_flag *object, memory_order order);
+
+==============================================================================
 Description
 
 2
@@ -531,12 +578,16 @@ Committee Draft — April 12, 2011
 
 N1570
 
+
+==============================================================================
 Returns
 3
 
 Atomically, the value of the object immediately before the effects.
 
 7.17.8.2 The atomic_flag_clear functions
+
+==============================================================================
 Synopsis
 1
 
@@ -544,6 +595,8 @@ Synopsis
 void atomic_flag_clear(volatile atomic_flag *object);
 void atomic_flag_clear_explicit(
 volatile atomic_flag *object, memory_order order);
+
+==============================================================================
 Description
 
 2
@@ -551,6 +604,8 @@ Description
 The order argument shall not be memory_order_acquire nor
 memory_order_acq_rel. Atomically sets the value pointed to by object to false.
 Memory is affected according to the value of order.
+
+==============================================================================
 Returns
 
 3
@@ -1507,6 +1562,7 @@ fputwc function (7.29.3.3), conversion state (7.29.6), the mbrtowc function
 (7.29.6.3.2), the wcrtomb function (7.29.6.3.3).
 
 7.21.4 Operations on files
+
 
 
 vim:tw=78:ts=8:ft=help:norl:

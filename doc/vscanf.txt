@@ -1,6 +1,9 @@
 *vscanf.txt*
 *vscanf*
+
 7.21.6.11 The vscanf function
+
+==============================================================================
 Synopsis
 1
 
@@ -8,6 +11,8 @@ Synopsis
 #include <stdio.h>
 int vscanf(const char * restrict format,
 va_list arg);
+
+==============================================================================
 Description
 
 2
@@ -16,6 +21,8 @@ The vscanf function is equivalent to scanf, with the variable argument list repl
 by arg, which shall have been initialized by the va_start macro (and possibly
 subsequent va_arg calls). The vscanf function does not invoke the va_end
 macro.288)
+
+==============================================================================
 Returns
 
 3
@@ -36,6 +43,7 @@ Library
 Committee Draft — April 12, 2011
 
 ISO/IEC 9899:201x
+
 
 
 

@@ -1,22 +1,30 @@
 *wcslen.txt*
 *wcslen*
+
 7.29.4.6.1 The wcslen function
+
+==============================================================================
 Synopsis
 1
 
 #include <wchar.h>
 size_t wcslen(const wchar_t *s);
+
+==============================================================================
 Description
 
 2
 
 The wcslen function computes the length of the wide string pointed to by s.
+
+==============================================================================
 Returns
 
 3
 
 The wcslen function returns the number of wide characters that precede the terminating
 null wide character.
+
 
 
 

@@ -1,16 +1,23 @@
 *fetestexcept.txt*
 *fetestexcept*
+
 7.6.2.5 The fetestexcept function
+
+==============================================================================
 Synopsis
 1
 
 #include <fenv.h>
 int fetestexcept(int excepts);
+
+==============================================================================
 Description
 
 2
 
 The fetestexcept function determines which of a specified subset of the floatingpoint exception flags are currently set. The excepts argument specifies the floatingpoint status flags to be queried.217)
+
+==============================================================================
 Returns
 
 3
@@ -57,6 +64,7 @@ if (set_excepts & FE_OVERFLOW) g();
 
 The fegetround and fesetround functions provide control of rounding direction
 modes.
+
 
 
 

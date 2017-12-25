@@ -1,11 +1,16 @@
 *feraiseexcept.txt*
 *feraiseexcept*
+
 7.6.2.3 The feraiseexcept function
+
+==============================================================================
 Synopsis
 1
 
 #include <fenv.h>
 int feraiseexcept(int excepts);
+
+==============================================================================
 Description
 
 2
@@ -15,6 +20,8 @@ represented by its argument.216) The order in which these floating-point excepti
 raised is unspecified, except as stated in F.8.6. Whether the feraiseexcept function
 additionally raises the ‘‘inexact’’ floating-point exception whenever it raises the
 ‘‘overflow’’ or ‘‘underflow’’ floating-point exception is implementation-defined.
+
+==============================================================================
 Returns
 
 3
@@ -37,6 +44,7 @@ Library
 Committee Draft — April 12, 2011
 
 ISO/IEC 9899:201x
+
 
 
 

@@ -1,11 +1,16 @@
 *strcspn.txt*
 *strcspn*
+
 7.24.5.3 The strcspn function
+
+==============================================================================
 Synopsis
 1
 
 #include <string.h>
 size_t strcspn(const char *s1, const char *s2);
+
+==============================================================================
 Description
 
 2
@@ -13,11 +18,14 @@ Description
 The strcspn function computes the length of the maximum initial segment of the string
 pointed to by s1 which consists entirely of characters not from the string pointed to by
 s2.
+
+==============================================================================
 Returns
 
 3
 
 The strcspn function returns the length of the segment.
+
 
 
 

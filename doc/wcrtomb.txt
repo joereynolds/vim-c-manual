@@ -1,6 +1,9 @@
 *wcrtomb.txt*
 *wcrtomb*
+
 7.29.6.3.3 The wcrtomb function
+
+==============================================================================
 Synopsis
 1
 
@@ -8,6 +11,8 @@ Synopsis
 size_t wcrtomb(char * restrict s,
 wchar_t wc,
 mbstate_t * restrict ps);
+
+==============================================================================
 Description
 
 2
@@ -24,6 +29,8 @@ to represent the multibyte character that corresponds to the wide character give
 array whose first element is pointed to by s. At most MB_CUR_MAX bytes are stored. If
 wc is a null wide character, a null byte is stored, preceded by any shift sequence needed
 to restore the initial shift state; the resulting state described is the initial conversion state.
+
+==============================================================================
 Returns
 
 4
@@ -63,6 +70,7 @@ Library
 Committee Draft — April 12, 2011
 
 ISO/IEC 9899:201x
+
 
 
 

@@ -1,11 +1,16 @@
 *wcscspn.txt*
 *wcscspn*
+
 7.29.4.5.2 The wcscspn function
+
+==============================================================================
 Synopsis
 1
 
 #include <wchar.h>
 size_t wcscspn(const wchar_t *s1, const wchar_t *s2);
+
+==============================================================================
 Description
 
 2
@@ -26,10 +31,13 @@ Committee Draft — April 12, 2011
 
 N1570
 
+
+==============================================================================
 Returns
 3
 
 The wcscspn function returns the length of the segment.
+
 
 
 

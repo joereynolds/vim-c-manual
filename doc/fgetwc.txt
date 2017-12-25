@@ -1,12 +1,17 @@
 *fgetwc.txt*
 *fgetwc*
+
 7.29.3.1 The fgetwc function
+
+==============================================================================
 Synopsis
 1
 
 #include <stdio.h>
 #include <wchar.h>
 wint_t fgetwc(FILE *stream);
+
+==============================================================================
 Description
 
 2
@@ -27,6 +32,8 @@ Committee Draft — April 12, 2011
 
 N1570
 
+
+==============================================================================
 Returns
 3
 
@@ -35,6 +42,7 @@ the fgetwc function returns the next wide character from the input stream pointe
 stream. If a read error occurs, the error indicator for the stream is set and the fgetwc
 function returns WEOF. If an encoding error occurs (including too few bytes), the value of
 the macro EILSEQ is stored in errno and the fgetwc function returns WEOF.341)
+
 
 
 

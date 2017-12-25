@@ -1,18 +1,25 @@
 *wmemchr.txt*
 *wmemchr*
+
 7.29.4.5.8 The wmemchr function
+
+==============================================================================
 Synopsis
 1
 
 #include <wchar.h>
 wchar_t *wmemchr(const wchar_t *s, wchar_t c,
 size_t n);
+
+==============================================================================
 Description
 
 2
 
 The wmemchr function locates the first occurrence of c in the initial n wide characters of
 the object pointed to by s.
+
+==============================================================================
 Returns
 
 3
@@ -33,6 +40,7 @@ Committee Draft — April 12, 2011
 ISO/IEC 9899:201x
 
 7.29.4.6 Miscellaneous functions
+
 
 
 vim:tw=78:ts=8:ft=help:norl:

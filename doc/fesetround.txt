@@ -1,11 +1,16 @@
 *fesetround.txt*
 *fesetround*
+
 7.6.3.2 The fesetround function
+
+==============================================================================
 Synopsis
 1
 
 #include <fenv.h>
 int fesetround(int round);
+
+==============================================================================
 Description
 
 2
@@ -13,6 +18,8 @@ Description
 The fesetround function establishes the rounding direction represented by its
 argument round. If the argument is not equal to the value of a rounding direction macro,
 the rounding direction is not changed.
+
+==============================================================================
 Returns
 
 3
@@ -56,6 +63,7 @@ fesetround(save_round);
 
 The functions in this section manage the floating-point environment — status flags and
 control modes — as one entity.
+
 
 
 

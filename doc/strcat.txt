@@ -1,12 +1,17 @@
 *strcat.txt*
 *strcat*
+
 7.24.3.1 The strcat function
+
+==============================================================================
 Synopsis
 1
 
 #include <string.h>
 char *strcat(char * restrict s1,
 const char * restrict s2);
+
+==============================================================================
 Description
 
 2
@@ -15,11 +20,14 @@ The strcat function appends a copy of the string pointed to by s2 (including the
 terminating null character) to the end of the string pointed to by s1. The initial character
 of s2 overwrites the null character at the end of s1. If copying takes place between
 objects that overlap, the behavior is undefined.
+
+==============================================================================
 Returns
 
 3
 
 The strcat function returns the value of s1.
+
 
 
 

@@ -1,23 +1,31 @@
 *wcspbrk.txt*
 *wcspbrk*
+
 7.29.4.5.3 The wcspbrk function
+
+==============================================================================
 Synopsis
 1
 
 #include <wchar.h>
 wchar_t *wcspbrk(const wchar_t *s1, const wchar_t *s2);
+
+==============================================================================
 Description
 
 2
 
 The wcspbrk function locates the first occurrence in the wide string pointed to by s1 of
 any wide character from the wide string pointed to by s2.
+
+==============================================================================
 Returns
 
 3
 
 The wcspbrk function returns a pointer to the wide character in s1, or a null pointer if
 no wide character from s2 occurs in s1.
+
 
 
 

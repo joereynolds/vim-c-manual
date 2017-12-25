@@ -1,11 +1,16 @@
 *atexit.txt*
 *atexit*
+
 7.22.4.2 The atexit function
+
+==============================================================================
 Synopsis
 1
 
 #include <stdlib.h>
 int atexit(void (*func)(void));
+
+==============================================================================
 Description
 
 2
@@ -18,6 +23,8 @@ Environmental limits
 3
 
 The implementation shall support the registration of at least 32 functions.
+
+==============================================================================
 Returns
 
 4
@@ -40,6 +47,7 @@ Library
 Committee Draft — April 12, 2011
 
 ISO/IEC 9899:201x
+
 
 
 

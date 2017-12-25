@@ -1,6 +1,9 @@
 *isgraph.txt*
 *isgraph*
+
 7.4.1.6 The isgraph function
+
+==============================================================================
 Synopsis
 1
 
@@ -22,10 +25,13 @@ Committee Draft — April 12, 2011
 
 N1570
 
+
+==============================================================================
 Description
 2
 
 The isgraph function tests for any printing character except space (' ').
+
 
 
 

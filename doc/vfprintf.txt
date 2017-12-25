@@ -1,6 +1,9 @@
 *vfprintf.txt*
 *vfprintf*
+
 7.21.6.8 The vfprintf function
+
+==============================================================================
 Synopsis
 1
 
@@ -9,6 +12,8 @@ Synopsis
 int vfprintf(FILE * restrict stream,
 const char * restrict format,
 va_list arg);
+
+==============================================================================
 Description
 
 2
@@ -30,6 +35,8 @@ Committee Draft — April 12, 2011
 ISO/IEC 9899:201x
 
 va_end macro.288)
+
+==============================================================================
 Returns
 3
 
@@ -54,6 +61,7 @@ fprintf(stderr, "ERROR in %s: ", function_name);
 vfprintf(stderr, format, args);
 va_end(args);
 }
+
 
 
 

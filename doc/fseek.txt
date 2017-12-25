@@ -1,11 +1,16 @@
 *fseek.txt*
 *fseek*
+
 7.21.9.2 The fseek function
+
+==============================================================================
 Synopsis
 1
 
 #include <stdio.h>
 int fseek(FILE *stream, long int offset, int whence);
+
+==============================================================================
 Description
 
 2
@@ -44,12 +49,15 @@ After determining the new position, a successful call to the fseek function undo
 effects of the ungetc function on the stream, clears the end-of-file indicator for the
 stream, and then establishes the new position. After a successful fseek call, the next
 operation on an update stream may be either input or output.
+
+==============================================================================
 Returns
 
 6
 
 The fseek function returns nonzero only for a request that cannot be satisfied.
 Forward references: the ftell function (7.21.9.4).
+
 
 
 

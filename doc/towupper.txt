@@ -1,16 +1,23 @@
 *towupper.txt*
 *towupper*
+
 7.30.3.1.2 The towupper function
+
+==============================================================================
 Synopsis
 1
 
 #include <wctype.h>
 wint_t towupper(wint_t wc);
+
+==============================================================================
 Description
 
 2
 
 The towupper function converts a lowercase letter to a corresponding uppercase letter.
+
+==============================================================================
 Returns
 
 3
@@ -39,6 +46,7 @@ Library
 Committee Draft — April 12, 2011
 
 N1570
+
 
 
 

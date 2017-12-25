@@ -1,11 +1,16 @@
 *timespec_get.txt*
 *timespec_get*
+
 7.27.2.5 The timespec_get function
+
+==============================================================================
 Synopsis
 1
 
 #include <time.h>
 int timespec_get(struct timespec *ts, int base);
+
+==============================================================================
 Description
 
 2
@@ -29,6 +34,8 @@ Committee Draft — April 12, 2011
 N1570
 
 clock.321)
+
+==============================================================================
 Returns
 4
 
@@ -45,6 +52,7 @@ information in any object of the same type pointed to by the value returned from
 previous call to any of them and the functions are not required to avoid data races with
 each other.322) The implementation shall behave as if no other library functions call these
 functions.
+
 
 
 

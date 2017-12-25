@@ -1,11 +1,16 @@
 *getenv.txt*
 *getenv*
+
 7.22.4.6 The getenv function
+
+==============================================================================
 Synopsis
 1
 
 #include <stdlib.h>
 char *getenv(const char *name);
+
+==============================================================================
 Description
 
 2
@@ -32,6 +37,8 @@ Committee Draft — April 12, 2011
 ISO/IEC 9899:201x
 
 The implementation shall behave as if no library function calls the getenv function.
+
+==============================================================================
 Returns
 
 4
@@ -40,6 +47,7 @@ The getenv function returns a pointer to a string associated with the matched li
 member. The string pointed to shall not be modified by the program, but may be
 overwritten by a subsequent call to the getenv function. If the specified name cannot
 be found, a null pointer is returned.
+
 
 
 

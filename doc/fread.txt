@@ -1,6 +1,9 @@
 *fread.txt*
 *fread*
+
 7.21.8.1 The fread function
+
+==============================================================================
 Synopsis
 1
 
@@ -8,6 +11,8 @@ Synopsis
 size_t fread(void * restrict ptr,
 size_t size, size_t nmemb,
 FILE * restrict stream);
+
+==============================================================================
 Description
 
 2
@@ -19,6 +24,8 @@ read, in an array of unsigned char exactly overlaying the object. The file posit
 indicator for the stream (if defined) is advanced by the number of characters successfully
 read. If an error occurs, the resulting value of the file position indicator for the stream is
 indeterminate. If a partial element is read, its value is indeterminate.
+
+==============================================================================
 Returns
 
 3
@@ -27,6 +34,7 @@ The fread function returns the number of elements successfully read, which may b
 less than nmemb if a read error or end-of-file is encountered. If size or nmemb is zero,
 fread returns zero and the contents of the array and the state of the stream remain
 unchanged.
+
 
 
 

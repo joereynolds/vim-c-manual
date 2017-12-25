@@ -1,17 +1,24 @@
 *mtx_unlock.txt*
 *mtx_unlock*
+
 7.26.4.6 The mtx_unlock function
+
+==============================================================================
 Synopsis
 1
 
 #include <threads.h>
 int mtx_unlock(mtx_t *mtx);
+
+==============================================================================
 Description
 
 2
 
 The mtx_unlock function unlocks the mutex pointed to by mtx. The mutex pointed to
 by mtx shall be locked by the calling thread.
+
+==============================================================================
 Returns
 
 3
@@ -32,6 +39,7 @@ Committee Draft — April 12, 2011
 ISO/IEC 9899:201x
 
 7.26.5 Thread functions
+
 
 
 vim:tw=78:ts=8:ft=help:norl:

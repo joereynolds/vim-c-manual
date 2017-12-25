@@ -1,11 +1,16 @@
 *mblen.txt*
 *mblen*
+
 7.22.7.1 The mblen function
+
+==============================================================================
 Synopsis
 1
 
 #include <stdlib.h>
 int mblen(const char *s, size_t n);
+
+==============================================================================
 Description
 
 2
@@ -19,6 +24,8 @@ mbtowc((wchar_t *)0, s, n);
 3
 
 The implementation shall behave as if no library function calls the mblen function.
+
+==============================================================================
 Returns
 
 4
@@ -45,6 +52,7 @@ Library
 Committee Draft — April 12, 2011
 
 N1570
+
 
 
 

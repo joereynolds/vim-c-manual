@@ -1,22 +1,30 @@
 *calloc.txt*
 *calloc*
+
 7.22.3.2 The calloc function
+
+==============================================================================
 Synopsis
 1
 
 #include <stdlib.h>
 void *calloc(size_t nmemb, size_t size);
+
+==============================================================================
 Description
 
 2
 
 The calloc function allocates space for an array of nmemb objects, each of whose size
 is size. The space is initialized to all bits zero.296)
+
+==============================================================================
 Returns
 
 3
 
 The calloc function returns either a null pointer or a pointer to the allocated space.
+
 
 
 

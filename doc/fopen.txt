@@ -1,12 +1,17 @@
 *fopen.txt*
 *fopen*
+
 7.21.5.3 The fopen function
+
+==============================================================================
 Synopsis
 1
 
 #include <stdio.h>
 FILE *fopen(const char * restrict filename,
 const char * restrict mode);
+
+==============================================================================
 Description
 
 2
@@ -105,6 +110,8 @@ binary stream in some implementations.
 
 When opened, a stream is fully buffered if and only if it can be determined not to refer to
 an interactive device. The error and end-of-file indicators for the stream are cleared.
+
+==============================================================================
 Returns
 
 9
@@ -124,6 +131,7 @@ Library
 Committee Draft — April 12, 2011
 
 ISO/IEC 9899:201x
+
 
 
 

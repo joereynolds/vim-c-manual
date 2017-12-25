@@ -1,11 +1,16 @@
 *system.txt*
 *system*
+
 7.22.4.8 The system function
+
+==============================================================================
 Synopsis
 1
 
 #include <stdlib.h>
 int system(const char *string);
+
+==============================================================================
 Description
 
 2
@@ -30,6 +35,8 @@ N1570
 function passes the string pointed to by string to that command processor to be
 executed in a manner which the implementation shall document; this might then cause the
 program calling system to behave in a non-conforming manner or to terminate.
+
+==============================================================================
 Returns
 3
 
@@ -90,6 +97,7 @@ Library
 Committee Draft — April 12, 2011
 
 ISO/IEC 9899:201x
+
 
 
 

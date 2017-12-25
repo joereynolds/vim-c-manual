@@ -1,23 +1,31 @@
 *localtime.txt*
 *localtime*
+
 7.27.3.4 The localtime function
+
+==============================================================================
 Synopsis
 1
 
 #include <time.h>
 struct tm *localtime(const time_t *timer);
+
+==============================================================================
 Description
 
 2
 
 The localtime function converts the calendar time pointed to by timer into a
 broken-down time, expressed as local time.
+
+==============================================================================
 Returns
 
 3
 
 The localtime function returns a pointer to the broken-down time, or a null pointer if
 the specified time cannot be converted to local time.
+
 
 
 

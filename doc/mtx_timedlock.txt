@@ -1,6 +1,9 @@
 *mtx_timedlock.txt*
 *mtx_timedlock*
+
 7.26.4.4 The mtx_timedlock function
+
+==============================================================================
 Synopsis
 1
 
@@ -20,6 +23,8 @@ Committee Draft — April 12, 2011
 
 N1570
 
+
+==============================================================================
 Description
 2
 
@@ -27,6 +32,8 @@ The mtx_timedlock function endeavors to block until it locks the mutex pointed t
 mtx or until after the TIME_UTC-based calendar time pointed to by ts. The specified
 mutex shall support timeout. If the operation succeeds, prior calls to mtx_unlock on
 the same mutex shall synchronize with this operation.
+
+==============================================================================
 Returns
 
 3
@@ -34,6 +41,7 @@ Returns
 The mtx_timedlock function returns thrd_success on success, or
 thrd_timedout if the time specified was reached without acquiring the requested
 resource, or thrd_error if the request could not be honored.
+
 
 
 

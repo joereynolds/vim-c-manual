@@ -1,11 +1,16 @@
 *quick_exit.txt*
 *quick_exit*
+
 7.22.4.7 The quick_exit function
+
+==============================================================================
 Synopsis
 1
 
 #include <stdlib.h>
 _Noreturn void quick_exit(int status);
+
+==============================================================================
 Description
 
 2
@@ -28,11 +33,14 @@ made that would terminate the call to the registered function, the behavior is u
 
 Then control is returned to the host environment by means of the function call
 _Exit(status).
+
+==============================================================================
 Returns
 
 5
 
 The quick_exit function cannot return to its caller.
+
 
 
 

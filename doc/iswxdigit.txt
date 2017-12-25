@@ -1,11 +1,16 @@
 *iswxdigit.txt*
 *iswxdigit*
+
 7.30.2.1.12 The iswxdigit function
+
+==============================================================================
 Synopsis
 1
 
 #include <wctype.h>
 int iswxdigit(wint_t wc);
+
+==============================================================================
 Description
 
 2
@@ -19,6 +24,7 @@ hexadecimal-digit character (as defined in 6.4.4.1).
 The functions wctype and iswctype provide extensible wide character classification
 as well as testing equivalent to that performed by the functions described in the previous
 subclause (7.30.2.1).
+
 
 
 

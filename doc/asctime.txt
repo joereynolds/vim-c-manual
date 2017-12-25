@@ -1,11 +1,16 @@
 *asctime.txt*
 *asctime*
+
 7.27.3.1 The asctime function
+
+==============================================================================
 Synopsis
 1
 
 #include <time.h>
 char *asctime(const struct tm *timeptr);
+
+==============================================================================
 Description
 
 2
@@ -55,11 +60,14 @@ If any of the members of the broken-down time contain values that are outside th
 normal ranges,323) the behavior of the asctime function is undefined. Likewise, if the
 calculated year exceeds four digits or is less than the year 1000, the behavior is
 undefined.
+
+==============================================================================
 Returns
 
 4
 
 The asctime function returns a pointer to the string.
+
 
 
 

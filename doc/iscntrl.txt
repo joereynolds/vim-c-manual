@@ -1,16 +1,22 @@
 *iscntrl.txt*
 *iscntrl*
+
 7.4.1.4 The iscntrl function
+
+==============================================================================
 Synopsis
 1
 
 #include <ctype.h>
 int iscntrl(int c);
+
+==============================================================================
 Description
 
 2
 
 The iscntrl function tests for any control character.
+
 
 
 

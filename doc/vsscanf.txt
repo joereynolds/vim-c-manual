@@ -1,6 +1,9 @@
 *vsscanf.txt*
 *vsscanf*
+
 7.21.6.14 The vsscanf function
+
+==============================================================================
 Synopsis
 1
 
@@ -9,6 +12,8 @@ Synopsis
 int vsscanf(const char * restrict s,
 const char * restrict format,
 va_list arg);
+
+==============================================================================
 Description
 
 2
@@ -17,6 +22,8 @@ The vsscanf function is equivalent to sscanf, with the variable argument list
 replaced by arg, which shall have been initialized by the va_start macro (and
 possibly subsequent va_arg calls). The vsscanf function does not invoke the
 va_end macro.288)
+
+==============================================================================
 Returns
 
 3
@@ -27,6 +34,7 @@ returns the number of input items assigned, which can be fewer than provided for
 zero, in the event of an early matching failure.
 
 7.21.7 Character input/output functions
+
 
 
 vim:tw=78:ts=8:ft=help:norl:

@@ -1,6 +1,9 @@
 *vswscanf.txt*
 *vswscanf*
+
 7.29.2.8 The vswscanf function
+
+==============================================================================
 Synopsis
 1
 
@@ -9,6 +12,8 @@ Synopsis
 int vswscanf(const wchar_t * restrict s,
 const wchar_t * restrict format,
 va_list arg);
+
+==============================================================================
 Description
 
 2
@@ -17,6 +22,8 @@ The vswscanf function is equivalent to swscanf, with the variable argument list
 replaced by arg, which shall have been initialized by the va_start macro (and
 possibly subsequent va_arg calls). The vswscanf function does not invoke the
 va_end macro.340)
+
+==============================================================================
 Returns
 
 3
@@ -37,6 +44,7 @@ Library
 Committee Draft — April 12, 2011
 
 N1570
+
 
 
 

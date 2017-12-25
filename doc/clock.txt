@@ -1,16 +1,23 @@
 *clock.txt*
 *clock*
+
 7.27.2.1 The clock function
+
+==============================================================================
 Synopsis
 1
 
 #include <time.h>
 clock_t clock(void);
+
+==============================================================================
 Description
 
 2
 
 The clock function determines the processor time used.
+
+==============================================================================
 Returns
 
 3
@@ -37,6 +44,7 @@ Library
 Committee Draft — April 12, 2011
 
 N1570
+
 
 
 

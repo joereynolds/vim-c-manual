@@ -1,6 +1,9 @@
 *mbsrtowcs.txt*
 *mbsrtowcs*
+
 7.29.6.4.1 The mbsrtowcs function
+
+==============================================================================
 Synopsis
 1
 
@@ -9,6 +12,8 @@ size_t mbsrtowcs(wchar_t * restrict dst,
 const char ** restrict src,
 size_t len,
 mbstate_t * restrict ps);
+
+==============================================================================
 Description
 
 2
@@ -30,6 +35,8 @@ pointer (if conversion stopped due to reaching a terminating null character) or 
 just past the last multibyte character converted (if any). If conversion stopped due to
 reaching a terminating null character and if dst is not a null pointer, the resulting state
 described is the initial conversion state.
+
+==============================================================================
 Returns
 
 4
@@ -53,6 +60,7 @@ Library
 Committee Draft — April 12, 2011
 
 N1570
+
 
 
 

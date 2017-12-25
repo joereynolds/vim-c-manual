@@ -1,16 +1,23 @@
 *toupper.txt*
 *toupper*
+
 7.4.2.2 The toupper function
+
+==============================================================================
 Synopsis
 1
 
 #include <ctype.h>
 int toupper(int c);
+
+==============================================================================
 Description
 
 2
 
 The toupper function converts a lowercase letter to a corresponding uppercase letter.
+
+==============================================================================
 Returns
 
 3
@@ -217,11 +224,15 @@ FE_ and an uppercase letter,212) and having type ‘‘pointer to const-qualifie
 may also be specified by the implementation.
 
 7.6.1 The FENV_ACCESS pragma
+
+==============================================================================
 Synopsis
 1
 
 #include <fenv.h>
 #pragma STDC FENV_ACCESS on-off-switch
+
+==============================================================================
 Description
 
 2
@@ -292,6 +303,7 @@ input argument for the functions represents a subset of floating-point exception
 be zero or the bitwise OR of one or more floating-point exception macros, for example
 FE_OVERFLOW | FE_INEXACT. For other argument values the behavior of these
 functions is undefined.
+
 
 
 

@@ -1,6 +1,9 @@
 *freopen.txt*
 *freopen*
+
 7.21.5.4 The freopen function
+
+==============================================================================
 Synopsis
 1
 
@@ -8,6 +11,8 @@ Synopsis
 FILE *freopen(const char * restrict filename,
 const char * restrict mode,
 FILE * restrict stream);
+
+==============================================================================
 Description
 
 2
@@ -28,12 +33,15 @@ permitted (if any), and under what circumstances.
 The freopen function first attempts to close any file that is associated with the specified
 stream. Failure to close the file is ignored. The error and end-of-file indicators for the
 stream are cleared.
+
+==============================================================================
 Returns
 
 5
 
 The freopen function returns a null pointer if the open operation fails. Otherwise,
 freopen returns the value of stream.
+
 
 
 

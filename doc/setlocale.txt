@@ -1,11 +1,16 @@
 *setlocale.txt*
 *setlocale*
+
 7.11.1.1 The setlocale function
+
+==============================================================================
 Synopsis
 1
 
 #include <locale.h>
 char *setlocale(int category, const char *locale);
+
+==============================================================================
 Description
 
 2
@@ -56,6 +61,8 @@ is executed.
 A call to the setlocale function may introduce a data race with other calls to the
 setlocale function or with calls to functions that are affected by the current locale.
 The implementation shall behave as if no library function calls the setlocale function.
+
+==============================================================================
 Returns
 
 6
@@ -83,6 +90,7 @@ character conversion functions (7.22.7), multibyte/wide string conversion functi
 strftime function (7.27.3.5), the strxfrm function (7.24.4.5).
 
 7.11.2 Numeric formatting convention inquiry
+
 
 
 vim:tw=78:ts=8:ft=help:norl:

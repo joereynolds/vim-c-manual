@@ -1,11 +1,16 @@
 *strchr.txt*
 *strchr*
+
 7.24.5.2 The strchr function
+
+==============================================================================
 Synopsis
 1
 
 #include <string.h>
 char *strchr(const char *s, int c);
+
+==============================================================================
 Description
 
 2
@@ -26,11 +31,14 @@ Committee Draft — April 12, 2011
 
 N1570
 
+
+==============================================================================
 Returns
 3
 
 The strchr function returns a pointer to the located character, or a null pointer if the
 character does not occur in the string.
+
 
 
 

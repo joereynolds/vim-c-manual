@@ -1,11 +1,16 @@
 *signal.txt*
 *signal*
+
 7.14.1.1 The signal function
+
+==============================================================================
 Synopsis
 1
 
 #include <signal.h>
 void (*signal(int sig, void (*func)(int)))(int);
+
+==============================================================================
 Description
 
 2
@@ -76,6 +81,8 @@ is executed for all other signals defined by the implementation.
 
 Use of this function in a multi-threaded program results in undefined behavior. The
 implementation shall behave as if no library function calls the signal function.
+
+==============================================================================
 Returns
 
 8
@@ -87,6 +94,7 @@ Forward references: the abort function (7.22.4.1), the exit function (7.22.4.4),
 _Exit function (7.22.4.5), the quick_exit function (7.22.4.7).
 
 7.14.2 Send signal
+
 
 
 vim:tw=78:ts=8:ft=help:norl:

@@ -1,11 +1,16 @@
 *atof.txt*
 *atof*
+
 7.22.1.1 The atof function
+
+==============================================================================
 Synopsis
 1
 
 #include <stdlib.h>
 double atof(const char *nptr);
+
+==============================================================================
 Description
 
 2
@@ -13,6 +18,8 @@ Description
 The atof function converts the initial portion of the string pointed to by nptr to
 double representation. Except for the behavior on error, it is equivalent to
 strtod(nptr, (char **)NULL)
+
+==============================================================================
 Returns
 
 3
@@ -21,6 +28,8 @@ The atof function returns the converted value.
 Forward references: the strtod, strtof, and strtold functions (7.22.1.3).
 
 7.22.1.2 The atoi, atol, and atoll functions
+
+==============================================================================
 Synopsis
 1
 
@@ -28,6 +37,8 @@ Synopsis
 int atoi(const char *nptr);
 long int atol(const char *nptr);
 long long int atoll(const char *nptr);
+
+==============================================================================
 Description
 
 2
@@ -38,6 +49,8 @@ Except for the behavior on error, they are equivalent to
 atoi: (int)strtol(nptr, (char **)NULL, 10)
 atol: strtol(nptr, (char **)NULL, 10)
 atoll: strtoll(nptr, (char **)NULL, 10)
+
+==============================================================================
 Returns
 
 3
@@ -59,6 +72,8 @@ Committee Draft — April 12, 2011
 N1570
 
 7.22.1.3 The strtod, strtof, and strtold functions
+
+==============================================================================
 Synopsis
 1
 
@@ -69,6 +84,8 @@ float strtof(const char * restrict nptr,
 char ** restrict endptr);
 long double strtold(const char * restrict nptr,
 char ** restrict endptr);
+
+==============================================================================
 Description
 
 2
@@ -183,6 +200,8 @@ N1570
 
 stipulation that the error with respect to D should have a correct sign for the current
 rounding direction.294)
+
+==============================================================================
 Returns
 10
 
@@ -195,6 +214,8 @@ no greater than the smallest normalized positive number in the return type; whet
 errno acquires the value ERANGE is implementation-defined.
 
 7.22.1.4 The strtol, strtoll, strtoul, and strtoull functions
+
+==============================================================================
 Synopsis
 1
 
@@ -215,6 +236,8 @@ unsigned long long int strtoull(
 const char * restrict nptr,
 char ** restrict endptr,
 int base);
+
+==============================================================================
 Description
 
 2
@@ -283,6 +306,8 @@ accepted.
 If the subject sequence is empty or does not have the expected form, no conversion is
 performed; the value of nptr is stored in the object pointed to by endptr, provided
 that endptr is not a null pointer.
+
+==============================================================================
 Returns
 
 8
@@ -306,6 +331,7 @@ Committee Draft — April 12, 2011
 N1570
 
 7.22.2 Pseudo-random sequence generation functions
+
 
 
 vim:tw=78:ts=8:ft=help:norl:

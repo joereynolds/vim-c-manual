@@ -1,12 +1,17 @@
 *fgetpos.txt*
 *fgetpos*
+
 7.21.9.1 The fgetpos function
+
+==============================================================================
 Synopsis
 1
 
 #include <stdio.h>
 int fgetpos(FILE * restrict stream,
 fpos_t * restrict pos);
+
+==============================================================================
 Description
 
 2
@@ -15,6 +20,8 @@ The fgetpos function stores the current values of the parse state (if any) and f
 position indicator for the stream pointed to by stream in the object pointed to by pos.
 The values stored contain unspecified information usable by the fsetpos function for
 repositioning the stream to its position at the time of the call to the fgetpos function.
+
+==============================================================================
 Returns
 
 3
@@ -22,6 +29,7 @@ Returns
 If successful, the fgetpos function returns zero; on failure, the fgetpos function
 returns nonzero and stores an implementation-defined positive value in errno.
 Forward references: the fsetpos function (7.21.9.3).
+
 
 
 

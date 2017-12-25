@@ -1,11 +1,16 @@
 *cnd_destroy.txt*
 *cnd_destroy*
+
 7.26.3.2 The cnd_destroy function
+
+==============================================================================
 Synopsis
 1
 
 #include <threads.h>
 void cnd_destroy(cnd_t *cond);
+
+==============================================================================
 Description
 
 2
@@ -25,10 +30,13 @@ Committee Draft — April 12, 2011
 
 ISO/IEC 9899:201x
 
+
+==============================================================================
 Returns
 3
 
 The cnd_destroy function returns no value.
+
 
 
 

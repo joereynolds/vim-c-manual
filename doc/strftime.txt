@@ -1,6 +1,9 @@
 *strftime.txt*
 *strftime*
+
 7.27.3.5 The strftime function
+
+==============================================================================
 Synopsis
 1
 
@@ -9,6 +12,8 @@ size_t strftime(char * restrict s,
 size_t maxsize,
 const char * restrict format,
 const struct tm * restrict timeptr);
+
+==============================================================================
 Description
 
 2
@@ -239,6 +244,8 @@ equivalent to ‘‘%m/%d/%y’’.
 equivalent to %T.
 implementation-defined.
 
+
+==============================================================================
 Returns
 8
 
@@ -286,6 +293,7 @@ pointer, each function uses its own internal mbstate_t object instead, which is
 initialized at program startup to the initial conversion state; the functions are not required
 to avoid data races with other calls to the same function in this case. The implementation
 behaves as if no library function calls these functions with a null pointer for ps.
+
 
 
 

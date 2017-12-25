@@ -1,11 +1,16 @@
 *abort.txt*
 *abort*
+
 7.22.4.1 The abort function
+
+==============================================================================
 Synopsis
 1
 
 #include <stdlib.h>
 _Noreturn void abort(void);
+
+==============================================================================
 Description
 
 2
@@ -16,11 +21,14 @@ with unwritten buffered data are flushed, open streams are closed, or temporary 
 removed is implementation-defined. An implementation-defined form of the status
 unsuccessful termination is returned to the host environment by means of the function
 call raise(SIGABRT).
+
+==============================================================================
 Returns
 
 3
 
 The abort function does not return to its caller.
+
 
 
 

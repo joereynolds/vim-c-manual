@@ -1,11 +1,16 @@
 *isspace.txt*
 *isspace*
+
 7.4.1.10 The isspace function
+
+==============================================================================
 Synopsis
 1
 
 #include <ctype.h>
 int isspace(int c);
+
+==============================================================================
 Description
 
 2
@@ -27,6 +32,7 @@ ISO/IEC 9899:201x
 white-space characters are the following: space (' '), form feed ('\f'), new-line
 ('\n'), carriage return ('\r'), horizontal tab ('\t'), and vertical tab ('\v'). In the
 "C" locale, isspace returns true only for the standard white-space characters.
+
 
 
 

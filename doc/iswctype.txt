@@ -1,11 +1,16 @@
 *iswctype.txt*
 *iswctype*
+
 7.30.2.2.1 The iswctype function
+
+==============================================================================
 Synopsis
 1
 
 #include <wctype.h>
 int iswctype(wint_t wc, wctype_t desc);
+
+==============================================================================
 Description
 
 2
@@ -82,6 +87,8 @@ iswspace(wc)
 iswupper(wc)
 iswxdigit(wc)
 
+
+==============================================================================
 Returns
 4
 
@@ -89,6 +96,7 @@ The iswctype function returns nonzero (true) if and only if the value of the wid
 character wc has the property described by desc. If desc is zero, the iswctype
 function returns zero (false).
 Forward references: the wctype function (7.30.2.2.2).
+
 
 
 

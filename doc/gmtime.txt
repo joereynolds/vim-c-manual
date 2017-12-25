@@ -1,6 +1,9 @@
 *gmtime.txt*
 *gmtime*
+
 7.27.3.3 The gmtime function
+
+==============================================================================
 Synopsis
 1
 
@@ -21,16 +24,21 @@ Committee Draft — April 12, 2011
 
 N1570
 
+
+==============================================================================
 Description
 2
 
 The gmtime function converts the calendar time pointed to by timer into a brokendown time, expressed as UTC.
+
+==============================================================================
 Returns
 
 3
 
 The gmtime function returns a pointer to the broken-down time, or a null pointer if the
 specified time cannot be converted to UTC.
+
 
 
 

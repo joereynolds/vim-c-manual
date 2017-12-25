@@ -1,11 +1,16 @@
 *isupper.txt*
 *isupper*
+
 7.4.1.11 The isupper function
+
+==============================================================================
 Synopsis
 1
 
 #include <ctype.h>
 int isupper(int c);
+
+==============================================================================
 Description
 
 2
@@ -14,6 +19,7 @@ The isupper function tests for any character that is an uppercase letter or is o
 locale-specific set of characters for which none of iscntrl, isdigit, ispunct, or
 isspace is true. In the "C" locale, isupper returns true only for the uppercase
 letters (as defined in 5.2.1).
+
 
 
 

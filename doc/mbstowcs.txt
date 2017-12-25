@@ -1,6 +1,9 @@
 *mbstowcs.txt*
 *mbstowcs*
+
 7.22.8.1 The mbstowcs function
+
+==============================================================================
 Synopsis
 1
 
@@ -8,6 +11,8 @@ Synopsis
 size_t mbstowcs(wchar_t * restrict pwcs,
 const char * restrict s,
 size_t n);
+
+==============================================================================
 Description
 
 2
@@ -24,6 +29,8 @@ not affected.
 
 No more than n elements will be modified in the array pointed to by pwcs. If copying
 takes place between objects that overlap, the behavior is undefined.
+
+==============================================================================
 Returns
 
 4
@@ -45,6 +52,7 @@ Library
 Committee Draft — April 12, 2011
 
 N1570
+
 
 
 

@@ -1,11 +1,16 @@
 *fflush.txt*
 *fflush*
+
 7.21.5.2 The fflush function
+
+==============================================================================
 Synopsis
 1
 
 #include <stdio.h>
 int fflush(FILE *stream);
+
+==============================================================================
 Description
 
 2
@@ -19,6 +24,8 @@ undefined.
 
 If stream is a null pointer, the fflush function performs this flushing action on all
 streams for which the behavior is defined above.
+
+==============================================================================
 Returns
 
 4
@@ -26,6 +33,7 @@ Returns
 The fflush function sets the error indicator for the stream and returns EOF if a write
 error occurs, otherwise it returns zero.
 Forward references: the fopen function (7.21.5.3).
+
 
 
 

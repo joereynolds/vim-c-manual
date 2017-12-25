@@ -1,12 +1,17 @@
 *fwide.txt*
 *fwide*
+
 7.29.3.5 The fwide function
+
+==============================================================================
 Synopsis
 1
 
 #include <stdio.h>
 #include <wchar.h>
 int fwide(FILE *stream, int mode);
+
+==============================================================================
 Description
 
 2
@@ -15,6 +20,8 @@ The fwide function determines the orientation of the stream pointed to by stream
 mode is greater than zero, the function first attempts to make the stream wide oriented. If
 mode is less than zero, the function first attempts to make the stream byte oriented.342)
 Otherwise, mode is zero and the function does not alter the orientation of the stream.
+
+==============================================================================
 Returns
 
 3
@@ -36,6 +43,7 @@ Library
 Committee Draft — April 12, 2011
 
 N1570
+
 
 
 

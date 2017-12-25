@@ -1,17 +1,24 @@
 *wcscmp.txt*
 *wcscmp*
+
 7.29.4.4.1 The wcscmp function
+
+==============================================================================
 Synopsis
 1
 
 #include <wchar.h>
 int wcscmp(const wchar_t *s1, const wchar_t *s2);
+
+==============================================================================
 Description
 
 2
 
 The wcscmp function compares the wide string pointed to by s1 to the wide string
 pointed to by s2.
+
+==============================================================================
 Returns
 
 3
@@ -19,6 +26,7 @@ Returns
 The wcscmp function returns an integer greater than, equal to, or less than zero,
 accordingly as the wide string pointed to by s1 is greater than, equal to, or less than the
 wide string pointed to by s2.
+
 
 
 

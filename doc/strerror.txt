@@ -1,11 +1,16 @@
 *strerror.txt*
 *strerror*
+
 7.24.6.2 The strerror function
+
+==============================================================================
 Synopsis
 1
 
 #include <string.h>
 char *strerror(int errnum);
+
+==============================================================================
 Description
 
 2
@@ -19,6 +24,8 @@ int to a message.
 The strerror function is not required to avoid data races with other calls to the
 strerror function.312) The implementation shall behave as if no library function calls
 the strerror function.
+
+==============================================================================
 Returns
 
 4
@@ -40,6 +47,7 @@ Library
 Committee Draft — April 12, 2011
 
 N1570
+
 
 
 

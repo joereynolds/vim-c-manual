@@ -1,6 +1,9 @@
 *fwscanf.txt*
 *fwscanf*
+
 7.29.2.2 The fwscanf function
+
+==============================================================================
 Synopsis
 1
 
@@ -8,6 +11,8 @@ Synopsis
 #include <wchar.h>
 int fwscanf(FILE * restrict stream,
 const wchar_t * restrict format, ...);
+
+==============================================================================
 Description
 
 2
@@ -339,6 +344,8 @@ respectively, a, e, f, g, and x.
 Trailing white space (including new-line wide characters) is left unread unless matched
 by a directive. The success of literal matches and suppressed assignments is not directly
 determinable other than via the %n directive.
+
+==============================================================================
 Returns
 
 16
@@ -398,6 +405,7 @@ will assign to i the value 56 and to x the value 789.0, will skip past 0123, and
 Forward references: the wcstod, wcstof, and wcstold functions (7.29.4.1.1), the
 wcstol, wcstoll, wcstoul, and wcstoull functions (7.29.4.1.2), the wcrtomb
 function (7.29.6.3.3).
+
 
 
 

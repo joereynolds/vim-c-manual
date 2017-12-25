@@ -1,6 +1,9 @@
 *mbrlen.txt*
 *mbrlen*
+
 7.29.6.3.1 The mbrlen function
+
+==============================================================================
 Synopsis
 1
 
@@ -8,6 +11,8 @@ Synopsis
 size_t mbrlen(const char * restrict s,
 size_t n,
 mbstate_t * restrict ps);
+
+==============================================================================
 Description
 
 2
@@ -16,6 +21,8 @@ The mbrlen function is equivalent to the call:
 mbrtowc(NULL, s, n, ps != NULL ? ps : &internal)
 where internal is the mbstate_t object for the mbrlen function, except that the
 expression designated by ps is evaluated only once.
+
+==============================================================================
 Returns
 
 3
@@ -35,6 +42,7 @@ Library
 Committee Draft — April 12, 2011
 
 ISO/IEC 9899:201x
+
 
 
 

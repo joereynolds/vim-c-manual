@@ -1,17 +1,24 @@
 *feclearexcept.txt*
 *feclearexcept*
+
 7.6.2.1 The feclearexcept function
+
+==============================================================================
 Synopsis
 1
 
 #include <fenv.h>
 int feclearexcept(int excepts);
+
+==============================================================================
 Description
 
 2
 
 The feclearexcept function attempts to clear the supported floating-point exceptions
 represented by its argument.
+
+==============================================================================
 Returns
 
 3
@@ -38,6 +45,7 @@ Library
 Committee Draft — April 12, 2011
 
 N1570
+
 
 
 

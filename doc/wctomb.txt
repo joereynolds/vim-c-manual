@@ -1,11 +1,16 @@
 *wctomb.txt*
 *wctomb*
+
 7.22.7.3 The wctomb function
+
+==============================================================================
 Synopsis
 1
 
 #include <stdlib.h>
 int wctomb(char *s, wchar_t wc);
+
+==============================================================================
 Description
 
 2
@@ -32,6 +37,8 @@ Committee Draft — April 12, 2011
 ISO/IEC 9899:201x
 
 The implementation shall behave as if no library function calls the wctomb function.
+
+==============================================================================
 Returns
 
 4
@@ -51,6 +58,7 @@ In no case will the value returned be greater than the value of the MB_CUR_MAX m
 
 The behavior of the multibyte string functions is affected by the LC_CTYPE category of
 the current locale.
+
 
 
 

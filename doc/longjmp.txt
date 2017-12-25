@@ -1,11 +1,16 @@
 *longjmp.txt*
 *longjmp*
+
 7.13.2.1 The longjmp function
+
+==============================================================================
 Synopsis
 1
 
 #include <setjmp.h>
 _Noreturn void longjmp(jmp_buf env, int val);
+
+==============================================================================
 Description
 
 2
@@ -26,6 +31,8 @@ objects of automatic storage duration that are local to the function containing 
 invocation of the corresponding setjmp macro that do not have volatile-qualified type
 and have been changed between the setjmp invocation and longjmp call are
 indeterminate.
+
+==============================================================================
 Returns
 
 4
@@ -163,6 +170,7 @@ Committee Draft — April 12, 2011
 N1570
 
 7.14.1 Specify signal handling
+
 
 
 vim:tw=78:ts=8:ft=help:norl:

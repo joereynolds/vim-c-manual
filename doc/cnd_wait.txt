@@ -1,11 +1,16 @@
 *cnd_wait.txt*
 *cnd_wait*
+
 7.26.3.6 The cnd_wait function
+
+==============================================================================
 Synopsis
 1
 
 #include <threads.h>
 int cnd_wait(cnd_t *cond, mtx_t *mtx);
+
+==============================================================================
 Description
 
 2
@@ -15,6 +20,8 @@ to block until the condition variable pointed to by cond is signaled by a call t
 cnd_signal or to cnd_broadcast. When the calling thread becomes unblocked it
 locks the mutex pointed to by mtx before it returns. The cnd_wait function requires
 that the mutex pointed to by mtx be locked by the calling thread.
+
+==============================================================================
 Returns
 
 3
@@ -23,6 +30,7 @@ The cnd_wait function returns thrd_success on success or thrd_error if the
 request could not be honored.
 
 7.26.4 Mutex functions
+
 
 
 vim:tw=78:ts=8:ft=help:norl:

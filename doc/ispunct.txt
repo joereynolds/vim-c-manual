@@ -1,11 +1,16 @@
 *ispunct.txt*
 *ispunct*
+
 7.4.1.9 The ispunct function
+
+==============================================================================
 Synopsis
 1
 
 #include <ctype.h>
 int ispunct(int c);
+
+==============================================================================
 Description
 
 2
@@ -14,6 +19,7 @@ The ispunct function tests for any printing character that is one of a locale-sp
 of punctuation characters for which neither isspace nor isalnum is true. In the "C"
 locale, ispunct returns true for every printing character for which neither isspace
 nor isalnum is true.
+
 
 
 

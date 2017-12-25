@@ -1,11 +1,16 @@
 *at_quick_exit.txt*
 *at_quick_exit*
+
 7.22.4.3 The at_quick_exit function
+
+==============================================================================
 Synopsis
 1
 
 #include <stdlib.h>
 int at_quick_exit(void (*func)(void));
+
+==============================================================================
 Description
 
 2
@@ -19,6 +24,8 @@ Environmental limits
 3
 
 The implementation shall support the registration of at least 32 functions.
+
+==============================================================================
 Returns
 
 4
@@ -26,6 +33,7 @@ Returns
 The at_quick_exit function returns zero if the registration succeeds, nonzero if it
 fails.
 Forward references: the quick_exit function (7.22.4.7).
+
 
 
 

@@ -1,6 +1,9 @@
 *fwprintf.txt*
 *fwprintf*
+
 7.29.2.1 The fwprintf function
+
+==============================================================================
 Synopsis
 1
 
@@ -8,6 +11,8 @@ Synopsis
 #include <wchar.h>
 int fwprintf(FILE * restrict stream,
 const wchar_t * restrict format, ...);
+
+==============================================================================
 Description
 
 2
@@ -429,6 +434,8 @@ representation with trailing zeros. Otherwise, the source value is bounded by tw
 adjacent decimal strings L < U, both having DECIMAL_DIG significant digits; the value
 of the resultant decimal string D should satisfy L ≤ D ≤ U, with the extra stipulation that
 the error should have a correct sign for the current rounding direction.
+
+==============================================================================
 Returns
 14
 
@@ -462,6 +469,7 @@ Forward references:
 (7.29.6.3.2).
 
 the btowc function (7.29.6.1.1), the mbrtowc function
+
 
 
 

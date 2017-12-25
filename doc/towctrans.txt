@@ -1,11 +1,16 @@
 *towctrans.txt*
 *towctrans*
+
 7.30.3.2.1 The towctrans function
+
+==============================================================================
 Synopsis
 1
 
 #include <wctype.h>
 wint_t towctrans(wint_t wc, wctrans_t desc);
+
+==============================================================================
 Description
 
 2
@@ -24,11 +29,14 @@ towctrans(wc, wctrans("toupper"))
 // towlower(wc)
 // towupper(wc)
 
+
+==============================================================================
 Returns
 4
 
 The towctrans function returns the mapped value of wc using the mapping described
 by desc. If desc is zero, the towctrans function returns the value of wc.
+
 
 
 

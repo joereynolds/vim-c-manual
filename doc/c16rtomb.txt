@@ -1,12 +1,17 @@
 *c16rtomb.txt*
 *c16rtomb*
+
 7.28.1.2 The c16rtomb function
+
+==============================================================================
 Synopsis
 1
 
 #include <uchar.h>
 size_t c16rtomb(char * restrict s, char16_t c16,
 mbstate_t * restrict ps);
+
+==============================================================================
 Description
 
 2
@@ -38,6 +43,8 @@ N1570
 array whose first element is pointed to by s. At most MB_CUR_MAX bytes are stored. If
 c16 is a null wide character, a null byte is stored, preceded by any shift sequence needed
 to restore the initial shift state; the resulting state described is the initial conversion state.
+
+==============================================================================
 Returns
 4
 
@@ -45,6 +52,7 @@ The c16rtomb function returns the number of bytes stored in the array object (in
 any shift sequences). When c16 is not a valid wide character, an encoding error occurs:
 the function stores the value of the macro EILSEQ in errno and returns
 (size_t)(-1); the conversion state is unspecified.
+
 
 
 

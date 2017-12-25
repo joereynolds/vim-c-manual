@@ -1,6 +1,9 @@
 *fputs.txt*
 *fputs*
+
 7.21.7.4 The fputs function
+
+==============================================================================
 Synopsis
 1
 
@@ -20,17 +23,22 @@ Committee Draft — April 12, 2011
 
 N1570
 
+
+==============================================================================
 Description
 2
 
 The fputs function writes the string pointed to by s to the stream pointed to by
 stream. The terminating null character is not written.
+
+==============================================================================
 Returns
 
 3
 
 The fputs function returns EOF if a write error occurs; otherwise it returns a
 nonnegative value.
+
 
 
 

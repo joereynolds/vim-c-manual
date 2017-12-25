@@ -1,16 +1,23 @@
 *tolower.txt*
 *tolower*
+
 7.4.2.1 The tolower function
+
+==============================================================================
 Synopsis
 1
 
 #include <ctype.h>
 int tolower(int c);
+
+==============================================================================
 Description
 
 2
 
 The tolower function converts an uppercase letter to a corresponding lowercase letter.
+
+==============================================================================
 Returns
 
 3
@@ -31,6 +38,7 @@ Library
 Committee Draft — April 12, 2011
 
 N1570
+
 
 
 

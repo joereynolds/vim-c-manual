@@ -1,12 +1,17 @@
 *setbuf.txt*
 *setbuf*
+
 7.21.5.5 The setbuf function
+
+==============================================================================
 Synopsis
 1
 
 #include <stdio.h>
 void setbuf(FILE * restrict stream,
 char * restrict buf);
+
+==============================================================================
 Description
 
 2
@@ -31,11 +36,14 @@ Committee Draft — April 12, 2011
 
 N1570
 
+
+==============================================================================
 Returns
 3
 
 The setbuf function returns no value.
 Forward references: the setvbuf function (7.21.5.6).
+
 
 
 

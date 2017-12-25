@@ -1,6 +1,9 @@
 *wcsrtombs.txt*
 *wcsrtombs*
+
 7.29.6.4.2 The wcsrtombs function
+
+==============================================================================
 Synopsis
 1
 
@@ -9,6 +12,8 @@ size_t wcsrtombs(char * restrict dst,
 const wchar_t ** restrict src,
 size_t len,
 mbstate_t * restrict ps);
+
+==============================================================================
 Description
 
 2
@@ -31,6 +36,8 @@ pointer (if conversion stopped due to reaching a terminating null wide character
 address just past the last wide character converted (if any). If conversion stopped due to
 reaching a terminating null wide character, the resulting state described is the initial
 conversion state.
+
+==============================================================================
 Returns
 
 4
@@ -139,6 +146,7 @@ character classification function from 7.4.1 returns true, except that the iswgr
 iswpunct functions may differ with respect to wide characters other than L' ' that are
 both printing and white-space wide characters.353)
 Forward references: the wctob function (7.29.6.1.2).
+
 
 
 

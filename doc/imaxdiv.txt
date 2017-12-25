@@ -1,17 +1,24 @@
 *imaxdiv.txt*
 *imaxdiv*
+
 7.8.2.2 The imaxdiv function
+
+==============================================================================
 Synopsis
 1
 
 #include <inttypes.h>
 imaxdiv_t imaxdiv(intmax_t numer, intmax_t denom);
+
+==============================================================================
 Description
 
 2
 
 The imaxdiv function computes numer / denom and numer % denom in a single
 operation.
+
+==============================================================================
 Returns
 
 3
@@ -22,6 +29,8 @@ quot (the quotient) and rem (the remainder), each of which has type intmax_t. If
 either part of the result cannot be represented, the behavior is undefined.
 
 7.8.2.3 The strtoimax and strtoumax functions
+
+==============================================================================
 Synopsis
 1
 
@@ -30,6 +39,8 @@ intmax_t strtoimax(const char * restrict nptr,
 char ** restrict endptr, int base);
 uintmax_t strtoumax(const char * restrict nptr,
 char ** restrict endptr, int base);
+
+==============================================================================
 Description
 
 2
@@ -37,6 +48,8 @@ Description
 The strtoimax and strtoumax functions are equivalent to the strtol, strtoll,
 strtoul, and strtoull functions, except that the initial portion of the string is
 converted to intmax_t and uintmax_t representation, respectively.
+
+==============================================================================
 Returns
 
 3
@@ -62,6 +75,8 @@ Committee Draft — April 12, 2011
 N1570
 
 7.8.2.4 The wcstoimax and wcstoumax functions
+
+==============================================================================
 Synopsis
 1
 
@@ -72,6 +87,8 @@ intmax_t wcstoimax(const wchar_t * restrict nptr,
 wchar_t ** restrict endptr, int base);
 uintmax_t wcstoumax(const wchar_t * restrict nptr,
 wchar_t ** restrict endptr, int base);
+
+==============================================================================
 Description
 
 2
@@ -79,6 +96,8 @@ Description
 The wcstoimax and wcstoumax functions are equivalent to the wcstol, wcstoll,
 wcstoul, and wcstoull functions except that the initial portion of the wide string is
 converted to intmax_t and uintmax_t representation, respectively.
+
+==============================================================================
 Returns
 
 3
@@ -307,6 +326,7 @@ with the characters LC_ and an uppercase letter,223) may also be specified by th
 implementation.
 
 7.11.1 Locale control
+
 
 
 vim:tw=78:ts=8:ft=help:norl:

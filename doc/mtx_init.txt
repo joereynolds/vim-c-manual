@@ -1,11 +1,16 @@
 *mtx_init.txt*
 *mtx_init*
+
 7.26.4.2 The mtx_init function
+
+==============================================================================
 Synopsis
 1
 
 #include <threads.h>
 int mtx_init(mtx_t *mtx, int type);
+
+==============================================================================
 Description
 
 2
@@ -22,12 +27,15 @@ mtx_timed | mtx_recursive for a recursive mutex that supports timeout.
 
 If the mtx_init function succeeds, it sets the mutex pointed to by mtx to a value that
 uniquely identifies the newly created mutex.
+
+==============================================================================
 Returns
 
 4
 
 The mtx_init function returns thrd_success on success, or thrd_error if the
 request could not be honored.
+
 
 
 

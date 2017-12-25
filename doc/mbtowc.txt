@@ -1,6 +1,9 @@
 *mbtowc.txt*
 *mbtowc*
+
 7.22.7.2 The mbtowc function
+
+==============================================================================
 Synopsis
 1
 
@@ -8,6 +11,8 @@ Synopsis
 int mbtowc(wchar_t * restrict pwc,
 const char * restrict s,
 size_t n);
+
+==============================================================================
 Description
 
 2
@@ -23,6 +28,8 @@ character, the function is left in the initial conversion state.
 3
 
 The implementation shall behave as if no library function calls the mbtowc function.
+
+==============================================================================
 Returns
 
 4
@@ -38,6 +45,7 @@ form a valid multibyte character).
 
 In no case will the value returned be greater than n or the value of the MB_CUR_MAX
 macro.
+
 
 
 

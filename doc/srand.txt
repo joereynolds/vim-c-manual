@@ -1,11 +1,16 @@
 *srand.txt*
 *srand*
+
 7.22.2.2 The srand function
+
+==============================================================================
 Synopsis
 1
 
 #include <stdlib.h>
 void srand(unsigned int seed);
+
+==============================================================================
 Description
 
 2
@@ -37,6 +42,8 @@ Committee Draft — April 12, 2011
 
 ISO/IEC 9899:201x
 
+
+==============================================================================
 Returns
 4
 
@@ -85,6 +92,7 @@ modify the storage that they allocate or deallocate. A call to free or realloc t
 deallocates a region p of memory synchronizes with any allocation call that allocates all
 or part of the region p. This synchronization occurs after any access of p by the
 deallocating function, and before any such access by the allocating function.
+
 
 
 

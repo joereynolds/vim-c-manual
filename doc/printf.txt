@@ -1,17 +1,24 @@
 *printf.txt*
 *printf*
+
 7.21.6.3 The printf function
+
+==============================================================================
 Synopsis
 1
 
 #include <stdio.h>
 int printf(const char * restrict format, ...);
+
+==============================================================================
 Description
 
 2
 
 The printf function is equivalent to fprintf with the argument stdout interposed
 before the arguments to printf.
+
+==============================================================================
 Returns
 
 3
@@ -30,6 +37,7 @@ Library
 Committee Draft — April 12, 2011
 
 ISO/IEC 9899:201x
+
 
 
 

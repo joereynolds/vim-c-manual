@@ -1,6 +1,9 @@
 *memcpy.txt*
 *memcpy*
+
 7.24.2.1 The memcpy function
+
+==============================================================================
 Synopsis
 1
 
@@ -8,6 +11,8 @@ Synopsis
 void *memcpy(void * restrict s1,
 const void * restrict s2,
 size_t n);
+
+==============================================================================
 Description
 
 2
@@ -15,6 +20,8 @@ Description
 The memcpy function copies n characters from the object pointed to by s2 into the
 object pointed to by s1. If copying takes place between objects that overlap, the behavior
 is undefined.
+
+==============================================================================
 Returns
 
 3
@@ -34,6 +41,7 @@ Library
 Committee Draft — April 12, 2011
 
 ISO/IEC 9899:201x
+
 
 
 

@@ -1,11 +1,16 @@
 *cnd_signal.txt*
 *cnd_signal*
+
 7.26.3.4 The cnd_signal function
+
+==============================================================================
 Synopsis
 1
 
 #include <threads.h>
 int cnd_signal(cnd_t *cond);
+
+==============================================================================
 Description
 
 2
@@ -14,12 +19,15 @@ The cnd_signal function unblocks one of the threads that are blocked on the
 condition variable pointed to by cond at the time of the call. If no threads are blocked
 on the condition variable at the time of the call, the function does nothing and return
 success.
+
+==============================================================================
 Returns
 
 3
 
 The cnd_signal function returns thrd_success on success or thrd_error if
 the request could not be honored.
+
 
 
 

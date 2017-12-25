@@ -1,12 +1,17 @@
 *thrd_create.txt*
 *thrd_create*
+
 7.26.5.1 The thrd_create function
+
+==============================================================================
 Synopsis
 1
 
 #include <threads.h>
 int thrd_create(thrd_t *thr, thrd_start_t func,
 void *arg);
+
+==============================================================================
 Description
 
 2
@@ -17,6 +22,8 @@ the newly created thread. (A thread’s identifier may be reused for a different
 the original thread has exited and either been detached or joined to another thread.) The
 completion of the thrd_create function synchronizes with the beginning of the
 execution of the new thread.
+
+==============================================================================
 Returns
 
 3
@@ -24,6 +31,7 @@ Returns
 The thrd_create function returns thrd_success on success, or thrd_nomem if
 no memory could be allocated for the thread requested, or thrd_error if the request
 could not be honored.
+
 
 
 

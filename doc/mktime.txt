@@ -1,11 +1,16 @@
 *mktime.txt*
 *mktime*
+
 7.27.2.3 The mktime function
+
+==============================================================================
 Synopsis
 1
 
 #include <time.h>
 time_t mktime(struct tm *timeptr);
+
+==============================================================================
 Description
 
 2
@@ -19,6 +24,8 @@ completion, the values of the tm_wday and tm_yday components of the structure ar
 set appropriately, and the other components are set to represent the specified calendar
 time, but with their values forced to the ranges indicated above; the final value of
 tm_mday is not set until tm_mon and tm_year are determined.
+
+==============================================================================
 Returns
 
 3
@@ -73,6 +80,7 @@ time_str.tm_isdst = -1;
 if (mktime(&time_str) == (time_t)(-1))
 time_str.tm_wday = 7;
 printf("%s\n", wday[time_str.tm_wday]);
+
 
 
 

@@ -1,11 +1,16 @@
 *puts.txt*
 *puts*
+
 7.21.7.9 The puts function
+
+==============================================================================
 Synopsis
 1
 
 #include <stdio.h>
 int puts(const char *s);
+
+==============================================================================
 Description
 
 2
@@ -13,6 +18,8 @@ Description
 The puts function writes the string pointed to by s to the stream pointed to by stdout,
 and appends a new-line character to the output. The terminating null character is not
 written.
+
+==============================================================================
 Returns
 
 3
@@ -31,6 +38,7 @@ Library
 Committee Draft — April 12, 2011
 
 N1570
+
 
 
 

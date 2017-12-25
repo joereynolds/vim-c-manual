@@ -1,11 +1,16 @@
 *mbsinit.txt*
 *mbsinit*
+
 7.29.6.2.1 The mbsinit function
+
+==============================================================================
 Synopsis
 1
 
 #include <wchar.h>
 int mbsinit(const mbstate_t *ps);
+
+==============================================================================
 Description
 
 2
@@ -25,6 +30,8 @@ Committee Draft — April 12, 2011
 
 N1570
 
+
+==============================================================================
 Returns
 3
 
@@ -47,6 +54,7 @@ no library function calls these functions with a null pointer for ps.
 
 Also unlike their corresponding functions, the return value does not represent whether the
 encoding is state-dependent.
+
 
 
 

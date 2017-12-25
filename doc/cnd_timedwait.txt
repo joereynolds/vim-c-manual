@@ -1,6 +1,9 @@
 *cnd_timedwait.txt*
 *cnd_timedwait*
+
 7.26.3.5 The cnd_timedwait function
+
+==============================================================================
 Synopsis
 1
 
@@ -21,6 +24,8 @@ Committee Draft — April 12, 2011
 
 N1570
 
+
+==============================================================================
 Description
 2
 
@@ -30,6 +35,8 @@ cnd_signal or to cnd_broadcast, or until after the TIME_UTC-based calendar
 time pointed to by ts. When the calling thread becomes unblocked it locks the variable
 pointed to by mtx before it returns. The cnd_timedwait function requires that the
 mutex pointed to by mtx be locked by the calling thread.
+
+==============================================================================
 Returns
 
 3
@@ -37,6 +44,7 @@ Returns
 The cnd_timedwait function returns thrd_success upon success, or
 thrd_timedout if the time specified in the call was reached without acquiring the
 requested resource, or thrd_error if the request could not be honored.
+
 
 
 

@@ -1,11 +1,16 @@
 *fclose.txt*
 *fclose*
+
 7.21.5.1 The fclose function
+
+==============================================================================
 Synopsis
 1
 
 #include <stdio.h>
 int fclose(FILE *stream);
+
+==============================================================================
 Description
 
 2
@@ -16,6 +21,8 @@ are delivered to the host environment to be written to the file; any unread buff
 are discarded. Whether or not the call succeeds, the stream is disassociated from the file
 and any buffer set by the setbuf or setvbuf function is disassociated from the stream
 (and deallocated if it was automatically allocated).
+
+==============================================================================
 Returns
 
 3
@@ -34,6 +41,7 @@ Library
 Committee Draft — April 12, 2011
 
 ISO/IEC 9899:201x
+
 
 
 

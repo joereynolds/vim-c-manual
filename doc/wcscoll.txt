@@ -1,11 +1,16 @@
 *wcscoll.txt*
 *wcscoll*
+
 7.29.4.4.2 The wcscoll function
+
+==============================================================================
 Synopsis
 1
 
 #include <wchar.h>
 int wcscoll(const wchar_t *s1, const wchar_t *s2);
+
+==============================================================================
 Description
 
 2
@@ -13,6 +18,8 @@ Description
 The wcscoll function compares the wide string pointed to by s1 to the wide string
 pointed to by s2, both interpreted as appropriate to the LC_COLLATE category of the
 current locale.
+
+==============================================================================
 Returns
 
 3
@@ -36,6 +43,7 @@ N1570
 
 wide string pointed to by s2 when both are interpreted as appropriate to the current
 locale.
+
 
 
 

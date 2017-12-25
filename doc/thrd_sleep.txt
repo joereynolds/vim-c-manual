@@ -1,12 +1,17 @@
 *thrd_sleep.txt*
 *thrd_sleep*
+
 7.26.5.7 The thrd_sleep function
+
+==============================================================================
 Synopsis
 1
 
 #include <threads.h>
 int thrd_sleep(const struct timespec *duration,
 struct timespec *remaining);
+
+==============================================================================
 Description
 
 2
@@ -24,12 +29,15 @@ The suspension time may be longer than requested because the interval is rounded
 an integer multiple of the sleep resolution or because of the scheduling of other activity
 by the system. But, except for the case of being interrupted by a signal, the suspension
 time shall not be less than that specified, as measured by the system clock TIME_UTC.
+
+==============================================================================
 Returns
 
 4
 
 The thrd_sleep function returns zero if the requested time has elapsed, -1 if it has
 been interrupted by a signal, or a negative value if it fails.
+
 
 
 

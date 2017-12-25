@@ -1,11 +1,16 @@
 *realloc.txt*
 *realloc*
+
 7.22.3.5 The realloc function
+
+==============================================================================
 Synopsis
 1
 
 #include <stdlib.h>
 void *realloc(void *ptr, size_t size);
+
+==============================================================================
 Description
 
 2
@@ -23,6 +28,8 @@ specified size. Otherwise, if ptr does not match a pointer earlier returned by a
 management function, or if the space has been deallocated by a call to the free or
 realloc function, the behavior is undefined. If memory for the new object cannot be
 allocated, the old object is not deallocated and its value is unchanged.
+
+==============================================================================
 Returns
 
 4
@@ -44,6 +51,7 @@ Committee Draft — April 12, 2011
 N1570
 
 7.22.4 Communication with the environment
+
 
 
 vim:tw=78:ts=8:ft=help:norl:

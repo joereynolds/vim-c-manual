@@ -1,17 +1,24 @@
 *clearerr.txt*
 *clearerr*
+
 7.21.10.1 The clearerr function
+
+==============================================================================
 Synopsis
 1
 
 #include <stdio.h>
 void clearerr(FILE *stream);
+
+==============================================================================
 Description
 
 2
 
 The clearerr function clears the end-of-file and error indicators for the stream pointed
 to by stream.
+
+==============================================================================
 Returns
 
 3
@@ -29,6 +36,7 @@ Library
 Committee Draft — April 12, 2011
 
 ISO/IEC 9899:201x
+
 
 
 

@@ -1,6 +1,9 @@
 *vwprintf.txt*
 *vwprintf*
+
 7.29.2.9 The vwprintf function
+
+==============================================================================
 Synopsis
 1
 
@@ -8,6 +11,8 @@ Synopsis
 #include <wchar.h>
 int vwprintf(const wchar_t * restrict format,
 va_list arg);
+
+==============================================================================
 Description
 
 2
@@ -16,12 +21,15 @@ The vwprintf function is equivalent to wprintf, with the variable argument list
 replaced by arg, which shall have been initialized by the va_start macro (and
 possibly subsequent va_arg calls). The vwprintf function does not invoke the
 va_end macro.340)
+
+==============================================================================
 Returns
 
 3
 
 The vwprintf function returns the number of wide characters transmitted, or a negative
 value if an output or encoding error occurred.
+
 
 
 

@@ -1,11 +1,16 @@
 *strstr.txt*
 *strstr*
+
 7.24.5.7 The strstr function
+
+==============================================================================
 Synopsis
 1
 
 #include <string.h>
 char *strstr(const char *s1, const char *s2);
+
+==============================================================================
 Description
 
 2
@@ -13,12 +18,15 @@ Description
 The strstr function locates the first occurrence in the string pointed to by s1 of the
 sequence of characters (excluding the terminating null character) in the string pointed to
 by s2.
+
+==============================================================================
 Returns
 
 3
 
 The strstr function returns a pointer to the located string, or a null pointer if the string
 is not found. If s2 points to a string with zero length, the function returns s1.
+
 
 
 

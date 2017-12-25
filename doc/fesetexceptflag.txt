@@ -1,12 +1,17 @@
 *fesetexceptflag.txt*
 *fesetexceptflag*
+
 7.6.2.4 The fesetexceptflag function
+
+==============================================================================
 Synopsis
 1
 
 #include <fenv.h>
 int fesetexceptflag(const fexcept_t *flagp,
 int excepts);
+
+==============================================================================
 Description
 
 2
@@ -16,6 +21,8 @@ indicated by the argument excepts to the states stored in the object pointed to 
 flagp. The value of *flagp shall have been set by a previous call to
 fegetexceptflag whose second argument represented at least those floating-point
 exceptions represented by the argument excepts. This function does not raise floatingpoint exceptions, but only sets the state of the flags.
+
+==============================================================================
 Returns
 
 3
@@ -23,6 +30,7 @@ Returns
 The fesetexceptflag function returns zero if the excepts argument is zero or if
 all the specified flags were successfully set to the appropriate state. Otherwise, it returns
 a nonzero value.
+
 
 
 

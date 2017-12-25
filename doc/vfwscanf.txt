@@ -1,6 +1,9 @@
 *vfwscanf.txt*
 *vfwscanf*
+
 7.29.2.6 The vfwscanf function
+
+==============================================================================
 Synopsis
 1
 
@@ -10,6 +13,8 @@ Synopsis
 int vfwscanf(FILE * restrict stream,
 const wchar_t * restrict format,
 va_list arg);
+
+==============================================================================
 Description
 
 2
@@ -18,6 +23,8 @@ The vfwscanf function is equivalent to fwscanf, with the variable argument list
 replaced by arg, which shall have been initialized by the va_start macro (and
 possibly subsequent va_arg calls). The vfwscanf function does not invoke the
 va_end macro.340)
+
+==============================================================================
 Returns
 
 3
@@ -38,6 +45,7 @@ Library
 Committee Draft — April 12, 2011
 
 ISO/IEC 9899:201x
+
 
 
 

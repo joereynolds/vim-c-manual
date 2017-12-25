@@ -2,13 +2,14 @@
 Parse the C reference manual and convert it into
 a vim-help format
 """
-
 import re
 
-def write_chapters():
-    manual = get_file_contents('./manual/creference')
+MANUAL_PATH = './manual/creference'
 
-    chapter_header_pattern= r'^\d+.+ The \w+ function$'
+def write_chapters():
+    manual = get_file_contents(MANUAL_PATH)
+
+    chapter_header_pattern = r'^\d+.+ The \w+ function$'
     chapter_headers = re.findall(chapter_header_pattern, manual, re.M)
 
     chapters = []
@@ -26,20 +27,30 @@ def write_chapters():
 
 def get_file_contents(file_path):
     """Return the file contents as a string"""
-    file_to_read = open(file_path)
-    file_contents = [line for line in file_to_read]
+    file_contents = [line for line in open(file_path)]
     return ''.join(file_contents)
 
 def write_chapter_to_file(chapter_title, chapter_contents):
-
-    manual = get_file_contents('./manual/creference')
     function_name = chapter_title.split()[2]
     chapter = open('../doc/' + function_name + '.txt', 'w')
-    chapter.write('*' + function_name + '.txt*\n' )
-    chapter.write('*' + function_name + '*\n')
-    chapter.write(chapter_contents)
-    chapter.write('\n\nvim:tw=78:ts=8:ft=help:norl:')
+    write_vim_help_hyperlinks(chapter, function_name)
+
+    for line in chapter_contents.split('\n'):
+        # These are headers in the file
+        if 'Synopsis' in line or 'Description' in line or 'Returns' in line:
+            chapter.write('\n')
+            chapter.write('=' * 78 + '\n')
+        chapter.write(line + '\n')
+
+    write_vim_help_format(chapter)
     chapter.close()
+
+def write_vim_help_hyperlinks(chapter, link):
+    chapter.write('*' + link + '.txt*\n')
+    chapter.write('*' + link + '*\n\n')
+
+def write_vim_help_format(chapter):
+    chapter.write('\nvim:tw=78:ts=8:ft=help:norl:')
 
 def main():
     write_chapters()

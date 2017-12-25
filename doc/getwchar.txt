@@ -1,22 +1,30 @@
 *getwchar.txt*
 *getwchar*
+
 7.29.3.7 The getwchar function
+
+==============================================================================
 Synopsis
 1
 
 #include <wchar.h>
 wint_t getwchar(void);
+
+==============================================================================
 Description
 
 2
 
 The getwchar function is equivalent to getwc with the argument stdin.
+
+==============================================================================
 Returns
 
 3
 
 The getwchar function returns the next wide character from the input stream pointed to
 by stdin, or WEOF.
+
 
 
 

@@ -1,6 +1,9 @@
 *wcsncpy.txt*
 *wcsncpy*
+
 7.29.4.2.2 The wcsncpy function
+
+==============================================================================
 Synopsis
 1
 
@@ -8,6 +11,8 @@ Synopsis
 wchar_t *wcsncpy(wchar_t * restrict s1,
 const wchar_t * restrict s2,
 size_t n);
+
+==============================================================================
 Description
 
 2
@@ -21,11 +26,14 @@ s1.346)
 If the array pointed to by s2 is a wide string that is shorter than n wide characters, null
 wide characters are appended to the copy in the array pointed to by s1, until n wide
 characters in all have been written.
+
+==============================================================================
 Returns
 
 4
 
 The wcsncpy function returns the value of s1.
+
 
 
 

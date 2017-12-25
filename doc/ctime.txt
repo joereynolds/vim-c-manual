@@ -1,11 +1,16 @@
 *ctime.txt*
 *ctime*
+
 7.27.3.2 The ctime function
+
+==============================================================================
 Synopsis
 1
 
 #include <time.h>
 char *ctime(const time_t *timer);
+
+==============================================================================
 Description
 
 2
@@ -13,6 +18,8 @@ Description
 The ctime function converts the calendar time pointed to by timer to local time in the
 form of a string. It is equivalent to
 asctime(localtime(timer))
+
+==============================================================================
 Returns
 
 3
@@ -20,6 +27,7 @@ Returns
 The ctime function returns the pointer returned by the asctime function with that
 broken-down time as argument.
 Forward references: the localtime function (7.27.3.4).
+
 
 
 

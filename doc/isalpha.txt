@@ -1,11 +1,16 @@
 *isalpha.txt*
 *isalpha*
+
 7.4.1.2 The isalpha function
+
+==============================================================================
 Synopsis
 1
 
 #include <ctype.h>
 int isalpha(int c);
+
+==============================================================================
 Description
 
 2
@@ -32,6 +37,7 @@ ISO/IEC 9899:201x
 
 none of iscntrl, isdigit, ispunct, or isspace is true.200) In the "C" locale,
 isalpha returns true only for the characters for which isupper or islower is true.
+
 
 
 

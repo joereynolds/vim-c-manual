@@ -1,6 +1,9 @@
 *vfwprintf.txt*
 *vfwprintf*
+
 7.29.2.5 The vfwprintf function
+
+==============================================================================
 Synopsis
 1
 
@@ -10,6 +13,8 @@ Synopsis
 int vfwprintf(FILE * restrict stream,
 const wchar_t * restrict format,
 va_list arg);
+
+==============================================================================
 Description
 
 2
@@ -18,6 +23,8 @@ The vfwprintf function is equivalent to fwprintf, with the variable argument lis
 replaced by arg, which shall have been initialized by the va_start macro (and
 possibly subsequent va_arg calls). The vfwprintf function does not invoke the
 va_end macro.340)
+
+==============================================================================
 Returns
 
 3
@@ -60,6 +67,7 @@ fwprintf(stderr, L"ERROR in %s: ", function_name);
 vfwprintf(stderr, format, args);
 va_end(args);
 }
+
 
 
 

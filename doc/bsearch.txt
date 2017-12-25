@@ -1,6 +1,9 @@
 *bsearch.txt*
 *bsearch*
+
 7.22.5.1 The bsearch function
+
+==============================================================================
 Synopsis
 1
 
@@ -8,6 +11,8 @@ Synopsis
 void *bsearch(const void *key, const void *base,
 size_t nmemb, size_t size,
 int (*compar)(const void *, const void *));
+
+==============================================================================
 Description
 
 2
@@ -24,6 +29,8 @@ integer less than, equal to, or greater than zero if the key object is considere
 respectively, to be less than, to match, or to be greater than the array element. The array
 shall consist of: all the elements that compare less than, all the elements that compare
 equal to, and all the elements that compare greater than the key object, in that order.303)
+
+==============================================================================
 Returns
 
 4
@@ -31,6 +38,7 @@ Returns
 The bsearch function returns a pointer to a matching element of the array, or a null
 pointer if no match is found. If two elements compare as equal, which element is
 matched is unspecified.
+
 
 
 

@@ -1,11 +1,16 @@
 *feupdateenv.txt*
 *feupdateenv*
+
 7.6.4.4 The feupdateenv function
+
+==============================================================================
 Synopsis
 1
 
 #include <fenv.h>
 int feupdateenv(const fenv_t *envp);
+
+==============================================================================
 Description
 
 2
@@ -15,6 +20,8 @@ exceptions in its automatic storage, install the floating-point environment repr
 the object pointed to by envp, and then raise the saved floating-point exceptions. The
 argument envp shall point to an object set by a call to feholdexcept or fegetenv,
 or equal a floating-point environment macro.
+
+==============================================================================
 Returns
 
 3
@@ -253,6 +260,7 @@ return 0;
 }
 
 7.8.2 Functions for greatest-width integer types
+
 
 
 vim:tw=78:ts=8:ft=help:norl:

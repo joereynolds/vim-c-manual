@@ -1,11 +1,16 @@
 *fsetpos.txt*
 *fsetpos*
+
 7.21.9.3 The fsetpos function
+
+==============================================================================
 Synopsis
 1
 
 #include <stdio.h>
 int fsetpos(FILE *stream, const fpos_t *pos);
+
+==============================================================================
 Description
 
 2
@@ -22,12 +27,15 @@ A successful call to the fsetpos function undoes any effects of the ungetc funct
 on the stream, clears the end-of-file indicator for the stream, and then establishes the new
 parse state and position. After a successful fsetpos call, the next operation on an
 update stream may be either input or output.
+
+==============================================================================
 Returns
 
 4
 
 If successful, the fsetpos function returns zero; on failure, the fsetpos function
 returns nonzero and stores an implementation-defined positive value in errno.
+
 
 
 

@@ -1,23 +1,31 @@
 *thrd_equal.txt*
 *thrd_equal*
+
 7.26.5.4 The thrd_equal function
+
+==============================================================================
 Synopsis
 1
 
 #include <threads.h>
 int thrd_equal(thrd_t thr0, thrd_t thr1);
+
+==============================================================================
 Description
 
 2
 
 The thrd_equal function will determine whether the thread identified by thr0 refers
 to the thread identified by thr1.
+
+==============================================================================
 Returns
 
 3
 
 The thrd_equal function returns zero if the thread thr0 and the thread thr1 refer to
 different threads. Otherwise the thrd_equal function returns a nonzero value.
+
 
 
 

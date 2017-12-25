@@ -1,16 +1,23 @@
 *fegetround.txt*
 *fegetround*
+
 7.6.3.1 The fegetround function
+
+==============================================================================
 Synopsis
 1
 
 #include <fenv.h>
 int fegetround(void);
+
+==============================================================================
 Description
 
 2
 
 The fegetround function gets the current rounding direction.
+
+==============================================================================
 Returns
 
 3
@@ -18,6 +25,7 @@ Returns
 The fegetround function returns the value of the rounding direction macro
 representing the current rounding direction or a negative value if there is no such
 rounding direction macro or the current rounding direction is not determinable.
+
 
 
 

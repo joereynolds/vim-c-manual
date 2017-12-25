@@ -1,6 +1,9 @@
 *vsprintf.txt*
 *vsprintf*
+
 7.21.6.13 The vsprintf function
+
+==============================================================================
 Synopsis
 1
 
@@ -9,6 +12,8 @@ Synopsis
 int vsprintf(char * restrict s,
 const char * restrict format,
 va_list arg);
+
+==============================================================================
 Description
 
 2
@@ -18,6 +23,8 @@ replaced by arg, which shall have been initialized by the va_start macro (and
 possibly subsequent va_arg calls). The vsprintf function does not invoke the
 va_end macro.288) If copying takes place between objects that overlap, the behavior is
 undefined.
+
+==============================================================================
 Returns
 
 3
@@ -36,6 +43,7 @@ Library
 Committee Draft — April 12, 2011
 
 N1570
+
 
 
 

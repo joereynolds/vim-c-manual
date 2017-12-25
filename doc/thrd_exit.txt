@@ -1,11 +1,16 @@
 *thrd_exit.txt*
 *thrd_exit*
+
 7.26.5.5 The thrd_exit function
+
+==============================================================================
 Synopsis
 1
 
 #include <threads.h>
 _Noreturn void thrd_exit(int res);
+
+==============================================================================
 Description
 
 2
@@ -18,11 +23,14 @@ code to res.
 The program shall terminate normally after the last thread has been terminated. The
 behavior shall be as if the program called the exit function with the status
 EXIT_SUCCESS at thread termination time.
+
+==============================================================================
 Returns
 
 4
 
 The thrd_exit function returns no value.
+
 
 
 

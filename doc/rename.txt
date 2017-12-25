@@ -1,11 +1,16 @@
 *rename.txt*
 *rename*
+
 7.21.4.2 The rename function
+
+==============================================================================
 Synopsis
 1
 
 #include <stdio.h>
 int rename(const char *old, const char *new);
+
+==============================================================================
 Description
 
 2
@@ -27,11 +32,14 @@ Committee Draft — April 12, 2011
 
 ISO/IEC 9899:201x
 
+
+==============================================================================
 Returns
 3
 
 The rename function returns zero if the operation succeeds, nonzero if it fails,269) in
 which case if the file existed previously it is still known by its original name.
+
 
 
 

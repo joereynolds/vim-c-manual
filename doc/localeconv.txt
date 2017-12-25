@@ -1,11 +1,16 @@
 *localeconv.txt*
 *localeconv*
+
 7.11.2.1 The localeconv function
+
+==============================================================================
 Synopsis
 1
 
 #include <locale.h>
 struct lconv *localeconv(void);
+
+==============================================================================
 Description
 
 2
@@ -217,6 +222,8 @@ ISO/IEC 9899:201x
 
 The implementation shall behave as if no library function calls the localeconv
 function.
+
+==============================================================================
 Returns
 
 8
@@ -728,11 +735,15 @@ Committee Draft — April 12, 2011
 ISO/IEC 9899:201x
 
 7.12.2 The FP_CONTRACT pragma
+
+==============================================================================
 Synopsis
 1
 
 #include <math.h>
 #pragma STDC FP_CONTRACT on-off-switch
+
+==============================================================================
 Description
 
 2
@@ -757,11 +768,15 @@ In the synopses in this subclause, real-floating indicates that the argument sha
 expression of real floating type.
 
 7.12.3.1 The fpclassify macro
+
+==============================================================================
 Synopsis
 1
 
 #include <math.h>
 int fpclassify(real-floating x);
+
+==============================================================================
 Description
 
 2
@@ -770,6 +785,8 @@ The fpclassify macro classifies its argument value as NaN, infinite, normal,
 subnormal, zero, or into another implementation-defined category. First, an argument
 represented in a format wider than its semantic type is converted to its semantic type.
 Then classification is based on the type of the argument.234)
+
+==============================================================================
 Returns
 
 3
@@ -793,11 +810,15 @@ Committee Draft — April 12, 2011
 N1570
 
 7.12.3.2 The isfinite macro
+
+==============================================================================
 Synopsis
 1
 
 #include <math.h>
 int isfinite(real-floating x);
+
+==============================================================================
 Description
 
 2
@@ -806,6 +827,8 @@ The isfinite macro determines whether its argument has a finite value (zero,
 subnormal, or normal, and not infinite or NaN). First, an argument represented in a
 format wider than its semantic type is converted to its semantic type. Then determination
 is based on the type of the argument.
+
+==============================================================================
 Returns
 
 3
@@ -814,11 +837,15 @@ The isfinite macro returns a nonzero value if and only if its argument has a fin
 value.
 
 7.12.3.3 The isinf macro
+
+==============================================================================
 Synopsis
 1
 
 #include <math.h>
 int isinf(real-floating x);
+
+==============================================================================
 Description
 
 2
@@ -826,6 +853,8 @@ Description
 The isinf macro determines whether its argument value is an infinity (positive or
 negative). First, an argument represented in a format wider than its semantic type is
 converted to its semantic type. Then determination is based on the type of the argument.
+
+==============================================================================
 Returns
 
 3
@@ -834,11 +863,15 @@ The isinf macro returns a nonzero value if and only if its argument has an infin
 value.
 
 7.12.3.4 The isnan macro
+
+==============================================================================
 Synopsis
 1
 
 #include <math.h>
 int isnan(real-floating x);
+
+==============================================================================
 Description
 
 2
@@ -861,17 +894,23 @@ Committee Draft — April 12, 2011
 
 ISO/IEC 9899:201x
 
+
+==============================================================================
 Returns
 3
 
 The isnan macro returns a nonzero value if and only if its argument has a NaN value.
 
 7.12.3.5 The isnormal macro
+
+==============================================================================
 Synopsis
 1
 
 #include <math.h>
 int isnormal(real-floating x);
+
+==============================================================================
 Description
 
 2
@@ -880,6 +919,8 @@ The isnormal macro determines whether its argument value is normal (neither zero
 subnormal, infinite, nor NaN). First, an argument represented in a format wider than its
 semantic type is converted to its semantic type. Then determination is based on the type
 of the argument.
+
+==============================================================================
 Returns
 
 3
@@ -888,16 +929,22 @@ The isnormal macro returns a nonzero value if and only if its argument has a nor
 value.
 
 7.12.3.6 The signbit macro
+
+==============================================================================
 Synopsis
 1
 
 #include <math.h>
 int signbit(real-floating x);
+
+==============================================================================
 Description
 
 2
 
 The signbit macro determines whether the sign of its argument value is negative.236)
+
+==============================================================================
 Returns
 
 3
@@ -922,6 +969,8 @@ N1570
 
 7.12.4 Trigonometric functions
 7.12.4.1 The acos functions
+
+==============================================================================
 Synopsis
 1
 
@@ -929,12 +978,16 @@ Synopsis
 double acos(double x);
 float acosf(float x);
 long double acosl(long double x);
+
+==============================================================================
 Description
 
 2
 
 The acos functions compute the principal value of the arc cosine of x. A domain error
 occurs for arguments not in the interval [−1, +1].
+
+==============================================================================
 Returns
 
 3
@@ -942,6 +995,8 @@ Returns
 The acos functions return arccos x in the interval [0, π ] radians.
 
 7.12.4.2 The asin functions
+
+==============================================================================
 Synopsis
 1
 
@@ -949,12 +1004,16 @@ Synopsis
 double asin(double x);
 float asinf(float x);
 long double asinl(long double x);
+
+==============================================================================
 Description
 
 2
 
 The asin functions compute the principal value of the arc sine of x. A domain error
 occurs for arguments not in the interval [−1, +1].
+
+==============================================================================
 Returns
 
 3
@@ -962,6 +1021,8 @@ Returns
 The asin functions return arcsin x in the interval [−π /2, +π /2] radians.
 
 7.12.4.3 The atan functions
+
+==============================================================================
 Synopsis
 1
 
@@ -969,6 +1030,8 @@ Synopsis
 double atan(double x);
 float atanf(float x);
 long double atanl(long double x);
+
+==============================================================================
 Description
 
 2
@@ -987,12 +1050,16 @@ Committee Draft — April 12, 2011
 
 ISO/IEC 9899:201x
 
+
+==============================================================================
 Returns
 3
 
 The atan functions return arctan x in the interval [−π /2, +π /2] radians.
 
 7.12.4.4 The atan2 functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1000,6 +1067,8 @@ Synopsis
 double atan2(double y, double x);
 float atan2f(float y, float x);
 long double atan2l(long double y, long double x);
+
+==============================================================================
 Description
 
 2
@@ -1007,6 +1076,8 @@ Description
 The atan2 functions compute the value of the arc tangent of y/x, using the signs of both
 arguments to determine the quadrant of the return value. A domain error may occur if
 both arguments are zero.
+
+==============================================================================
 Returns
 
 3
@@ -1014,6 +1085,8 @@ Returns
 The atan2 functions return arctan y/x in the interval [−π , +π ] radians.
 
 7.12.4.5 The cos functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1021,11 +1094,15 @@ Synopsis
 double cos(double x);
 float cosf(float x);
 long double cosl(long double x);
+
+==============================================================================
 Description
 
 2
 
 The cos functions compute the cosine of x (measured in radians).
+
+==============================================================================
 Returns
 
 3
@@ -1033,6 +1110,8 @@ Returns
 The cos functions return cos x.
 
 7.12.4.6 The sin functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1040,6 +1119,8 @@ Synopsis
 double sin(double x);
 float sinf(float x);
 long double sinl(long double x);
+
+==============================================================================
 Description
 
 2
@@ -1058,12 +1139,16 @@ Committee Draft — April 12, 2011
 
 N1570
 
+
+==============================================================================
 Returns
 3
 
 The sin functions return sin x.
 
 7.12.4.7 The tan functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1071,11 +1156,15 @@ Synopsis
 double tan(double x);
 float tanf(float x);
 long double tanl(long double x);
+
+==============================================================================
 Description
 
 2
 
 The tan functions return the tangent of x (measured in radians).
+
+==============================================================================
 Returns
 
 3
@@ -1084,6 +1173,8 @@ The tan functions return tan x.
 
 7.12.5 Hyperbolic functions
 7.12.5.1 The acosh functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1091,12 +1182,16 @@ Synopsis
 double acosh(double x);
 float acoshf(float x);
 long double acoshl(long double x);
+
+==============================================================================
 Description
 
 2
 
 The acosh functions compute the (nonnegative) arc hyperbolic cosine of x. A domain
 error occurs for arguments less than 1.
+
+==============================================================================
 Returns
 
 3
@@ -1104,6 +1199,8 @@ Returns
 The acosh functions return arcosh x in the interval [0, +∞].
 
 7.12.5.2 The asinh functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1111,6 +1208,8 @@ Synopsis
 double asinh(double x);
 float asinhf(float x);
 long double asinhl(long double x);
+
+==============================================================================
 Description
 
 2
@@ -1129,12 +1228,16 @@ Committee Draft — April 12, 2011
 
 ISO/IEC 9899:201x
 
+
+==============================================================================
 Returns
 3
 
 The asinh functions return arsinh x.
 
 7.12.5.3 The atanh functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1142,6 +1245,8 @@ Synopsis
 double atanh(double x);
 float atanhf(float x);
 long double atanhl(long double x);
+
+==============================================================================
 Description
 
 2
@@ -1149,6 +1254,8 @@ Description
 The atanh functions compute the arc hyperbolic tangent of x. A domain error occurs
 for arguments not in the interval [−1, +1]. A pole error may occur if the argument equals
 −1 or +1.
+
+==============================================================================
 Returns
 
 3
@@ -1156,6 +1263,8 @@ Returns
 The atanh functions return artanh x.
 
 7.12.5.4 The cosh functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1163,12 +1272,16 @@ Synopsis
 double cosh(double x);
 float coshf(float x);
 long double coshl(long double x);
+
+==============================================================================
 Description
 
 2
 
 The cosh functions compute the hyperbolic cosine of x. A range error occurs if the
 magnitude of x is too large.
+
+==============================================================================
 Returns
 
 3
@@ -1176,6 +1289,8 @@ Returns
 The cosh functions return cosh x.
 
 7.12.5.5 The sinh functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1183,6 +1298,8 @@ Synopsis
 double sinh(double x);
 float sinhf(float x);
 long double sinhl(long double x);
+
+==============================================================================
 Description
 
 2
@@ -1201,12 +1318,16 @@ Committee Draft — April 12, 2011
 
 N1570
 
+
+==============================================================================
 Returns
 3
 
 The sinh functions return sinh x.
 
 7.12.5.6 The tanh functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1214,11 +1335,15 @@ Synopsis
 double tanh(double x);
 float tanhf(float x);
 long double tanhl(long double x);
+
+==============================================================================
 Description
 
 2
 
 The tanh functions compute the hyperbolic tangent of x.
+
+==============================================================================
 Returns
 
 3
@@ -1227,6 +1352,8 @@ The tanh functions return tanh x.
 
 7.12.6 Exponential and logarithmic functions
 7.12.6.1 The exp functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1234,12 +1361,16 @@ Synopsis
 double exp(double x);
 float expf(float x);
 long double expl(long double x);
+
+==============================================================================
 Description
 
 2
 
 The exp functions compute the base-e exponential of x. A range error occurs if the
 magnitude of x is too large.
+
+==============================================================================
 Returns
 
 3
@@ -1247,6 +1378,8 @@ Returns
 The exp functions return ex .
 
 7.12.6.2 The exp2 functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1254,6 +1387,8 @@ Synopsis
 double exp2(double x);
 float exp2f(float x);
 long double exp2l(long double x);
+
+==============================================================================
 Description
 
 2
@@ -1272,12 +1407,16 @@ Committee Draft — April 12, 2011
 
 ISO/IEC 9899:201x
 
+
+==============================================================================
 Returns
 3
 
 The exp2 functions return 2x .
 
 7.12.6.3 The expm1 functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1285,12 +1424,16 @@ Synopsis
 double expm1(double x);
 float expm1f(float x);
 long double expm1l(long double x);
+
+==============================================================================
 Description
 
 2
 
 The expm1 functions compute the base-e exponential of the argument, minus 1. A range
 error occurs if x is too large.237)
+
+==============================================================================
 Returns
 
 3
@@ -1298,6 +1441,8 @@ Returns
 The expm1 functions return ex − 1.
 
 7.12.6.4 The frexp functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1305,12 +1450,16 @@ Synopsis
 double frexp(double value, int *exp);
 float frexpf(float value, int *exp);
 long double frexpl(long double value, int *exp);
+
+==============================================================================
 Description
 
 2
 
 The frexp functions break a floating-point number into a normalized fraction and an
 integral power of 2. They store the integer in the int object pointed to by exp.
+
+==============================================================================
 Returns
 
 3
@@ -1335,6 +1484,8 @@ Committee Draft — April 12, 2011
 N1570
 
 7.12.6.5 The ilogb functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1342,6 +1493,8 @@ Synopsis
 int ilogb(double x);
 int ilogbf(float x);
 int ilogbl(long double x);
+
+==============================================================================
 Description
 
 2
@@ -1352,6 +1505,8 @@ a NaN they compute the value FP_ILOGBNAN; otherwise, they are equivalent to call
 the corresponding logb function and casting the returned value to type int. A domain
 error or range error may occur if x is zero, infinite, or NaN. If the correct value is outside
 the range of the return type, the numeric result is unspecified.
+
+==============================================================================
 Returns
 
 3
@@ -1360,6 +1515,8 @@ The ilogb functions return the exponent of x as a signed int value.
 Forward references: the logb functions (7.12.6.11).
 
 7.12.6.6 The ldexp functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1367,12 +1524,16 @@ Synopsis
 double ldexp(double x, int exp);
 float ldexpf(float x, int exp);
 long double ldexpl(long double x, int exp);
+
+==============================================================================
 Description
 
 2
 
 The ldexp functions multiply a floating-point number by an integral power of 2. A
 range error may occur.
+
+==============================================================================
 Returns
 
 3
@@ -1380,6 +1541,8 @@ Returns
 The ldexp functions return x × 2exp .
 
 7.12.6.7 The log functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1400,11 +1563,15 @@ Committee Draft — April 12, 2011
 
 ISO/IEC 9899:201x
 
+
+==============================================================================
 Description
 2
 
 The log functions compute the base-e (natural) logarithm of x. A domain error occurs if
 the argument is negative. A pole error may occur if the argument is zero.
+
+==============================================================================
 Returns
 
 3
@@ -1412,6 +1579,8 @@ Returns
 The log functions return loge x.
 
 7.12.6.8 The log10 functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1419,12 +1588,16 @@ Synopsis
 double log10(double x);
 float log10f(float x);
 long double log10l(long double x);
+
+==============================================================================
 Description
 
 2
 
 The log10 functions compute the base-10 (common) logarithm of x. A domain error
 occurs if the argument is negative. A pole error may occur if the argument is zero.
+
+==============================================================================
 Returns
 
 3
@@ -1432,6 +1605,8 @@ Returns
 The log10 functions return log10 x.
 
 7.12.6.9 The log1p functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1439,6 +1614,8 @@ Synopsis
 double log1p(double x);
 float log1pf(float x);
 long double log1pl(long double x);
+
+==============================================================================
 Description
 
 2
@@ -1446,6 +1623,8 @@ Description
 The log1p functions compute the base-e (natural) logarithm of 1 plus the argument.238)
 A domain error occurs if the argument is less than −1. A pole error may occur if the
 argument equals −1.
+
+==============================================================================
 Returns
 
 3
@@ -1467,6 +1646,8 @@ Committee Draft — April 12, 2011
 N1570
 
 7.12.6.10 The log2 functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1474,12 +1655,16 @@ Synopsis
 double log2(double x);
 float log2f(float x);
 long double log2l(long double x);
+
+==============================================================================
 Description
 
 2
 
 The log2 functions compute the base-2 logarithm of x. A domain error occurs if the
 argument is less than zero. A pole error may occur if the argument is zero.
+
+==============================================================================
 Returns
 
 3
@@ -1487,6 +1672,8 @@ Returns
 The log2 functions return log2 x.
 
 7.12.6.11 The logb functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1494,6 +1681,8 @@ Synopsis
 double logb(double x);
 float logbf(float x);
 long double logbl(long double x);
+
+==============================================================================
 Description
 
 2
@@ -1503,6 +1692,8 @@ format. If x is subnormal it is treated as though it were normalized; thus, for 
 finite x,
 1 ≤ x × FLT_RADIX−logb(x) < FLT_RADIX
 A domain error or pole error may occur if the argument is zero.
+
+==============================================================================
 Returns
 
 3
@@ -1510,6 +1701,8 @@ Returns
 The logb functions return the signed exponent of x.
 
 7.12.6.12 The modf functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1517,6 +1710,8 @@ Synopsis
 double modf(double value, double *iptr);
 float modff(float value, float *iptr);
 long double modfl(long double value, long double *iptr);
+
+==============================================================================
 Description
 
 2
@@ -1536,12 +1731,16 @@ Committee Draft — April 12, 2011
 ISO/IEC 9899:201x
 
 floating-point format) in the object pointed to by iptr.
+
+==============================================================================
 Returns
 3
 
 The modf functions return the signed fractional part of value.
 
 7.12.6.13 The scalbn and scalbln functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1552,12 +1751,16 @@ long double scalbnl(long double x, int n);
 double scalbln(double x, long int n);
 float scalblnf(float x, long int n);
 long double scalblnl(long double x, long int n);
+
+==============================================================================
 Description
 
 2
 
 The scalbn and scalbln functions compute x × FLT_RADIXn efficiently, not
 normally by computing FLT_RADIXn explicitly. A range error may occur.
+
+==============================================================================
 Returns
 
 3
@@ -1566,6 +1769,8 @@ The scalbn and scalbln functions return x × FLT_RADIXn .
 
 7.12.7 Power and absolute-value functions
 7.12.7.1 The cbrt functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1573,11 +1778,15 @@ Synopsis
 double cbrt(double x);
 float cbrtf(float x);
 long double cbrtl(long double x);
+
+==============================================================================
 Description
 
 2
 
 The cbrt functions compute the real cube root of x.
+
+==============================================================================
 Returns
 
 3
@@ -1597,6 +1806,8 @@ Committee Draft — April 12, 2011
 N1570
 
 7.12.7.2 The fabs functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1604,11 +1815,15 @@ Synopsis
 double fabs(double x);
 float fabsf(float x);
 long double fabsl(long double x);
+
+==============================================================================
 Description
 
 2
 
 The fabs functions compute the absolute value of a floating-point number x.
+
+==============================================================================
 Returns
 
 3
@@ -1616,6 +1831,8 @@ Returns
 The fabs functions return | x |.
 
 7.12.7.3 The hypot functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1623,6 +1840,8 @@ Synopsis
 double hypot(double x, double y);
 float hypotf(float x, float y);
 long double hypotl(long double x, long double y);
+
+==============================================================================
 Description
 
 2
@@ -1632,6 +1851,8 @@ without undue overflow or underflow. A range error may occur.
 
 3
 
+
+==============================================================================
 Returns
 
 4
@@ -1641,6 +1862,8 @@ The hypot functions return √
 ⎯⎯⎯⎯⎯⎯
 
 7.12.7.4 The pow functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1648,6 +1871,8 @@ Synopsis
 double pow(double x, double y);
 float powf(float x, float y);
 long double powl(long double x, long double y);
+
+==============================================================================
 Description
 
 2
@@ -1669,12 +1894,16 @@ Committee Draft — April 12, 2011
 
 ISO/IEC 9899:201x
 
+
+==============================================================================
 Returns
 3
 
 The pow functions return xy .
 
 7.12.7.5 The sqrt functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1682,12 +1911,16 @@ Synopsis
 double sqrt(double x);
 float sqrtf(float x);
 long double sqrtl(long double x);
+
+==============================================================================
 Description
 
 2
 
 The sqrt functions compute the nonnegative square root of x. A domain error occurs if
 the argument is less than zero.
+
+==============================================================================
 Returns
 
 3
@@ -1697,6 +1930,8 @@ The sqrt functions return √
 
 7.12.8 Error and gamma functions
 7.12.8.1 The erf functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1704,11 +1939,15 @@ Synopsis
 double erf(double x);
 float erff(float x);
 long double erfl(long double x);
+
+==============================================================================
 Description
 
 2
 
 The erf functions compute the error function of x.
+
+==============================================================================
 Returns
 
 3
@@ -1729,6 +1968,8 @@ e−t dt.
 2
 
 7.12.8.2 The erfc functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1736,6 +1977,8 @@ Synopsis
 double erfc(double x);
 float erfcf(float x);
 long double erfcl(long double x);
+
+==============================================================================
 Description
 
 2
@@ -1752,6 +1995,8 @@ Committee Draft — April 12, 2011
 
 N1570
 
+
+==============================================================================
 Returns
 3
 
@@ -1770,6 +2015,8 @@ e−t dt.
 2
 
 7.12.8.3 The lgamma functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1777,6 +2024,8 @@ Synopsis
 double lgamma(double x);
 float lgammaf(float x);
 long double lgammal(long double x);
+
+==============================================================================
 Description
 
 2
@@ -1784,6 +2033,8 @@ Description
 The lgamma functions compute the natural logarithm of the absolute value of gamma of
 x. A range error occurs if x is too large. A pole error may occur if x is a negative integer
 or zero.
+
+==============================================================================
 Returns
 
 3
@@ -1791,6 +2042,8 @@ Returns
 The lgamma functions return loge | Γ(x) |.
 
 7.12.8.4 The tgamma functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1798,6 +2051,8 @@ Synopsis
 double tgamma(double x);
 float tgammaf(float x);
 long double tgammal(long double x);
+
+==============================================================================
 Description
 
 2
@@ -1805,6 +2060,8 @@ Description
 The tgamma functions compute the gamma function of x. A domain error or pole error
 may occur if x is a negative integer or zero. A range error occurs if the magnitude of x is
 too large and may occur if the magnitude of x is too small.
+
+==============================================================================
 Returns
 
 3
@@ -1825,6 +2082,8 @@ ISO/IEC 9899:201x
 
 7.12.9 Nearest integer functions
 7.12.9.1 The ceil functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1832,11 +2091,15 @@ Synopsis
 double ceil(double x);
 float ceilf(float x);
 long double ceill(long double x);
+
+==============================================================================
 Description
 
 2
 
 The ceil functions compute the smallest integer value not less than x.
+
+==============================================================================
 Returns
 
 3
@@ -1844,6 +2107,8 @@ Returns
 The ceil functions return ⎡x⎤, expressed as a floating-point number.
 
 7.12.9.2 The floor functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1851,11 +2116,15 @@ Synopsis
 double floor(double x);
 float floorf(float x);
 long double floorl(long double x);
+
+==============================================================================
 Description
 
 2
 
 The floor functions compute the largest integer value not greater than x.
+
+==============================================================================
 Returns
 
 3
@@ -1863,6 +2132,8 @@ Returns
 The floor functions return ⎣x⎦, expressed as a floating-point number.
 
 7.12.9.3 The nearbyint functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1870,6 +2141,8 @@ Synopsis
 double nearbyint(double x);
 float nearbyintf(float x);
 long double nearbyintl(long double x);
+
+==============================================================================
 Description
 
 2
@@ -1889,12 +2162,16 @@ Committee Draft — April 12, 2011
 
 N1570
 
+
+==============================================================================
 Returns
 3
 
 The nearbyint functions return the rounded integer value.
 
 7.12.9.4 The rint functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1902,6 +2179,8 @@ Synopsis
 double rint(double x);
 float rintf(float x);
 long double rintl(long double x);
+
+==============================================================================
 Description
 
 2
@@ -1909,6 +2188,8 @@ Description
 The rint functions differ from the nearbyint functions (7.12.9.3) only in that the
 rint functions may raise the ‘‘inexact’’ floating-point exception if the result differs in
 value from the argument.
+
+==============================================================================
 Returns
 
 3
@@ -1916,6 +2197,8 @@ Returns
 The rint functions return the rounded integer value.
 
 7.12.9.5 The lrint and llrint functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1926,6 +2209,8 @@ long int lrintl(long double x);
 long long int llrint(double x);
 long long int llrintf(float x);
 long long int llrintl(long double x);
+
+==============================================================================
 Description
 
 2
@@ -1934,6 +2219,8 @@ The lrint and llrint functions round their argument to the nearest integer value
 rounding according to the current rounding direction. If the rounded value is outside the
 range of the return type, the numeric result is unspecified and a domain error or range
 error may occur.
+
+==============================================================================
 Returns
 
 3
@@ -1953,6 +2240,8 @@ Committee Draft — April 12, 2011
 ISO/IEC 9899:201x
 
 7.12.9.6 The round functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1960,6 +2249,8 @@ Synopsis
 double round(double x);
 float roundf(float x);
 long double roundl(long double x);
+
+==============================================================================
 Description
 
 2
@@ -1967,6 +2258,8 @@ Description
 The round functions round their argument to the nearest integer value in floating-point
 format, rounding halfway cases away from zero, regardless of the current rounding
 direction.
+
+==============================================================================
 Returns
 
 3
@@ -1974,6 +2267,8 @@ Returns
 The round functions return the rounded integer value.
 
 7.12.9.7 The lround and llround functions
+
+==============================================================================
 Synopsis
 1
 
@@ -1984,6 +2279,8 @@ long int lroundl(long double x);
 long long int llround(double x);
 long long int llroundf(float x);
 long long int llroundl(long double x);
+
+==============================================================================
 Description
 
 2
@@ -1992,6 +2289,8 @@ The lround and llround functions round their argument to the nearest integer val
 rounding halfway cases away from zero, regardless of the current rounding direction. If
 the rounded value is outside the range of the return type, the numeric result is unspecified
 and a domain error or range error may occur.
+
+==============================================================================
 Returns
 
 3
@@ -1999,6 +2298,8 @@ Returns
 The lround and llround functions return the rounded integer value.
 
 7.12.9.8 The trunc functions
+
+==============================================================================
 Synopsis
 1
 
@@ -2019,11 +2320,15 @@ Committee Draft — April 12, 2011
 
 N1570
 
+
+==============================================================================
 Description
 2
 
 The trunc functions round their argument to the integer value, in floating format,
 nearest to but no larger in magnitude than the argument.
+
+==============================================================================
 Returns
 
 3
@@ -2032,6 +2337,8 @@ The trunc functions return the truncated integer value.
 
 7.12.10 Remainder functions
 7.12.10.1 The fmod functions
+
+==============================================================================
 Synopsis
 1
 
@@ -2039,11 +2346,15 @@ Synopsis
 double fmod(double x, double y);
 float fmodf(float x, float y);
 long double fmodl(long double x, long double y);
+
+==============================================================================
 Description
 
 2
 
 The fmod functions compute the floating-point remainder of x/y.
+
+==============================================================================
 Returns
 
 3
@@ -2053,6 +2364,8 @@ the result has the same sign as x and magnitude less than the magnitude of y. If
 whether a domain error occurs or the fmod functions return zero is implementationdefined.
 
 7.12.10.2 The remainder functions
+
+==============================================================================
 Synopsis
 1
 
@@ -2060,6 +2373,8 @@ Synopsis
 double remainder(double x, double y);
 float remainderf(float x, float y);
 long double remainderl(long double x, long double y);
+
+==============================================================================
 Description
 
 2
@@ -2083,6 +2398,8 @@ Committee Draft — April 12, 2011
 
 ISO/IEC 9899:201x
 
+
+==============================================================================
 Returns
 3
 
@@ -2090,6 +2407,8 @@ The remainder functions return x REM y. If y is zero, whether a domain error occ
 or the functions return zero is implementation defined.
 
 7.12.10.3 The remquo functions
+
+==============================================================================
 Synopsis
 1
 
@@ -2098,6 +2417,8 @@ double remquo(double x, double y, int *quo);
 float remquof(float x, float y, int *quo);
 long double remquol(long double x, long double y,
 int *quo);
+
+==============================================================================
 Description
 
 2
@@ -2106,6 +2427,8 @@ The remquo functions compute the same remainder as the remainder functions. In
 the object pointed to by quo they store a value whose sign is the sign of x/y and whose
 magnitude is congruent modulo 2n to the magnitude of the integral quotient of x/y, where
 n is an implementation-defined integer greater than or equal to 3.
+
+==============================================================================
 Returns
 
 3
@@ -2116,6 +2439,8 @@ return zero is implementation defined.
 
 7.12.11 Manipulation functions
 7.12.11.1 The copysign functions
+
+==============================================================================
 Synopsis
 1
 
@@ -2123,6 +2448,8 @@ Synopsis
 double copysign(double x, double y);
 float copysignf(float x, float y);
 long double copysignl(long double x, long double y);
+
+==============================================================================
 Description
 
 2
@@ -2131,6 +2458,8 @@ The copysign functions produce a value with the magnitude of x and the sign of y
 They produce a NaN (with the sign of y) if x is a NaN. On implementations that
 represent a signed zero but do not treat negative zero consistently in arithmetic
 operations, the copysign functions regard the sign of zero as positive.
+
+==============================================================================
 Returns
 
 3
@@ -2150,6 +2479,8 @@ Committee Draft — April 12, 2011
 N1570
 
 7.12.11.2 The nan functions
+
+==============================================================================
 Synopsis
 1
 
@@ -2157,6 +2488,8 @@ Synopsis
 double nan(const char *tagp);
 float nanf(const char *tagp);
 long double nanl(const char *tagp);
+
+==============================================================================
 Description
 
 2
@@ -2168,6 +2501,8 @@ strtod("NAN()", (char**) NULL). If tagp does not point to an n-char
 sequence or an empty string, the call is equivalent to strtod("NAN", (char**)
 NULL). Calls to nanf and nanl are equivalent to the corresponding calls to strtof
 and strtold.
+
+==============================================================================
 Returns
 
 3
@@ -2177,6 +2512,8 @@ If the implementation does not support quiet NaNs, the functions return zero.
 Forward references: the strtod, strtof, and strtold functions (7.22.1.3).
 
 7.12.11.3 The nextafter functions
+
+==============================================================================
 Synopsis
 1
 
@@ -2184,6 +2521,8 @@ Synopsis
 double nextafter(double x, double y);
 float nextafterf(float x, float y);
 long double nextafterl(long double x, long double y);
+
+==============================================================================
 Description
 
 2
@@ -2193,6 +2532,8 @@ function, after x in the direction of y, where x and y are first converted to th
 function.240) The nextafter functions return y if x equals y. A range error may occur
 if the magnitude of x is the largest finite value representable in the type and the result is
 infinite or not representable in the type.
+
+==============================================================================
 Returns
 
 3
@@ -2216,6 +2557,8 @@ Committee Draft — April 12, 2011
 ISO/IEC 9899:201x
 
 7.12.11.4 The nexttoward functions
+
+==============================================================================
 Synopsis
 1
 
@@ -2223,6 +2566,8 @@ Synopsis
 double nexttoward(double x, long double y);
 float nexttowardf(float x, long double y);
 long double nexttowardl(long double x, long double y);
+
+==============================================================================
 Description
 
 2
@@ -2233,6 +2578,8 @@ type of the function if x equals y.241)
 
 7.12.12 Maximum, minimum, and positive difference functions
 7.12.12.1 The fdim functions
+
+==============================================================================
 Synopsis
 1
 
@@ -2240,6 +2587,8 @@ Synopsis
 double fdim(double x, double y);
 float fdimf(float x, float y);
 long double fdiml(long double x, long double y);
+
+==============================================================================
 Description
 
 2
@@ -2250,6 +2599,8 @@ The fdim functions determine the positive difference between their arguments:
 if x ≤ y
 ⎩+0
 A range error may occur.
+
+==============================================================================
 Returns
 
 3
@@ -2257,6 +2608,8 @@ Returns
 The fdim functions return the positive difference value.
 
 7.12.12.2 The fmax functions
+
+==============================================================================
 Synopsis
 1
 
@@ -2280,10 +2633,14 @@ Committee Draft — April 12, 2011
 
 N1570
 
+
+==============================================================================
 Description
 2
 
 The fmax functions determine the maximum numeric value of their arguments.242)
+
+==============================================================================
 Returns
 
 3
@@ -2291,6 +2648,8 @@ Returns
 The fmax functions return the maximum numeric value of their arguments.
 
 7.12.12.3 The fmin functions
+
+==============================================================================
 Synopsis
 1
 
@@ -2298,11 +2657,15 @@ Synopsis
 double fmin(double x, double y);
 float fminf(float x, float y);
 long double fminl(long double x, long double y);
+
+==============================================================================
 Description
 
 2
 
 The fmin functions determine the minimum numeric value of their arguments.243)
+
+==============================================================================
 Returns
 
 3
@@ -2311,6 +2674,8 @@ The fmin functions return the minimum numeric value of their arguments.
 
 7.12.13 Floating multiply-add
 7.12.13.1 The fma functions
+
+==============================================================================
 Synopsis
 1
 
@@ -2319,6 +2684,8 @@ double fma(double x, double y, double z);
 float fmaf(float x, float y, float z);
 long double fmal(long double x, long double y,
 long double z);
+
+==============================================================================
 Description
 
 2
@@ -2326,6 +2693,8 @@ Description
 The fma functions compute (x × y) + z, rounded as one ternary operation: they compute
 the value (as if) to infinite precision and round once to the result format, according to the
 current rounding mode. A range error may occur.
+
+==============================================================================
 Returns
 
 3
@@ -2363,11 +2732,15 @@ the synopses in this subclause, real-floating indicates that the argument shall 
 expression of real floating type245) (both arguments need not have the same type).246)
 
 7.12.14.1 The isgreater macro
+
+==============================================================================
 Synopsis
 1
 
 #include <math.h>
 int isgreater(real-floating x, real-floating y);
+
+==============================================================================
 Description
 
 2
@@ -2376,6 +2749,8 @@ The isgreater macro determines whether its first argument is greater than its se
 argument. The value of isgreater(x, y) is always equal to (x) > (y); however,
 unlike (x) > (y), isgreater(x, y) does not raise the ‘‘invalid’’ floating-point
 exception when x and y are unordered.
+
+==============================================================================
 Returns
 
 3
@@ -2383,6 +2758,8 @@ Returns
 The isgreater macro returns the value of (x) > (y).
 
 7.12.14.2 The isgreaterequal macro
+
+==============================================================================
 Synopsis
 1
 
@@ -2409,6 +2786,8 @@ Committee Draft — April 12, 2011
 
 N1570
 
+
+==============================================================================
 Description
 2
 
@@ -2416,6 +2795,8 @@ The isgreaterequal macro determines whether its first argument is greater than o
 equal to its second argument. The value of isgreaterequal(x, y) is always equal
 to (x) >= (y); however, unlike (x) >= (y), isgreaterequal(x, y) does
 not raise the ‘‘invalid’’ floating-point exception when x and y are unordered.
+
+==============================================================================
 Returns
 
 3
@@ -2423,11 +2804,15 @@ Returns
 The isgreaterequal macro returns the value of (x) >= (y).
 
 7.12.14.3 The isless macro
+
+==============================================================================
 Synopsis
 1
 
 #include <math.h>
 int isless(real-floating x, real-floating y);
+
+==============================================================================
 Description
 
 2
@@ -2436,6 +2821,8 @@ The isless macro determines whether its first argument is less than its second
 argument. The value of isless(x, y) is always equal to (x) < (y); however,
 unlike (x) < (y), isless(x, y) does not raise the ‘‘invalid’’ floating-point
 exception when x and y are unordered.
+
+==============================================================================
 Returns
 
 3
@@ -2443,11 +2830,15 @@ Returns
 The isless macro returns the value of (x) < (y).
 
 7.12.14.4 The islessequal macro
+
+==============================================================================
 Synopsis
 1
 
 #include <math.h>
 int islessequal(real-floating x, real-floating y);
+
+==============================================================================
 Description
 
 2
@@ -2456,6 +2847,8 @@ The islessequal macro determines whether its first argument is less than or equa
 its second argument. The value of islessequal(x, y) is always equal to
 (x) <= (y); however, unlike (x) <= (y), islessequal(x, y) does not raise
 the ‘‘invalid’’ floating-point exception when x and y are unordered.
+
+==============================================================================
 Returns
 
 3
@@ -2475,11 +2868,15 @@ Committee Draft — April 12, 2011
 ISO/IEC 9899:201x
 
 7.12.14.5 The islessgreater macro
+
+==============================================================================
 Synopsis
 1
 
 #include <math.h>
 int islessgreater(real-floating x, real-floating y);
+
+==============================================================================
 Description
 
 2
@@ -2489,6 +2886,8 @@ greater than its second argument. The islessgreater(x, y) macro is similar to
 (x) < (y) || (x) > (y); however, islessgreater(x, y) does not raise
 the ‘‘invalid’’ floating-point exception when x and y are unordered (nor does it evaluate x
 and y twice).
+
+==============================================================================
 Returns
 
 3
@@ -2496,16 +2895,22 @@ Returns
 The islessgreater macro returns the value of (x) < (y) || (x) > (y).
 
 7.12.14.6 The isunordered macro
+
+==============================================================================
 Synopsis
 1
 
 #include <math.h>
 int isunordered(real-floating x, real-floating y);
+
+==============================================================================
 Description
 
 2
 
 The isunordered macro determines whether its arguments are unordered.
+
+==============================================================================
 Returns
 
 3
@@ -2549,17 +2954,23 @@ program defines an external identifier with the name setjmp, the behavior is und
 
 7.13.1 Save calling environment
 7.13.1.1 The setjmp macro
+
+==============================================================================
 Synopsis
 1
 
 #include <setjmp.h>
 int setjmp(jmp_buf env);
+
+==============================================================================
 Description
 
 2
 
 The setjmp macro saves its calling environment in its jmp_buf argument for later use
 by the longjmp function.
+
+==============================================================================
 Returns
 
 3
@@ -2599,6 +3010,7 @@ controlling expression of a selection or iteration statement; or
 If the invocation appears in any other context, the behavior is undefined.
 
 7.13.2 Restore calling environment
+
 
 
 vim:tw=78:ts=8:ft=help:norl:

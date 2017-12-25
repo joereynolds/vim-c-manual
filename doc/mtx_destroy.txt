@@ -1,17 +1,24 @@
 *mtx_destroy.txt*
 *mtx_destroy*
+
 7.26.4.1 The mtx_destroy function
+
+==============================================================================
 Synopsis
 1
 
 #include <threads.h>
 void mtx_destroy(mtx_t *mtx);
+
+==============================================================================
 Description
 
 2
 
 The mtx_destroy function releases any resources used by the mutex pointed to by
 mtx. No threads can be blocked waiting for the mutex pointed to by mtx.
+
+==============================================================================
 Returns
 
 3
@@ -28,6 +35,7 @@ Library
 Committee Draft — April 12, 2011
 
 ISO/IEC 9899:201x
+
 
 
 

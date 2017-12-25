@@ -1,23 +1,31 @@
 *wcschr.txt*
 *wcschr*
+
 7.29.4.5.1 The wcschr function
+
+==============================================================================
 Synopsis
 1
 
 #include <wchar.h>
 wchar_t *wcschr(const wchar_t *s, wchar_t c);
+
+==============================================================================
 Description
 
 2
 
 The wcschr function locates the first occurrence of c in the wide string pointed to by s.
 The terminating null wide character is considered to be part of the wide string.
+
+==============================================================================
 Returns
 
 3
 
 The wcschr function returns a pointer to the located wide character, or a null pointer if
 the wide character does not occur in the wide string.
+
 
 
 

@@ -1,23 +1,31 @@
 *strpbrk.txt*
 *strpbrk*
+
 7.24.5.4 The strpbrk function
+
+==============================================================================
 Synopsis
 1
 
 #include <string.h>
 char *strpbrk(const char *s1, const char *s2);
+
+==============================================================================
 Description
 
 2
 
 The strpbrk function locates the first occurrence in the string pointed to by s1 of any
 character from the string pointed to by s2.
+
+==============================================================================
 Returns
 
 3
 
 The strpbrk function returns a pointer to the character, or a null pointer if no character
 from s2 occurs in s1.
+
 
 
 

@@ -1,16 +1,23 @@
 *towlower.txt*
 *towlower*
+
 7.30.3.1.1 The towlower function
+
+==============================================================================
 Synopsis
 1
 
 #include <wctype.h>
 wint_t towlower(wint_t wc);
+
+==============================================================================
 Description
 
 2
 
 The towlower function converts an uppercase letter to a corresponding lowercase letter.
+
+==============================================================================
 Returns
 
 3
@@ -20,6 +27,7 @@ more corresponding wide characters, as specified by the current locale, for whic
 iswlower is true, the towlower function returns one of the corresponding wide
 characters (always the same one for any given locale); otherwise, the argument is
 returned unchanged.
+
 
 
 

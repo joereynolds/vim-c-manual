@@ -1,17 +1,24 @@
 *strcmp.txt*
 *strcmp*
+
 7.24.4.2 The strcmp function
+
+==============================================================================
 Synopsis
 1
 
 #include <string.h>
 int strcmp(const char *s1, const char *s2);
+
+==============================================================================
 Description
 
 2
 
 The strcmp function compares the string pointed to by s1 to the string pointed to by
 s2.
+
+==============================================================================
 Returns
 
 3
@@ -35,6 +42,7 @@ Committee Draft — April 12, 2011
 N1570
 
 pointed to by s2.
+
 
 
 

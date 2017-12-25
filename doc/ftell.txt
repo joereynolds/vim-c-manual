@@ -1,11 +1,16 @@
 *ftell.txt*
 *ftell*
+
 7.21.9.4 The ftell function
+
+==============================================================================
 Synopsis
 1
 
 #include <stdio.h>
 long int ftell(FILE *stream);
+
+==============================================================================
 Description
 
 2
@@ -29,12 +34,15 @@ Committee Draft — April 12, 2011
 N1570
 
 or read.
+
+==============================================================================
 Returns
 3
 
 If successful, the ftell function returns the current value of the file position indicator
 for the stream. On failure, the ftell function returns −1L and stores an
 implementation-defined positive value in errno.
+
 
 
 

@@ -1,6 +1,9 @@
 *wcsxfrm.txt*
 *wcsxfrm*
+
 7.29.4.4.4 The wcsxfrm function
+
+==============================================================================
 Synopsis
 1
 
@@ -8,6 +11,8 @@ Synopsis
 size_t wcsxfrm(wchar_t * restrict s1,
 const wchar_t * restrict s2,
 size_t n);
+
+==============================================================================
 Description
 
 2
@@ -19,6 +24,8 @@ than, equal to, or less than zero, corresponding to the result of the wcscoll fu
 applied to the same two original wide strings. No more than n wide characters are placed
 into the resulting array pointed to by s1, including the terminating null wide character. If
 n is zero, s1 is permitted to be a null pointer.
+
+==============================================================================
 Returns
 
 3
@@ -45,6 +52,7 @@ Committee Draft — April 12, 2011
 ISO/IEC 9899:201x
 
 1 + wcsxfrm(NULL, s, 0)
+
 
 
 

@@ -1,6 +1,9 @@
 *strncat.txt*
 *strncat*
+
 7.24.3.2 The strncat function
+
+==============================================================================
 Synopsis
 1
 
@@ -8,6 +11,8 @@ Synopsis
 char *strncat(char * restrict s1,
 const char * restrict s2,
 size_t n);
+
+==============================================================================
 Description
 
 2
@@ -34,6 +39,8 @@ Committee Draft — April 12, 2011
 ISO/IEC 9899:201x
 
 takes place between objects that overlap, the behavior is undefined.
+
+==============================================================================
 Returns
 3
 
@@ -47,6 +54,7 @@ The sign of a nonzero value returned by the comparison functions memcmp, strcmp,
 and strncmp is determined by the sign of the difference between the values of the first
 pair of characters (both interpreted as unsigned char) that differ in the objects being
 compared.
+
 
 
 

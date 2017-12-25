@@ -1,12 +1,17 @@
 *ungetwc.txt*
 *ungetwc*
+
 7.29.3.10 The ungetwc function
+
+==============================================================================
 Synopsis
 1
 
 #include <stdio.h>
 #include <wchar.h>
 wint_t ungetwc(wint_t c, FILE *stream);
+
+==============================================================================
 Description
 
 2
@@ -52,6 +57,8 @@ Committee Draft — April 12, 2011
 
 N1570
 
+
+==============================================================================
 Returns
 6
 
@@ -78,6 +85,8 @@ zero wide characters.
 
 7.29.4.1 Wide string numeric conversion functions
 7.29.4.1.1 The wcstod, wcstof, and wcstold functions
+
+==============================================================================
 Synopsis
 1
 
@@ -88,6 +97,8 @@ float wcstof(const wchar_t * restrict nptr,
 wchar_t ** restrict endptr);
 long double wcstold(const wchar_t * restrict nptr,
 wchar_t ** restrict endptr);
+
+==============================================================================
 Description
 
 2
@@ -208,6 +219,8 @@ The result should be one of the (equal or adjacent) values that would be obtaine
 correctly rounding L and U according to the current rounding direction, with the extra
 stipulation that the error with respect to D should have a correct sign for the current
 rounding direction.345)
+
+==============================================================================
 Returns
 
 10
@@ -236,6 +249,8 @@ Committee Draft — April 12, 2011
 ISO/IEC 9899:201x
 
 7.29.4.1.2 The wcstol, wcstoll, wcstoul, and wcstoull functions
+
+==============================================================================
 Synopsis
 1
 
@@ -256,6 +271,8 @@ unsigned long long int wcstoull(
 const wchar_t * restrict nptr,
 wchar_t ** restrict endptr,
 int base);
+
+==============================================================================
 Description
 
 2
@@ -323,6 +340,8 @@ accepted.
 If the subject sequence is empty or does not have the expected form, no conversion is
 performed; the value of nptr is stored in the object pointed to by endptr, provided
 that endptr is not a null pointer.
+
+==============================================================================
 Returns
 
 8
@@ -334,6 +353,7 @@ LLONG_MAX, ULONG_MAX, or ULLONG_MAX is returned (according to the return type
 sign of the value, if any), and the value of the macro ERANGE is stored in errno.
 
 7.29.4.2 Wide string copying functions
+
 
 
 vim:tw=78:ts=8:ft=help:norl:

@@ -1,11 +1,16 @@
 *rand.txt*
 *rand*
+
 7.22.2.1 The rand function
+
+==============================================================================
 Synopsis
 1
 
 #include <stdlib.h>
 int rand(void);
+
+==============================================================================
 Description
 
 2
@@ -18,6 +23,8 @@ RAND_MAX.295)
 The rand function is not required to avoid data races with other calls to pseudo-random
 sequence generation functions. The implementation shall behave as if no library function
 calls the rand function.
+
+==============================================================================
 Returns
 
 4
@@ -28,6 +35,7 @@ Environmental limits
 5
 
 The value of the RAND_MAX macro shall be at least 32767.
+
 
 
 

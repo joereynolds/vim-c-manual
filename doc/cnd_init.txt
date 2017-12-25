@@ -1,11 +1,16 @@
 *cnd_init.txt*
 *cnd_init*
+
 7.26.3.3 The cnd_init function
+
+==============================================================================
 Synopsis
 1
 
 #include <threads.h>
 int cnd_init(cnd_t *cond);
+
+==============================================================================
 Description
 
 2
@@ -14,6 +19,8 @@ The cnd_init function creates a condition variable. If it succeeds it sets the v
 pointed to by cond to a value that uniquely identifies the newly created condition
 variable. A thread that calls cnd_wait on a newly created condition variable will
 block.
+
+==============================================================================
 Returns
 
 3
@@ -21,6 +28,7 @@ Returns
 The cnd_init function returns thrd_success on success, or thrd_nomem if no
 memory could be allocated for the newly created condition, or thrd_error if the
 request could not be honored.
+
 
 
 

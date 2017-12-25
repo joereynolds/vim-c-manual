@@ -1,6 +1,9 @@
 *mbrtoc32.txt*
 *mbrtoc32*
+
 7.28.1.3 The mbrtoc32 function
+
+==============================================================================
 Synopsis
 1
 
@@ -8,6 +11,8 @@ Synopsis
 size_t mbrtoc32(char32_t * restrict pc32,
 const char * restrict s, size_t n,
 mbstate_t * restrict ps);
+
+==============================================================================
 Description
 
 2
@@ -27,6 +32,8 @@ the first (or only) such character in the object pointed to by pc32. Subsequent 
 store successive wide characters without consuming any additional input until all the
 characters have been stored. If the corresponding wide character is the null wide
 character, the resulting state described is the initial conversion state.
+
+==============================================================================
 Returns
 
 4
@@ -62,6 +69,7 @@ stored).325)
 do not contribute to a complete and valid multibyte character (no
 value is stored); the value of the macro EILSEQ is stored in errno,
 and the conversion state is unspecified.
+
 
 
 

@@ -1,6 +1,9 @@
 *wcstok.txt*
 *wcstok*
+
 7.29.4.5.7 The wcstok function
+
+==============================================================================
 Synopsis
 1
 
@@ -8,6 +11,8 @@ Synopsis
 wchar_t *wcstok(wchar_t * restrict s1,
 const wchar_t * restrict s2,
 wchar_t ** restrict ptr);
+
+==============================================================================
 Description
 
 2
@@ -59,6 +64,8 @@ In all cases, the wcstok function stores sufficient information in the pointer p
 by ptr so that subsequent calls, with a null pointer for s1 and the unmodified pointer
 value for ptr, shall start searching just past the element overwritten by a null wide
 character (if any).
+
+==============================================================================
 Returns
 
 7
@@ -114,6 +121,7 @@ points to the token L"??b"
 is a null pointer
 points to the token L"c"
 is a null pointer
+
 
 
 

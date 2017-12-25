@@ -1,11 +1,16 @@
 *perror.txt*
 *perror*
+
 7.21.10.4 The perror function
+
+==============================================================================
 Synopsis
 1
 
 #include <stdio.h>
 void perror(const char *s);
+
+==============================================================================
 Description
 
 2
@@ -16,6 +21,8 @@ error message. It writes a sequence of characters to the standard error stream t
 string pointed to by s followed by a colon (:) and a space; then an appropriate error
 message string followed by a new-line character. The contents of the error message
 strings are the same as those returned by the strerror function with argument errno.
+
+==============================================================================
 Returns
 
 3
@@ -88,6 +95,7 @@ ISO/IEC 9899:201x
 The functions atof, atoi, atol, and atoll need not affect the value of the integer
 expression errno on an error. If the value of the result cannot be represented, the
 behavior is undefined.
+
 
 
 
