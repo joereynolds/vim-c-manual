@@ -1,2 +1,2 @@
-exec 'setlocal rtp+=' . fnameescape(expand('<sfile>:h:h')) . '/manual'
+exec 'setlocal rtp+=' . fnameescape(expand('<sfile>:h:h'))
 setlocal keywordprg=:help
