@@ -36,14 +36,19 @@ def write_chapter_to_file(chapter_title, chapter_contents):
     write_vim_help_hyperlinks(chapter, function_name)
 
     for line in chapter_contents.split('\n'):
-        # These are headers in the file
+        # These are headers in the file so mark them up accordingly
         if 'Synopsis' in line or 'Description' in line or 'Returns' in line:
             chapter.write('\n')
             chapter.write('=' * 78 + '\n')
+        if line_is_junk(line):
+            continue
         chapter.write(line + '\n')
 
     write_vim_help_format(chapter)
     chapter.close()
+
+def line_is_junk(line):
+    return line.startswith(('Committee Draft', 'ISO/IEC', 'Library'))
 
 def write_vim_help_hyperlinks(chapter, link):
     chapter.write('*' + link + '.txt*\n')
