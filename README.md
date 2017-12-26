@@ -1,3 +1,16 @@
+# Preamble
+
+Note that for those with the Linux Programmers Manual, you will not need this plugin.
+
+To see if you fall under this category, do the following in a terminal
+
+```
+man scanf
+```
+
+If it opens up documentation, good news, you don't need this plugin!
+`
+
 # Help files for the C11 standard
 
 Press <kbd>K</kbd> over a keyword to get the documentation for that function.
